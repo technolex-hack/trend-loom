@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Track your GlowSkin skincare order"
+  >
+
+  <title>Track Order — GlowSkin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link
+    rel="stylesheet"
+    href="assets/css/index.css"
+  >
+
+  <!-- Track Order CSS -->
+  <link
+    rel="stylesheet"
+    href="assets/css/track-order.css"
+  >
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       ANNOUNCEMENT BAR
+       ===================================================== -->
+
+  <div class="announcement-bar">
+    ✨ Free shipping on orders above ₹999
+  </div>
+
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="header-container">
+
+
+      <!-- Logo -->
+
+      <a
+        href="index.html"
+        class="brand-logo"
+      >
+
+        <span class="brand-mark">
+          G
+        </span>
+
+        <span class="brand-text">
+          GlowSkin
+        </span>
+
+      </a>
+
+
+      <!-- Desktop Navigation -->
+
+      <nav class="main-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="shop.html?category=offers">
+          Offers
+        </a>
+
+      </nav>
+
+
+      <!-- Header Actions -->
+
+      <div class="header-actions">
+
+
+        <!-- Search -->
+
+        <button
+          type="button"
+          class="header-icon-btn"
+          id="searchOpen"
+          aria-label="Search"
+        >
+          🔍
+        </button>
+
+
+        <!-- Account -->
+
+        <a
+          href="account.html"
+          class="header-icon-btn"
+          aria-label="My Account"
+        >
+          👤
+        </a>
+
+
+        <!-- Wishlist -->
+
+        <a
+          href="wishlist.html"
+          class="header-icon-btn"
+          aria-label="Wishlist"
+        >
+
+          ♡
+
+          <span
+            class="header-count"
+            id="wishlistCount"
+            hidden
+          >
+            0
+          </span>
+
+        </a>
+
+
+        <!-- Cart -->
+
+        <a
+          href="cart.html"
+          class="header-icon-btn"
+          aria-label="Cart"
+        >
+
+          🛒
+
+          <span
+            class="header-count"
+            id="cartCount"
+            hidden
+          >
+            0
+          </span>
+
+        </a>
+
+
+        <!-- Mobile Menu -->
+
+        <button
+          type="button"
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       SEARCH OVERLAY
+       ===================================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+  >
+
+    <div class="search-box">
+
+      <button
+        type="button"
+        class="search-close"
+        id="searchClose"
+        aria-label="Close search"
+      >
+        ×
+      </button>
+
+
+      <form
+        id="searchForm"
+        class="search-form"
+      >
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search skincare products..."
+          autocomplete="off"
+        >
+
+        <button type="submit">
+          Search
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MOBILE MENU
+       ===================================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <div class="mobile-menu-inner">
+
+      <div class="mobile-menu-header">
+
+        <strong>
+          GlowSkin
+        </strong>
+
+        <button
+          type="button"
+          id="mobileMenuClose"
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <nav class="mobile-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="shop.html?category=offers">
+          Offers
+        </a>
+
+        <a href="account.html">
+          My Account
+        </a>
+
+        <a href="wishlist.html">
+          Wishlist
+        </a>
+
+        <a href="cart.html">
+          Cart
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       TRACK ORDER PAGE
+       ===================================================== -->
+
+  <main class="track-order-page">
+
+    <div class="track-order-container">
+
+
+      <!-- =================================================
+           PAGE HEADER
+           ================================================= -->
+
+      <section class="track-page-header">
+
+        <span class="track-eyebrow">
+          ORDER TRACKING
+        </span>
+
+        <h1>
+          Track Your Order
+        </h1>
+
+        <p>
+          Enter your GlowSkin order ID to check
+          your order status and delivery details.
+        </p>
+
+      </section>
+
+
+      <!-- =================================================
+           SEARCH ORDER
+           ================================================= -->
+
+      <section class="track-search-card">
+
+        <form
+          id="trackOrderForm"
+          class="track-order-form"
+        >
+
+          <label for="orderIdInput">
+            Order ID
+          </label>
+
+
+          <div class="track-input-row">
+
+            <input
+              type="text"
+              id="orderIdInput"
+              name="orderId"
+              placeholder="Example: GS20260910ABC123"
+              autocomplete="off"
+              required
+            >
+
+            <button
+              type="submit"
+              id="trackOrderBtn"
+            >
+              Track Order
+            </button>
+
+          </div>
+
+
+          <p
+            class="track-form-error"
+            id="trackFormError"
+            aria-live="polite"
+          ></p>
+
+        </form>
+
+
+        <div class="track-help">
+
+          <span>
+            💡
+          </span>
+
+          <p>
+            Your Order ID can be found in your
+            order confirmation page and account.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           ORDER RESULT
+           ================================================= -->
+
+      <section
+        class="track-result"
+        id="trackResult"
+        hidden
+      >
+
+
+        <!-- Order Heading -->
+
+        <div class="track-result-header">
+
+          <div>
+
+            <span class="track-result-label">
+              ORDER
+            </span>
+
+            <h2 id="resultOrderId">
+              GS000000
+            </h2>
+
+          </div>
+
+
+          <span
+            class="track-status-badge"
+            id="resultStatus"
+          >
+            Placed
+          </span>
+
+        </div>
+
+
+        <!-- Customer / Order Summary -->
+
+        <div class="track-summary-grid">
+
+
+          <div class="track-summary-item">
+
+            <span>
+              Customer
+            </span>
+
+            <strong id="resultCustomer">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="track-summary-item">
+
+            <span>
+              Order Total
+            </span>
+
+            <strong id="resultTotal">
+              ₹0
+            </strong>
+
+          </div>
+
+
+          <div class="track-summary-item">
+
+            <span>
+              Payment
+            </span>
+
+            <strong id="resultPayment">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="track-summary-item">
+
+            <span>
+              Estimated Delivery
+            </span>
+
+            <strong id="resultDelivery">
+              —
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ORDER TIMELINE
+             ================================================= -->
+
+        <div class="track-timeline">
+
+          <h3>
+            Order Status
+          </h3>
+
+
+          <div class="timeline">
+
+
+            <!-- Placed -->
+
+            <div
+              class="timeline-step completed"
+              data-status="placed"
+            >
+
+              <div class="timeline-icon">
+                ✓
+              </div>
+
+              <div class="timeline-content">
+
+                <strong>
+                  Order Placed
+                </strong>
+
+                <span>
+                  Your order has been received.
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Processing -->
+
+            <div
+              class="timeline-step"
+              data-status="processing"
+            >
+
+              <div class="timeline-icon">
+                2
+              </div>
+
+              <div class="timeline-content">
+
+                <strong>
+                  Processing
+                </strong>
+
+                <span>
+                  Your order is being prepared.
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Shipped -->
+
+            <div
+              class="timeline-step"
+              data-status="shipped"
+            >
+
+              <div class="timeline-icon">
+                3
+              </div>
+
+              <div class="timeline-content">
+
+                <strong>
+                  Shipped
+                </strong>
+
+                <span>
+                  Your order is on its way.
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Delivered -->
+
+            <div
+              class="timeline-step"
+              data-status="delivered"
+            >
+
+              <div class="timeline-icon">
+                4
+              </div>
+
+              <div class="timeline-content">
+
+                <strong>
+                  Delivered
+                </strong>
+
+                <span>
+                  Your order has been delivered.
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ORDER ITEMS
+             ================================================= -->
+
+        <div class="track-items">
+
+          <div class="track-section-heading">
+
+            <h3>
+              Order Items
+            </h3>
+
+            <span id="resultItemCount">
+              0 items
+            </span>
+
+          </div>
+
+
+          <div
+            class="track-items-list"
+            id="trackItemsList"
+          >
+            <!-- Items inserted by JS -->
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             DELIVERY INFORMATION
+             ================================================= -->
+
+        <div class="delivery-info-card">
+
+          <div class="delivery-info-icon">
+            🚚
+          </div>
+
+          <div>
+
+            <strong>
+              Delivery Information
+            </strong>
+
+            <p id="deliveryInfoText">
+              Your order is expected to arrive
+              within 3–7 business days.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ACTIONS
+             ================================================= -->
+
+        <div class="track-actions">
+
+          <a
+            href="shop.html"
+            class="track-primary-btn"
+          >
+            Continue Shopping
+          </a>
+
+          <a
+            href="account.html"
+            class="track-secondary-btn"
+          >
+            My Account
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           NO ORDER FOUND
+           ================================================= -->
+
+      <section
+        class="track-not-found"
+        id="trackNotFound"
+        hidden
+      >
+
+        <div class="not-found-icon">
+          🔎
+        </div>
+
+        <h2>
+          Order Not Found
+        </h2>
+
+        <p>
+          We couldn't find an order with that ID.
+          Please check the Order ID and try again.
+        </p>
+
+        <button
+          type="button"
+          id="tryAgainBtn"
+        >
+          Try Again
+        </button>
+
+      </section>
+
+
+      <!-- =================================================
+           TRUST SECTION
+           ================================================= -->
+
+      <section class="track-trust">
+
+        <div class="track-trust-item">
+
+          <span>
+            🔒
+          </span>
+
+          <div>
+
+            <strong>
+              Secure Orders
+            </strong>
+
+            <p>
+              Your order details stay protected.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="track-trust-item">
+
+          <span>
+            📦
+          </span>
+
+          <div>
+
+            <strong>
+              Easy Tracking
+            </strong>
+
+            <p>
+              Check your order status anytime.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="track-trust-item">
+
+          <span>
+            💬
+          </span>
+
+          <div>
+
+            <strong>
+              Need Help?
+            </strong>
+
+            <p>
+              Our support team is here to help.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-container">
+
+
+      <div class="footer-brand">
+
+        <a
+          href="index.html"
+          class="brand-logo"
+        >
+
+          <span class="brand-mark">
+            G
+          </span>
+
+          <span class="brand-text">
+            GlowSkin
+          </span>
+
+        </a>
+
+        <p>
+          Simple skincare for healthy,
+          confident and glowing skin.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          All Products
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="shop.html?category=moisturizers">
+          Moisturizers
+        </a>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Help
+        </h4>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a href="shipping-returns.html">
+          Shipping & Returns
+        </a>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Account
+        </h4>
+
+        <a href="account.html">
+          My Account
+        </a>
+
+        <a href="wishlist.html">
+          Wishlist
+        </a>
+
+        <a href="cart.html">
+          Cart
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 GlowSkin. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="assets/js/index.js"></script>
+
+  <script src="assets/js/track-order.js"></script>
+
+</body>
+
+</html>
