@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>GlowSkin Admin — Dashboard</title>
+
+  <meta
+    name="description"
+    content="GlowSkin admin dashboard for managing products, orders, customers and store settings."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/admin.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/admin-dashboard.css"
+  >
+</head>
+
+<body class="admin-body">
+
+
+  <!-- =====================================================
+       ADMIN LAYOUT
+       ===================================================== -->
+
+  <div class="admin-layout">
+
+
+    <!-- ===================================================
+         SIDEBAR
+         =================================================== -->
+
+    <aside
+      class="admin-sidebar"
+      id="adminSidebar"
+    >
+
+      <div class="admin-sidebar-top">
+
+
+        <!-- LOGO -->
+
+        <a
+          href="index.html"
+          class="admin-logo"
+        >
+          Glow<span>Skin</span>
+          <small>ADMIN</small>
+        </a>
+
+
+        <!-- MOBILE CLOSE -->
+
+        <button
+          type="button"
+          class="admin-sidebar-close"
+          id="adminSidebarClose"
+          aria-label="Close admin menu"
+        >
+          ×
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+          class="admin-nav"
+          aria-label="Admin Navigation"
+        >
+
+          <a
+            href="index.html"
+            class="admin-nav-item active"
+          >
+            <span class="admin-nav-icon">▦</span>
+            <span>Dashboard</span>
+          </a>
+
+
+          <a
+            href="products.html"
+            class="admin-nav-item"
+          >
+            <span class="admin-nav-icon">◈</span>
+            <span>Products</span>
+          </a>
+
+
+          <a
+            href="orders.html"
+            class="admin-nav-item"
+          >
+            <span class="admin-nav-icon">▤</span>
+            <span>Orders</span>
+            <span
+              class="admin-nav-badge"
+              id="sidebarOrderCount"
+            >
+              0
+            </span>
+          </a>
+
+
+          <a
+            href="customers.html"
+            class="admin-nav-item"
+          >
+            <span class="admin-nav-icon">♙</span>
+            <span>Customers</span>
+          </a>
+
+
+          <a
+            href="inventory.html"
+            class="admin-nav-item"
+          >
+            <span class="admin-nav-icon">▥</span>
+            <span>Inventory</span>
+          </a>
+
+
+          <a
+            href="coupons.html"
+            class="admin-nav-item"
+          >
+            <span class="admin-nav-icon">%</span>
+            <span>Coupons</span>
+          </a>
+
+
+          <a
+            href="banners.html"
+            class="admin-nav-item"
+          >
+            <span class="admin-nav-icon">▣</span>
+            <span>Banners</span>
+          </a>
+
+
+          <a
+            href="reviews.html"
+            class="admin-nav-item"
+          >
+            <span class="admin-nav-icon">★</span>
+            <span>Reviews</span>
+          </a>
+
+
+          <a
+            href="blog.html"
+            class="admin-nav-item"
+          >
+            <span class="admin-nav-icon">✎</span>
+            <span>Blog</span>
+          </a>
+
+
+          <div class="admin-nav-divider"></div>
+
+
+          <a
+            href="shipping.html"
+            class="admin-nav-item"
+          >
+            <span class="admin-nav-icon">⇢</span>
+            <span>Shipping</span>
+          </a>
+
+
+          <a
+            href="payments.html"
+            class="admin-nav-item"
+          >
+            <span class="admin-nav-icon">₹</span>
+            <span>Payments</span>
+          </a>
+
+
+          <a
+            href="settings.html"
+            class="admin-nav-item"
+          >
+            <span class="admin-nav-icon">⚙</span>
+            <span>Settings</span>
+          </a>
+
+        </nav>
+
+      </div>
+
+
+      <!-- SIDEBAR BOTTOM -->
+
+      <div class="admin-sidebar-bottom">
+
+        <a
+          href="../index.html"
+          class="view-store-link"
+        >
+          <span>↗</span>
+          View Store
+        </a>
+
+      </div>
+
+    </aside>
+
+
+    <!-- ===================================================
+         SIDEBAR OVERLAY
+         =================================================== -->
+
+    <div
+      class="admin-sidebar-overlay"
+      id="adminSidebarOverlay"
+    ></div>
+
+
+    <!-- ===================================================
+         MAIN AREA
+         =================================================== -->
+
+    <div class="admin-main">
+
+
+      <!-- =================================================
+           TOPBAR
+           ================================================= -->
+
+      <header class="admin-topbar">
+
+        <div class="admin-topbar-left">
+
+          <button
+            type="button"
+            class="admin-menu-btn"
+            id="adminSidebarOpen"
+            aria-label="Open admin menu"
+          >
+            ☰
+          </button>
+
+          <div>
+
+            <span class="admin-page-label">
+              ADMIN PANEL
+            </span>
+
+            <h1>
+              Dashboard
+            </h1>
+
+          </div>
+
+        </div>
+
+
+        <div class="admin-topbar-right">
+
+          <!-- STORE -->
+
+          <a
+            href="../index.html"
+            class="admin-topbar-store"
+          >
+            View Store ↗
+          </a>
+
+
+          <!-- NOTIFICATION -->
+
+          <button
+            type="button"
+            class="admin-topbar-icon"
+            aria-label="Notifications"
+          >
+            🔔
+          </button>
+
+
+          <!-- ADMIN PROFILE -->
+
+          <div class="admin-profile">
+
+            <div class="admin-avatar">
+              GS
+            </div>
+
+            <div class="admin-profile-info">
+
+              <strong>
+                Admin
+              </strong>
+
+              <span>
+                Store Manager
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </header>
+
+
+      <!-- =================================================
+           CONTENT
+           ================================================= -->
+
+      <main class="admin-content">
+
+
+        <!-- ===============================================
+             WELCOME
+             =============================================== -->
+
+        <section class="admin-welcome">
+
+          <div>
+
+            <span>
+              GLOWSKIN STORE
+            </span>
+
+            <h2>
+              Welcome back, Admin 👋
+            </h2>
+
+            <p>
+              Here's what's happening with your store today.
+            </p>
+
+          </div>
+
+          <a
+            href="products.html"
+            class="admin-primary-btn"
+          >
+            + Add Product
+          </a>
+
+        </section>
+
+
+        <!-- ===============================================
+             STAT CARDS
+             =============================================== -->
+
+        <section class="admin-stats-grid">
+
+
+          <!-- ORDERS -->
+
+          <div class="admin-stat-card">
+
+            <div class="admin-stat-icon orders">
+              ▤
+            </div>
+
+            <div class="admin-stat-content">
+
+              <span>
+                Total Orders
+              </span>
+
+              <strong id="totalOrders">
+                0
+              </strong>
+
+              <small>
+                All customer orders
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <!-- REVENUE -->
+
+          <div class="admin-stat-card">
+
+            <div class="admin-stat-icon revenue">
+              ₹
+            </div>
+
+            <div class="admin-stat-content">
+
+              <span>
+                Total Revenue
+              </span>
+
+              <strong id="totalRevenue">
+                ₹0
+              </strong>
+
+              <small>
+                From completed orders
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <!-- CUSTOMERS -->
+
+          <div class="admin-stat-card">
+
+            <div class="admin-stat-icon customers">
+              ♙
+            </div>
+
+            <div class="admin-stat-content">
+
+              <span>
+                Customers
+              </span>
+
+              <strong id="totalCustomers">
+                0
+              </strong>
+
+              <small>
+                Registered customers
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <!-- PRODUCTS -->
+
+          <div class="admin-stat-card">
+
+            <div class="admin-stat-icon products">
+              ◈
+            </div>
+
+            <div class="admin-stat-content">
+
+              <span>
+                Products
+              </span>
+
+              <strong id="totalProducts">
+                12
+              </strong>
+
+              <small>
+                Products in catalogue
+              </small>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- ===============================================
+             QUICK ACTIONS
+             =============================================== -->
+
+        <section class="admin-section">
+
+          <div class="admin-section-header">
+
+            <div>
+
+              <span>
+                STORE MANAGEMENT
+              </span>
+
+              <h2>
+                Quick Actions
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <div class="admin-quick-grid">
+
+
+            <a
+              href="products.html"
+              class="admin-quick-card"
+            >
+
+              <div class="admin-quick-icon">
+                ◈
+              </div>
+
+              <div>
+
+                <strong>
+                  Manage Products
+                </strong>
+
+                <span>
+                  Add, edit or remove products
+                </span>
+
+              </div>
+
+              <b>
+                →
+              </b>
+
+            </a>
+
+
+            <a
+              href="orders.html"
+              class="admin-quick-card"
+            >
+
+              <div class="admin-quick-icon">
+                ▤
+              </div>
+
+              <div>
+
+                <strong>
+                  Manage Orders
+                </strong>
+
+                <span>
+                  View and update customer orders
+                </span>
+
+              </div>
+
+              <b>
+                →
+              </b>
+
+            </a>
+
+
+            <a
+              href="customers.html"
+              class="admin-quick-card"
+            >
+
+              <div class="admin-quick-icon">
+                ♙
+              </div>
+
+              <div>
+
+                <strong>
+                  Customers
+                </strong>
+
+                <span>
+                  View registered customers
+                </span>
+
+              </div>
+
+              <b>
+                →
+              </b>
+
+            </a>
+
+
+            <a
+              href="inventory.html"
+              class="admin-quick-card"
+            >
+
+              <div class="admin-quick-icon">
+                ▥
+              </div>
+
+              <div>
+
+                <strong>
+                  Inventory
+                </strong>
+
+                <span>
+                  Check product stock levels
+                </span>
+
+              </div>
+
+              <b>
+                →
+              </b>
+
+            </a>
+
+          </div>
+
+        </section>
+
+
+        <!-- ===============================================
+             RECENT ORDERS + LOW STOCK
+             =============================================== -->
+
+        <section class="admin-dashboard-grid">
+
+
+          <!-- RECENT ORDERS -->
+
+          <div class="admin-panel-card">
+
+            <div class="admin-panel-header">
+
+              <div>
+
+                <span>
+                  ORDERS
+                </span>
+
+                <h2>
+                  Recent Orders
+                </h2>
+
+              </div>
+
+              <a href="orders.html">
+                View All →
+              </a>
+
+            </div>
+
+
+            <div
+              class="admin-orders-table-wrapper"
+              id="recentOrders"
+            >
+
+              <!-- JS WILL INSERT ORDERS -->
+
+            </div>
+
+
+            <div
+              class="admin-empty-small"
+              id="recentOrdersEmpty"
+            >
+
+              <div>
+                ▤
+              </div>
+
+              <strong>
+                No orders yet
+              </strong>
+
+              <p>
+                Customer orders will appear here.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- LOW STOCK -->
+
+          <div class="admin-panel-card">
+
+            <div class="admin-panel-header">
+
+              <div>
+
+                <span>
+                  INVENTORY
+                </span>
+
+                <h2>
+                  Stock Overview
+                </h2>
+
+              </div>
+
+              <a href="inventory.html">
+                Manage →
+              </a>
+
+            </div>
+
+
+            <div class="stock-overview">
+
+
+              <div class="stock-row">
+
+                <div class="stock-product">
+
+                  <div class="stock-product-image">
+                    VC
+                  </div>
+
+                  <div>
+
+                    <strong>
+                      Vitamin C Brightening Serum
+                    </strong>
+
+                    <span>
+                      SKU: GS-VCS-001
+                    </span>
+
+                  </div>
+
+                </div>
+
+                <div class="stock-value">
+                  <strong>
+                    24
+                  </strong>
+
+                  <span>
+                    In Stock
+                  </span>
+                </div>
+
+              </div>
+
+
+              <div class="stock-row">
+
+                <div class="stock-product">
+
+                  <div class="stock-product-image">
+                    SPF
+                  </div>
+
+                  <div>
+
+                    <strong>
+                      Daily Sunscreen SPF 50
+                    </strong>
+
+                    <span>
+                      SKU: GS-SPF-002
+                    </span>
+
+                  </div>
+
+                </div>
+
+                <div class="stock-value">
+                  <strong>
+                    18
+                  </strong>
+
+                  <span>
+                    In Stock
+                  </span>
+                </div>
+
+              </div>
+
+
+              <div class="stock-row">
+
+                <div class="stock-product">
+
+                  <div class="stock-product-image">
+                    NP
+                  </div>
+
+                  <div>
+
+                    <strong>
+                      Niacinamide Pore Serum
+                    </strong>
+
+                    <span>
+                      SKU: GS-NPS-003
+                    </span>
+
+                  </div>
+
+                </div>
+
+                <div class="stock-value warning">
+                  <strong>
+                    7
+                  </strong>
+
+                  <span>
+                    Low Stock
+                  </span>
+                </div>
+
+              </div>
+
+
+              <div class="stock-row">
+
+                <div class="stock-product">
+
+                  <div class="stock-product-image">
+                    FW
+                  </div>
+
+                  <div>
+
+                    <strong>
+                      Acne Control Face Wash
+                    </strong>
+
+                    <span>
+                      SKU: GS-ACF-010
+                    </span>
+
+                  </div>
+
+                </div>
+
+                <div class="stock-value danger">
+                  <strong>
+                    3
+                  </strong>
+
+                  <span>
+                    Very Low
+                  </span>
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- ===============================================
+             STORE OVERVIEW
+             =============================================== -->
+
+        <section class="admin-section">
+
+          <div class="admin-section-header">
+
+            <div>
+
+              <span>
+                STORE
+              </span>
+
+              <h2>
+                Store Overview
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <div class="admin-overview-grid">
+
+
+            <a
+              href="coupons.html"
+              class="admin-overview-card"
+            >
+
+              <div class="admin-overview-icon">
+                %
+              </div>
+
+              <div>
+
+                <strong>
+                  Coupons
+                </strong>
+
+                <span>
+                  Manage discount codes
+                </span>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="banners.html"
+              class="admin-overview-card"
+            >
+
+              <div class="admin-overview-icon">
+                ▣
+              </div>
+
+              <div>
+
+                <strong>
+                  Banners
+                </strong>
+
+                <span>
+                  Manage homepage banners
+                </span>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="reviews.html"
+              class="admin-overview-card"
+            >
+
+              <div class="admin-overview-icon">
+                ★
+              </div>
+
+              <div>
+
+                <strong>
+                  Reviews
+                </strong>
+
+                <span>
+                  Manage customer reviews
+                </span>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="blog.html"
+              class="admin-overview-card"
+            >
+
+              <div class="admin-overview-icon">
+                ✎
+              </div>
+
+              <div>
+
+                <strong>
+                  Blog
+                </strong>
+
+                <span>
+                  Publish skincare articles
+                </span>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="shipping.html"
+              class="admin-overview-card"
+            >
+
+              <div class="admin-overview-icon">
+                ⇢
+              </div>
+
+              <div>
+
+                <strong>
+                  Shipping
+                </strong>
+
+                <span>
+                  Delivery and shipping settings
+                </span>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="payments.html"
+              class="admin-overview-card"
+            >
+
+              <div class="admin-overview-icon">
+                ₹
+              </div>
+
+              <div>
+
+                <strong>
+                  Payments
+                </strong>
+
+                <span>
+                  Payment configuration
+                </span>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </section>
+
+
+        <!-- ===============================================
+             DEMO NOTICE
+             =============================================== -->
+
+        <section class="admin-demo-notice">
+
+          <div class="admin-demo-icon">
+            ⚠
+          </div>
+
+          <div>
+
+            <strong>
+              Frontend Demo Mode
+            </strong>
+
+            <p>
+              This admin panel currently uses browser
+              localStorage for demonstration. A real production
+              store should connect the admin panel to a secure
+              backend and database.
+            </p>
+
+          </div>
+
+        </section>
+
+
+      </main>
+
+
+      <!-- =================================================
+           FOOTER
+           ================================================= -->
+
+      <footer class="admin-footer">
+
+        <p>
+          © 2026 GlowSkin Admin Panel
+        </p>
+
+        <span>
+          Store Management System
+        </span>
+
+      </footer>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="../assets/js/admin.js"></script>
+  <script src="../assets/js/admin-dashboard.js"></script>
+
+</body>
+</html>
