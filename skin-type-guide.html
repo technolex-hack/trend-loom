@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="GlowSkin skin type guide. Learn about oily, dry, combination, normal and sensitive skin and find the right skincare routine."
+  >
+
+  <title>Skin Type Guide — GlowSkin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+
+  <!-- Skin Type Guide CSS -->
+  <link rel="stylesheet" href="assets/css/skin-type-guide.css">
+</head>
+
+<body>
+
+  <!-- =========================================
+       ANNOUNCEMENT BAR
+  ========================================== -->
+
+  <div class="announcement-bar">
+    ✨ Free shipping on orders above ₹999
+  </div>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <!-- Logo -->
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GlowSkin</span>
+      </a>
+
+
+      <!-- Desktop Navigation -->
+
+      <nav class="main-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+      </nav>
+
+
+      <!-- Header Actions -->
+
+      <div class="header-actions">
+
+        <!-- Search -->
+
+        <button
+          type="button"
+          class="header-action"
+          id="searchOpen"
+          aria-label="Search"
+        >
+          🔍
+        </button>
+
+
+        <!-- Account -->
+
+        <a
+          href="login.html"
+          class="header-action"
+          aria-label="Account"
+        >
+          👤
+        </a>
+
+
+        <!-- Wishlist -->
+
+        <a
+          href="wishlist.html"
+          class="header-action action-with-count"
+          aria-label="Wishlist"
+        >
+
+          ♡
+
+          <span
+            id="wishlistCount"
+            class="action-count"
+          >
+            0
+          </span>
+
+        </a>
+
+
+        <!-- Cart -->
+
+        <a
+          href="cart.html"
+          class="header-action action-with-count"
+          aria-label="Cart"
+        >
+
+          🛒
+
+          <span
+            id="cartCount"
+            class="action-count"
+          >
+            0
+          </span>
+
+        </a>
+
+
+        <!-- Mobile Menu -->
+
+        <button
+          type="button"
+          class="header-action mobile-menu-button"
+          id="mobileMenuOpen"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================
+       SEARCH OVERLAY
+  ========================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+    aria-hidden="true"
+  >
+
+    <div class="search-box">
+
+      <button
+        type="button"
+        class="search-close"
+        id="searchClose"
+        aria-label="Close search"
+      >
+        ×
+      </button>
+
+
+      <form id="searchForm">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search skincare products..."
+          autocomplete="off"
+        >
+
+        <button type="submit">
+          Search
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       MOBILE MENU
+  ========================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-hidden="true"
+  >
+
+    <div class="mobile-menu-inner">
+
+      <button
+        type="button"
+        class="mobile-menu-close"
+        id="mobileMenuClose"
+        aria-label="Close menu"
+      >
+        ×
+      </button>
+
+
+      <div class="mobile-menu-logo">
+
+        <span class="logo-mark">
+          G
+        </span>
+
+        <span class="logo-text">
+          GlowSkin
+        </span>
+
+      </div>
+
+
+      <nav class="mobile-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+        <a
+          href="skin-concerns.html"
+        >
+          Skin Concerns
+        </a>
+
+        <a
+          href="skin-type-guide.html"
+          class="active"
+        >
+          Skin Type Guide
+        </a>
+
+        <a href="wishlist.html">
+          Wishlist
+        </a>
+
+        <a href="account.html">
+          My Account
+        </a>
+
+        <a href="track-order.html">
+          Track Order
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       MAIN
+  ========================================== -->
+
+  <main class="skin-type-page">
+
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="skin-type-hero">
+
+      <div class="container">
+
+        <div class="skin-type-hero-content">
+
+          <span class="skin-type-eyebrow">
+            KNOW YOUR SKIN
+          </span>
+
+          <h1>
+            Find Your<br>
+            Skin Type
+          </h1>
+
+          <p>
+            Understanding your skin type is the
+            first step toward building a skincare
+            routine that works for you.
+          </p>
+
+          <a
+            href="#skinTypes"
+            class="btn btn-primary"
+          >
+            Explore Skin Types
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         SKIN TYPES
+    ====================================== -->
+
+    <section
+      class="skin-types-section"
+      id="skinTypes"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-eyebrow">
+            YOUR SKIN PROFILE
+          </span>
+
+          <h2>
+            Which Skin Type Are You?
+          </h2>
+
+          <p>
+            Learn the common characteristics of
+            different skin types and discover where
+            to start.
+          </p>
+
+        </div>
+
+
+        <div class="skin-types-grid">
+
+
+          <!-- OILY -->
+
+          <article class="skin-type-card">
+
+            <div class="skin-type-icon">
+              ◉
+            </div>
+
+            <span class="skin-type-number">
+              01
+            </span>
+
+            <h3>
+              Oily Skin
+            </h3>
+
+            <p>
+              Skin may appear shiny and produce
+              excess oil, especially around the
+              forehead, nose and chin.
+            </p>
+
+            <div class="skin-type-details">
+
+              <strong>
+                Look for
+              </strong>
+
+              <span>
+                Lightweight hydration ·
+                Gentle cleansing ·
+                Non-heavy formulas
+              </span>
+
+            </div>
+
+            <a
+              href="shop.html?concern=acne"
+              class="skin-type-link"
+            >
+              Explore Products →
+            </a>
+
+          </article>
+
+
+          <!-- DRY -->
+
+          <article class="skin-type-card">
+
+            <div class="skin-type-icon">
+              ◌
+            </div>
+
+            <span class="skin-type-number">
+              02
+            </span>
+
+            <h3>
+              Dry Skin
+            </h3>
+
+            <p>
+              Skin can feel tight, rough or
+              uncomfortable and may need extra
+              moisture and hydration.
+            </p>
+
+            <div class="skin-type-details">
+
+              <strong>
+                Look for
+              </strong>
+
+              <span>
+                Hydrating ingredients ·
+                Rich moisturizers ·
+                Gentle cleansers
+              </span>
+
+            </div>
+
+            <a
+              href="shop.html?concern=dryness"
+              class="skin-type-link"
+            >
+              Explore Products →
+            </a>
+
+          </article>
+
+
+          <!-- COMBINATION -->
+
+          <article class="skin-type-card">
+
+            <div class="skin-type-icon">
+              ◍
+            </div>
+
+            <span class="skin-type-number">
+              03
+            </span>
+
+            <h3>
+              Combination Skin
+            </h3>
+
+            <p>
+              Some areas may be oily while other
+              areas feel normal or dry, often with
+              more oil around the T-zone.
+            </p>
+
+            <div class="skin-type-details">
+
+              <strong>
+                Look for
+              </strong>
+
+              <span>
+                Balanced hydration ·
+                Lightweight layers ·
+                Targeted care
+              </span>
+
+            </div>
+
+            <a
+              href="shop.html"
+              class="skin-type-link"
+            >
+              Explore Products →
+            </a>
+
+          </article>
+
+
+          <!-- NORMAL -->
+
+          <article class="skin-type-card">
+
+            <div class="skin-type-icon">
+              ○
+            </div>
+
+            <span class="skin-type-number">
+              04
+            </span>
+
+            <h3>
+              Normal Skin
+            </h3>
+
+            <p>
+              Skin generally feels comfortable,
+              balanced and neither excessively
+              oily nor dry.
+            </p>
+
+            <div class="skin-type-details">
+
+              <strong>
+                Look for
+              </strong>
+
+              <span>
+                Gentle cleansing ·
+                Daily hydration ·
+                Sun protection
+              </span>
+
+            </div>
+
+            <a
+              href="shop.html"
+              class="skin-type-link"
+            >
+              Explore Products →
+            </a>
+
+          </article>
+
+
+          <!-- SENSITIVE -->
+
+          <article class="skin-type-card">
+
+            <div class="skin-type-icon">
+              ♡
+            </div>
+
+            <span class="skin-type-number">
+              05
+            </span>
+
+            <h3>
+              Sensitive Skin
+            </h3>
+
+            <p>
+              Skin may react easily to certain
+              products or environmental factors
+              and can feel uncomfortable.
+            </p>
+
+            <div class="skin-type-details">
+
+              <strong>
+                Look for
+              </strong>
+
+              <span>
+                Gentle formulas ·
+                Simple routines ·
+                Patch testing
+              </span>
+
+            </div>
+
+            <a
+              href="shop.html"
+              class="skin-type-link"
+            >
+              Shop Gentle Care →
+            </a>
+
+          </article>
+
+
+          <!-- NOT SURE -->
+
+          <article class="skin-type-card skin-type-card-special">
+
+            <div class="skin-type-icon">
+              ?
+            </div>
+
+            <span class="skin-type-number">
+              06
+            </span>
+
+            <h3>
+              Not Sure?
+            </h3>
+
+            <p>
+              Your skin can change with weather,
+              age, lifestyle and other factors.
+              Start simple and observe how your
+              skin responds.
+            </p>
+
+            <div class="skin-type-details">
+
+              <strong>
+                Start with
+              </strong>
+
+              <span>
+                Cleanser · Moisturizer ·
+                Sunscreen
+              </span>
+
+            </div>
+
+            <a
+              href="#skinTest"
+              class="skin-type-link"
+            >
+              Take Quick Test →
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         QUICK SKIN TEST
+    ====================================== -->
+
+    <section
+      class="skin-test-section"
+      id="skinTest"
+    >
+
+      <div class="container">
+
+        <div class="skin-test-card">
+
+          <div class="skin-test-heading">
+
+            <span class="section-eyebrow">
+              QUICK CHECK
+            </span>
+
+            <h2>
+              What Does Your Skin Feel Like?
+            </h2>
+
+            <p>
+              Answer a few simple questions to get
+              a basic skin-type suggestion.
+            </p>
+
+          </div>
+
+
+          <form
+            id="skinTestForm"
+            class="skin-test-form"
+          >
+
+
+            <!-- Question 1 -->
+
+            <div class="test-question">
+
+              <h3>
+                1. How does your skin usually feel
+                a few hours after cleansing?
+              </h3>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q1"
+                  value="oily"
+                  required
+                >
+
+                <span>
+                  Shiny or oily
+                </span>
+
+              </label>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q1"
+                  value="dry"
+                >
+
+                <span>
+                  Tight or dry
+                </span>
+
+              </label>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q1"
+                  value="combination"
+                >
+
+                <span>
+                  Oily in some areas and dry in others
+                </span>
+
+              </label>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q1"
+                  value="normal"
+                >
+
+                <span>
+                  Comfortable and balanced
+                </span>
+
+              </label>
+
+            </div>
+
+
+            <!-- Question 2 -->
+
+            <div class="test-question">
+
+              <h3>
+                2. How does your skin usually react
+                to new products?
+              </h3>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q2"
+                  value="sensitive"
+                  required
+                >
+
+                <span>
+                  It reacts easily
+                </span>
+
+              </label>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q2"
+                  value="normal"
+                >
+
+                <span>
+                  Usually fine
+                </span>
+
+              </label>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q2"
+                  value="oily"
+                >
+
+                <span>
+                  I mostly notice more oil
+                </span>
+
+              </label>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q2"
+                  value="dry"
+                >
+
+                <span>
+                  It can feel dry or uncomfortable
+                </span>
+
+              </label>
+
+            </div>
+
+
+            <!-- Question 3 -->
+
+            <div class="test-question">
+
+              <h3>
+                3. Which area gives you the most
+                trouble?
+              </h3>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q3"
+                  value="oily"
+                  required
+                >
+
+                <span>
+                  Forehead, nose and chin
+                </span>
+
+              </label>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q3"
+                  value="dry"
+                >
+
+                <span>
+                  Cheeks or around the mouth
+                </span>
+
+              </label>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q3"
+                  value="combination"
+                >
+
+                <span>
+                  Different areas behave differently
+                </span>
+
+              </label>
+
+              <label class="test-option">
+
+                <input
+                  type="radio"
+                  name="q3"
+                  value="normal"
+                >
+
+                <span>
+                  No particular problem
+                </span>
+
+              </label>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary skin-test-button"
+            >
+              Check My Skin Type
+            </button>
+
+          </form>
+
+
+          <!-- Test Result -->
+
+          <div
+            class="skin-test-result"
+            id="skinTestResult"
+            hidden
+          >
+
+            <div class="result-icon">
+              ✨
+            </div>
+
+            <span class="result-label">
+              YOUR BASIC RESULT
+            </span>
+
+            <h3 id="skinTestResultTitle">
+              Your Skin Type
+            </h3>
+
+            <p id="skinTestResultText">
+              Your result will appear here.
+            </p>
+
+            <a
+              href="shop.html"
+              id="skinTestShopLink"
+              class="btn btn-outline"
+            >
+              Explore Products
+            </a>
+
+            <button
+              type="button"
+              class="test-reset"
+              id="skinTestReset"
+            >
+              Take Test Again
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         ROUTINE
+    ====================================== -->
+
+    <section class="skin-routine-section">
+
+      <div class="container">
+
+        <div class="routine-heading">
+
+          <span class="section-eyebrow">
+            EVERYDAY BASICS
+          </span>
+
+          <h2>
+            A Simple Routine for Every Skin Type
+          </h2>
+
+        </div>
+
+
+        <div class="routine-grid">
+
+
+          <div class="routine-card">
+
+            <div class="routine-icon">
+              01
+            </div>
+
+            <h3>
+              Cleanse
+            </h3>
+
+            <p>
+              Start with a gentle cleanser to
+              remove daily buildup.
+            </p>
+
+          </div>
+
+
+          <div class="routine-card">
+
+            <div class="routine-icon">
+              02
+            </div>
+
+            <h3>
+              Treat
+            </h3>
+
+            <p>
+              Add a serum based on your skin
+              concern and routine.
+            </p>
+
+          </div>
+
+
+          <div class="routine-card">
+
+            <div class="routine-icon">
+              03
+            </div>
+
+            <h3>
+              Moisturize
+            </h3>
+
+            <p>
+              Use a moisturizer suited to your
+              skin's hydration needs.
+            </p>
+
+          </div>
+
+
+          <div class="routine-card">
+
+            <div class="routine-icon">
+              04
+            </div>
+
+            <h3>
+              Protect
+            </h3>
+
+            <p>
+              Use sunscreen during the day to
+              protect your skin.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CTA
+    ====================================== -->
+
+    <section class="skin-type-cta">
+
+      <div class="container">
+
+        <div class="skin-type-cta-box">
+
+          <span class="section-eyebrow">
+            READY TO START?
+          </span>
+
+          <h2>
+            Build Your Skincare Routine
+          </h2>
+
+          <p>
+            Explore GlowSkin products and find
+            simple essentials for your routine.
+          </p>
+
+          <a
+            href="shop.html"
+            class="btn btn-primary"
+          >
+            Shop All Products
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+      <div class="footer-brand">
+
+        <a
+          href="index.html"
+          class="logo"
+        >
+
+          <span class="logo-mark">
+            G
+          </span>
+
+          <span class="logo-text">
+            GlowSkin
+          </span>
+
+        </a>
+
+        <p>
+          Simple skincare for healthy,
+          confident and glowing skin.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          All Products
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Explore
+        </h4>
+
+        <a href="skin-concerns.html">
+          Skin Concerns
+        </a>
+
+        <a href="skin-type-guide.html">
+          Skin Type Guide
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+        <a href="about.html">
+          About GlowSkin
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Help
+        </h4>
+
+        <a href="track-order.html">
+          Track Order
+        </a>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="shipping-returns.html">
+          Shipping & Returns
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>
+          © 2026 GlowSkin. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script src="assets/js/index.js"></script>
+
+  <script src="assets/js/skin-type-guide.js"></script>
+
+</body>
+  </html>
