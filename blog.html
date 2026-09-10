@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GlowSkin — Skincare Blog</title>
+
+  <meta
+    name="description"
+    content="GlowSkin skincare tips, routines, ingredients and beauty guides."
+  >
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+
+  <!-- Blog CSS -->
+  <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       ANNOUNCEMENT
+       ===================================================== -->
+
+  <div class="announcement-bar">
+    ✨ Free shipping on orders above ₹999
+  </div>
+
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        Glow<span>Skin</span>
+      </a>
+
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="shop.html">Shop</a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+        <a href="blog.html" class="active">
+          Blog
+        </a>
+
+      </nav>
+
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+
+        <!-- Search -->
+        <button
+          type="button"
+          class="header-icon-btn"
+          id="searchOpen"
+          aria-label="Search"
+        >
+          🔍
+        </button>
+
+
+        <!-- Account -->
+        <a
+          href="login.html"
+          class="header-icon-btn"
+          aria-label="Account"
+        >
+          👤
+        </a>
+
+
+        <!-- Wishlist -->
+        <a
+          href="wishlist.html"
+          class="header-icon-btn count-btn"
+          aria-label="Wishlist"
+        >
+          ♡
+          <span id="wishlistCount" class="count">
+            0
+          </span>
+        </a>
+
+
+        <!-- Cart -->
+        <a
+          href="cart.html"
+          class="header-icon-btn count-btn"
+          aria-label="Cart"
+        >
+          🛒
+          <span id="cartCount" class="count">
+            0
+          </span>
+        </a>
+
+
+        <!-- Mobile Menu -->
+        <button
+          type="button"
+          class="mobile-menu-btn"
+          id="mobileMenuOpen"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       SEARCH OVERLAY
+       ===================================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+    aria-hidden="true"
+  >
+
+    <div class="search-box">
+
+      <button
+        type="button"
+        class="search-close"
+        id="searchClose"
+        aria-label="Close search"
+      >
+        ×
+      </button>
+
+      <form id="searchForm">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search skincare products..."
+          autocomplete="off"
+        >
+
+        <button type="submit">
+          Search
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MOBILE MENU
+       ===================================================== -->
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <div class="mobile-menu-panel">
+
+      <div class="mobile-menu-header">
+
+        <a href="index.html" class="logo">
+          Glow<span>Skin</span>
+        </a>
+
+        <button
+          type="button"
+          id="mobileMenuClose"
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <nav class="mobile-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+        <a href="account.html">
+          My Account
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       BLOG HERO
+       ===================================================== -->
+
+  <main class="blog-page">
+
+    <section class="blog-hero">
+
+      <div class="container">
+
+        <span class="blog-eyebrow">
+          GLOWSKIN JOURNAL
+        </span>
+
+        <h1>
+          Skincare Tips for Your
+          <span>Best Skin</span>
+        </h1>
+
+        <p>
+          Discover simple skincare tips, ingredient guides,
+          routines and expert-inspired beauty advice.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         BLOG CATEGORIES
+         ================================================= -->
+
+    <section class="blog-categories">
+
+      <div class="container">
+
+        <div class="category-buttons">
+
+          <button
+            type="button"
+            class="blog-category active"
+            data-category="all"
+          >
+            All
+          </button>
+
+          <button
+            type="button"
+            class="blog-category"
+            data-category="skincare"
+          >
+            Skincare
+          </button>
+
+          <button
+            type="button"
+            class="blog-category"
+            data-category="ingredients"
+          >
+            Ingredients
+          </button>
+
+          <button
+            type="button"
+            class="blog-category"
+            data-category="routine"
+          >
+            Routines
+          </button>
+
+          <button
+            type="button"
+            class="blog-category"
+            data-category="sun-care"
+          >
+            Sun Care
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         FEATURED ARTICLE
+         ================================================= -->
+
+    <section class="featured-blog-section">
+
+      <div class="container">
+
+        <div class="featured-blog">
+
+          <div class="featured-blog-image">
+
+            <div class="blog-placeholder">
+              ✨
+            </div>
+
+          </div>
+
+
+          <div class="featured-blog-content">
+
+            <span class="article-category">
+              Skincare
+            </span>
+
+            <h2>
+              How to Build a Simple Skincare Routine
+            </h2>
+
+            <p>
+              A good skincare routine doesn't need to be
+              complicated. Learn the basic steps you need
+              for clean, hydrated and protected skin.
+            </p>
+
+            <div class="article-meta">
+              <span>5 min read</span>
+              <span>•</span>
+              <span>GlowSkin Journal</span>
+            </div>
+
+            <a
+              href="#articles"
+              class="blog-read-more"
+            >
+              Read Article →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ARTICLES
+         ================================================= -->
+
+    <section
+      class="articles-section"
+      id="articles"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span>
+            LATEST ARTICLES
+          </span>
+
+          <h2>
+            Skincare Knowledge
+          </h2>
+
+          <p>
+            Easy-to-understand guides to help you
+            take better care of your skin.
+          </p>
+
+        </div>
+
+
+        <div class="articles-grid" id="articlesGrid">
+
+
+          <!-- Article 1 -->
+
+          <article
+            class="article-card"
+            data-category="ingredients"
+          >
+
+            <div class="article-image">
+
+              <div class="article-placeholder">
+                🍊
+              </div>
+
+              <span class="article-badge">
+                Ingredients
+              </span>
+
+            </div>
+
+            <div class="article-content">
+
+              <div class="article-small-meta">
+                4 min read
+              </div>
+
+              <h3>
+                Vitamin C: Benefits for Your Skin
+              </h3>
+
+              <p>
+                Learn how Vitamin C can support brighter
+                and more even-looking skin.
+              </p>
+
+              <a href="#articles">
+                Read More →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- Article 2 -->
+
+          <article
+            class="article-card"
+            data-category="sun-care"
+          >
+
+            <div class="article-image">
+
+              <div class="article-placeholder">
+                ☀️
+              </div>
+
+              <span class="article-badge">
+                Sun Care
+              </span>
+
+            </div>
+
+            <div class="article-content">
+
+              <div class="article-small-meta">
+                5 min read
+              </div>
+
+              <h3>
+                Why Sunscreen Should Be a Daily Step
+              </h3>
+
+              <p>
+                Understand why daily sun protection is
+                an important part of a skincare routine.
+              </p>
+
+              <a href="#articles">
+                Read More →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- Article 3 -->
+
+          <article
+            class="article-card"
+            data-category="routine"
+          >
+
+            <div class="article-image">
+
+              <div class="article-placeholder">
+                💧
+              </div>
+
+              <span class="article-badge">
+                Routine
+              </span>
+
+            </div>
+
+            <div class="article-content">
+
+              <div class="article-small-meta">
+                4 min read
+              </div>
+
+              <h3>
+                The Right Order to Apply Skincare
+              </h3>
+
+              <p>
+                Discover a simple order for applying your
+                everyday skincare products.
+              </p>
+
+              <a href="#articles">
+                Read More →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- Article 4 -->
+
+          <article
+            class="article-card"
+            data-category="skincare"
+          >
+
+            <div class="article-image">
+
+              <div class="article-placeholder">
+                🌿
+              </div>
+
+              <span class="article-badge">
+                Skincare
+              </span>
+
+            </div>
+
+            <div class="article-content">
+
+              <div class="article-small-meta">
+                6 min read
+              </div>
+
+              <h3>
+                How to Take Care of Oily Skin
+              </h3>
+
+              <p>
+                Simple tips to keep oily skin feeling
+                fresh without over-drying it.
+              </p>
+
+              <a href="#articles">
+                Read More →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- Article 5 -->
+
+          <article
+            class="article-card"
+            data-category="skincare"
+          >
+
+            <div class="article-image">
+
+              <div class="article-placeholder">
+                🌸
+              </div>
+
+              <span class="article-badge">
+                Skincare
+              </span>
+
+            </div>
+
+            <div class="article-content">
+
+              <div class="article-small-meta">
+                5 min read
+              </div>
+
+              <h3>
+                Simple Tips for Dry Skin
+              </h3>
+
+              <p>
+                Build a gentle routine that helps dry skin
+                feel comfortable and hydrated.
+              </p>
+
+              <a href="#articles">
+                Read More →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- Article 6 -->
+
+          <article
+            class="article-card"
+            data-category="ingredients"
+          >
+
+            <div class="article-image">
+
+              <div class="article-placeholder">
+                💚
+              </div>
+
+              <span class="article-badge">
+                Ingredients
+              </span>
+
+            </div>
+
+            <div class="article-content">
+
+              <div class="article-small-meta">
+                5 min read
+              </div>
+
+              <h3>
+                Understanding Niacinamide
+              </h3>
+
+              <p>
+                Learn about one of the most popular skincare
+                ingredients and how it fits into a routine.
+              </p>
+
+              <a href="#articles">
+                Read More →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- No Articles -->
+
+        <div
+          class="articles-empty"
+          id="articlesEmpty"
+          hidden
+        >
+          <div>
+            🔍
+          </div>
+
+          <h3>
+            No articles found
+          </h3>
+
+          <p>
+            Try selecting another category.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         NEWSLETTER CTA
+         ================================================= -->
+
+    <section class="blog-newsletter">
+
+      <div class="container">
+
+        <div class="blog-newsletter-box">
+
+          <span>
+            GLOWSKIN UPDATES
+          </span>
+
+          <h2>
+            Get Skincare Tips in Your Inbox
+          </h2>
+
+          <p>
+            Subscribe for skincare guides, product tips
+            and GlowSkin updates.
+          </p>
+
+          <form
+            class="blog-newsletter-form"
+            id="blogNewsletterForm"
+          >
+
+            <input
+              type="email"
+              id="blogNewsletterEmail"
+              placeholder="Enter your email"
+              autocomplete="email"
+              required
+            >
+
+            <button type="submit">
+              Subscribe
+            </button>
+
+          </form>
+
+          <small id="blogNewsletterMessage"></small>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+          Glow<span>Skin</span>
+        </a>
+
+        <p>
+          Simple skincare for healthy,
+          confident-looking skin.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Shop</h4>
+
+        <a href="shop.html">
+          All Products
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Help</h4>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="track-order.html">
+          Track Order
+        </a>
+
+        <a href="shipping-returns.html">
+          Shipping & Returns
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>GlowSkin</h4>
+
+        <a href="about.html">
+          About Us
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+        <a href="skin-type-guide.html">
+          Skin Type Guide
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>
+          © 2026 GlowSkin. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       TOAST
+       ===================================================== -->
+
+  <div
+    class="blog-toast"
+    id="blogToast"
+    role="status"
+    aria-live="polite"
+  >
+    <span id="blogToastText">
+      Done
+    </span>
+  </div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/blog.js"></script>
+
+</body>
+            </html>
