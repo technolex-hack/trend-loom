@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="GlowSkin skincare offers, discounts and special deals."
+  >
+
+  <title>Offers — GlowSkin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+
+  <!-- Offers CSS -->
+  <link rel="stylesheet" href="assets/css/offers.css">
+</head>
+
+<body>
+
+  <!-- =========================================
+       ANNOUNCEMENT BAR
+  ========================================== -->
+
+  <div class="announcement-bar">
+    ✨ Free shipping on orders above ₹999
+  </div>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GlowSkin</span>
+      </a>
+
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav">
+
+        <a href="index.html">Home</a>
+
+        <a href="shop.html">Shop</a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html" class="active">
+          Offers
+        </a>
+
+      </nav>
+
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+
+        <!-- Search -->
+        <button
+          type="button"
+          class="header-action"
+          id="searchOpen"
+          aria-label="Search"
+        >
+          🔍
+        </button>
+
+
+        <!-- Account -->
+        <a
+          href="login.html"
+          class="header-action"
+          aria-label="Account"
+        >
+          👤
+        </a>
+
+
+        <!-- Wishlist -->
+        <a
+          href="wishlist.html"
+          class="header-action action-with-count"
+          aria-label="Wishlist"
+        >
+          ♡
+          <span id="wishlistCount" class="action-count">
+            0
+          </span>
+        </a>
+
+
+        <!-- Cart -->
+        <a
+          href="cart.html"
+          class="header-action action-with-count"
+          aria-label="Cart"
+        >
+          🛒
+          <span id="cartCount" class="action-count">
+            0
+          </span>
+        </a>
+
+
+        <!-- Mobile Menu -->
+        <button
+          type="button"
+          class="header-action mobile-menu-button"
+          id="mobileMenuOpen"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================
+       SEARCH OVERLAY
+  ========================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+    aria-hidden="true"
+  >
+
+    <div class="search-box">
+
+      <button
+        type="button"
+        class="search-close"
+        id="searchClose"
+        aria-label="Close search"
+      >
+        ×
+      </button>
+
+      <form id="searchForm">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search skincare products..."
+          autocomplete="off"
+        >
+
+        <button type="submit">
+          Search
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       MOBILE MENU
+  ========================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-hidden="true"
+  >
+
+    <div class="mobile-menu-inner">
+
+      <button
+        type="button"
+        class="mobile-menu-close"
+        id="mobileMenuClose"
+        aria-label="Close menu"
+      >
+        ×
+      </button>
+
+      <div class="mobile-menu-logo">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GlowSkin</span>
+      </div>
+
+      <nav class="mobile-nav">
+
+        <a href="index.html">Home</a>
+
+        <a href="shop.html">Shop</a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html" class="active">
+          Offers
+        </a>
+
+        <a href="wishlist.html">Wishlist</a>
+
+        <a href="account.html">My Account</a>
+
+        <a href="track-order.html">Track Order</a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       OFFERS HERO
+  ========================================== -->
+
+  <main class="offers-page">
+
+    <section class="offers-hero">
+
+      <div class="container">
+
+        <div class="offers-hero-content">
+
+          <span class="offers-eyebrow">
+            ✨ SPECIAL OFFERS
+          </span>
+
+          <h1>
+            Glow More.<br>
+            Spend Less.
+          </h1>
+
+          <p>
+            Discover exclusive skincare deals and
+            save more on your everyday essentials.
+          </p>
+
+          <a
+            href="shop.html"
+            class="btn btn-primary"
+          >
+            Shop All Products
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         COUPON OFFERS
+    ========================================== -->
+
+    <section class="coupon-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-eyebrow">
+            SAVE MORE
+          </span>
+
+          <h2>
+            Exclusive Deals
+          </h2>
+
+          <p>
+            Use these offers while shopping at GlowSkin.
+          </p>
+
+        </div>
+
+
+        <div class="coupon-grid">
+
+
+          <!-- Offer 1 -->
+
+          <article class="coupon-card">
+
+            <div class="coupon-icon">
+              %
+            </div>
+
+            <div class="coupon-content">
+
+              <span class="coupon-label">
+                LIMITED OFFER
+              </span>
+
+              <h3>
+                10% OFF
+              </h3>
+
+              <p>
+                Get 10% off on orders above ₹499.
+              </p>
+
+              <div class="coupon-code-row">
+
+                <span class="coupon-code">
+                  GLOW10
+                </span>
+
+                <button
+                  type="button"
+                  class="copy-coupon"
+                  data-code="GLOW10"
+                >
+                  Copy
+                </button>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Offer 2 -->
+
+          <article class="coupon-card">
+
+            <div class="coupon-icon">
+              🚚
+            </div>
+
+            <div class="coupon-content">
+
+              <span class="coupon-label">
+                FREE DELIVERY
+              </span>
+
+              <h3>
+                FREE SHIPPING
+              </h3>
+
+              <p>
+                Free shipping on orders above ₹999.
+              </p>
+
+              <a
+                href="shop.html"
+                class="coupon-link"
+              >
+                Shop Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- Offer 3 -->
+
+          <article class="coupon-card">
+
+            <div class="coupon-icon">
+              ✨
+            </div>
+
+            <div class="coupon-content">
+
+              <span class="coupon-label">
+                SKINCARE DEAL
+              </span>
+
+              <h3>
+                DAILY GLOW
+              </h3>
+
+              <p>
+                Build your skincare routine with
+                our bestselling essentials.
+              </p>
+
+              <a
+                href="shop.html"
+                class="coupon-link"
+              >
+                Explore Products →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         DEAL PRODUCTS
+    ========================================== -->
+
+    <section class="deal-products">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-eyebrow">
+            BEST VALUE
+          </span>
+
+          <h2>
+            Products on Deal
+          </h2>
+
+          <p>
+            Pick your favourites and enjoy great value.
+          </p>
+
+        </div>
+
+
+        <div class="deal-grid">
+
+
+          <!-- Product 1 -->
+
+          <article class="deal-card">
+
+            <div class="deal-image">
+
+              <span class="deal-badge">
+                25% OFF
+              </span>
+
+              <div class="product-placeholder">
+                <span>Vitamin C</span>
+              </div>
+
+            </div>
+
+            <div class="deal-info">
+
+              <span class="deal-category">
+                SERUM
+              </span>
+
+              <h3>
+                Vitamin C Brightening Serum
+              </h3>
+
+              <div class="deal-rating">
+                ★★★★★
+                <span>(124)</span>
+              </div>
+
+              <div class="deal-price">
+
+                <strong>₹599</strong>
+
+                <del>₹799</del>
+
+              </div>
+
+              <a
+                href="product.html?product=vitamin-c-brightening-serum"
+                class="btn btn-primary deal-button"
+              >
+                View Product
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- Product 2 -->
+
+          <article class="deal-card">
+
+            <div class="deal-image">
+
+              <span class="deal-badge">
+                20% OFF
+              </span>
+
+              <div class="product-placeholder">
+                <span>SPF 50</span>
+              </div>
+
+            </div>
+
+            <div class="deal-info">
+
+              <span class="deal-category">
+                SUNSCREEN
+              </span>
+
+              <h3>
+                Daily Sunscreen SPF 50
+              </h3>
+
+              <div class="deal-rating">
+                ★★★★★
+                <span>(98)</span>
+              </div>
+
+              <div class="deal-price">
+
+                <strong>₹479</strong>
+
+                <del>₹599</del>
+
+              </div>
+
+              <a
+                href="product.html?product=daily-sunscreen-spf-50"
+                class="btn btn-primary deal-button"
+              >
+                View Product
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- Product 3 -->
+
+          <article class="deal-card">
+
+            <div class="deal-image">
+
+              <span class="deal-badge">
+                20% OFF
+              </span>
+
+              <div class="product-placeholder">
+                <span>Niacinamide</span>
+              </div>
+
+            </div>
+
+            <div class="deal-info">
+
+              <span class="deal-category">
+                SERUM
+              </span>
+
+              <h3>
+                Niacinamide Pore Serum
+              </h3>
+
+              <div class="deal-rating">
+                ★★★★★
+                <span>(87)</span>
+              </div>
+
+              <div class="deal-price">
+
+                <strong>₹549</strong>
+
+                <del>₹699</del>
+
+              </div>
+
+              <a
+                href="product.html?product=niacinamide-pore-serum"
+                class="btn btn-primary deal-button"
+              >
+                View Product
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- Product 4 -->
+
+          <article class="deal-card">
+
+            <div class="deal-image">
+
+              <span class="deal-badge">
+                10% OFF
+              </span>
+
+              <div class="product-placeholder">
+                <span>Moisturizer</span>
+              </div>
+
+            </div>
+
+            <div class="deal-info">
+
+              <span class="deal-category">
+                MOISTURIZER
+              </span>
+
+              <h3>
+                Daily Hydrating Moisturizer
+              </h3>
+
+              <div class="deal-rating">
+                ★★★★★
+                <span>(76)</span>
+              </div>
+
+              <div class="deal-price">
+
+                <strong>₹449</strong>
+
+                <del>₹499</del>
+
+              </div>
+
+              <a
+                href="product.html?product=daily-hydrating-moisturizer"
+                class="btn btn-primary deal-button"
+              >
+                View Product
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="view-all-deals">
+
+          <a
+            href="shop.html"
+            class="btn btn-outline"
+          >
+            View All Products
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         OFFER INFO
+    ========================================== -->
+
+    <section class="offer-info-section">
+
+      <div class="container">
+
+        <div class="offer-info-grid">
+
+          <div class="offer-info-card">
+
+            <div class="offer-info-icon">
+              🎁
+            </div>
+
+            <h3>
+              Exclusive Savings
+            </h3>
+
+            <p>
+              Enjoy special discounts on selected
+              GlowSkin products.
+            </p>
+
+          </div>
+
+
+          <div class="offer-info-card">
+
+            <div class="offer-info-icon">
+              🚚
+            </div>
+
+            <h3>
+              Free Shipping
+            </h3>
+
+            <p>
+              Orders above ₹999 qualify for free
+              standard shipping.
+            </p>
+
+          </div>
+
+
+          <div class="offer-info-card">
+
+            <div class="offer-info-icon">
+              🔒
+            </div>
+
+            <h3>
+              Secure Shopping
+            </h3>
+
+            <p>
+              Shop confidently with secure checkout
+              and multiple payment options.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+          <span class="logo-mark">G</span>
+          <span class="logo-text">GlowSkin</span>
+        </a>
+
+        <p>
+          Simple skincare for healthy,
+          confident and glowing skin.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Shop</h4>
+
+        <a href="shop.html">All Products</a>
+        <a href="shop.html?category=face-wash">Face Care</a>
+        <a href="shop.html?category=serums">Serums</a>
+        <a href="shop.html?category=sunscreen">Sunscreen</a>
+        <a href="offers.html">Offers</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Help</h4>
+
+        <a href="track-order.html">Track Order</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="shipping-returns.html">
+          Shipping & Returns
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Account</h4>
+
+        <a href="login.html">Login</a>
+        <a href="account.html">My Account</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="cart.html">Cart</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>
+          © 2026 GlowSkin. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================
+       TOAST
+  ========================================== -->
+
+  <div
+    class="offers-toast"
+    id="offersToast"
+    role="status"
+    aria-live="polite"
+  >
+    <span id="offersToastText">
+      Coupon copied!
+    </span>
+  </div>
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/offers.js"></script>
+
+</body>
+</html>
