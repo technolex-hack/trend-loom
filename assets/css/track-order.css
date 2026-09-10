@@ -1,0 +1,1040 @@
+/* =========================================================
+   GLOWSKIN — TRACK ORDER
+   File: assets/css/track-order.css
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.track-order-page {
+  min-height: 75vh;
+  padding: 70px 20px 90px;
+  background: var(--cream);
+}
+
+.track-order-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.track-page-header {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.track-eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  color: var(--primary);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.track-page-header h1 {
+  margin: 0 0 12px;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: 1.1;
+
+  color: var(--dark);
+}
+
+.track-page-header p {
+  max-width: 580px;
+  margin: 0 auto;
+
+  color: var(--muted);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SEARCH CARD
+   ========================================================= */
+
+.track-search-card {
+  padding: 28px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: 18px;
+
+  box-shadow: var(--shadow);
+
+  margin-bottom: 30px;
+}
+
+.track-order-form label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: var(--dark);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.track-input-row {
+  display: flex;
+  gap: 12px;
+}
+
+.track-input-row input {
+  flex: 1;
+
+  min-width: 0;
+  min-height: 50px;
+
+  padding: 0 16px;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  outline: none;
+
+  background: var(--white);
+  color: var(--dark);
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.track-input-row input::placeholder {
+  color: #aaa;
+}
+
+.track-input-row input:focus {
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(143, 91, 69, 0.1);
+}
+
+.track-input-row button {
+  min-width: 145px;
+  min-height: 50px;
+
+  padding: 0 22px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: var(--primary);
+  color: var(--white);
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.track-input-row button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.track-input-row button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   FORM ERROR
+   ========================================================= */
+
+.track-form-error {
+  min-height: 20px;
+
+  margin: 8px 0 0;
+
+  color: var(--danger);
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TRACK HELP
+   ========================================================= */
+
+.track-help {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-top: 5px;
+  padding-top: 18px;
+
+  border-top: 1px solid var(--border);
+}
+
+.track-help > span {
+  flex: 0 0 auto;
+
+  font-size: 18px;
+}
+
+.track-help p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESULT
+   ========================================================= */
+
+.track-result {
+  overflow: hidden;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
+   RESULT HEADER
+   ========================================================= */
+
+.track-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 28px 30px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.track-result-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+.track-result-header h2 {
+  margin: 0;
+
+  color: var(--dark);
+
+  font-size: 22px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+.track-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 34px;
+
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  background: #edf7ef;
+  color: var(--success);
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SUMMARY GRID
+   ========================================================= */
+
+.track-summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 1px;
+
+  background: var(--border);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.track-summary-item {
+  padding: 22px;
+
+  background: var(--white);
+}
+
+.track-summary-item span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+.track-summary-item strong {
+  display: block;
+
+  color: var(--dark);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.track-timeline {
+  padding: 32px 30px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.track-timeline h3 {
+  margin: 0 0 25px;
+
+  color: var(--dark);
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.timeline {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 0;
+}
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 20px;
+  left: 11%;
+  right: 11%;
+
+  height: 2px;
+
+  background: var(--border);
+
+  z-index: 0;
+}
+
+.timeline-step {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.timeline-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  border: 2px solid var(--border);
+  border-radius: 50%;
+
+  background: var(--white);
+
+  color: var(--muted);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.timeline-step.completed .timeline-icon,
+.timeline-step.active .timeline-icon {
+  border-color: var(--success);
+
+  background: var(--success);
+  color: var(--white);
+}
+
+.timeline-content strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--dark);
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.timeline-content span {
+  display: block;
+
+  max-width: 150px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ORDER ITEMS
+   ========================================================= */
+
+.track-items {
+  padding: 32px 30px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.track-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.track-section-heading h3 {
+  margin: 0;
+
+  color: var(--dark);
+
+  font-size: 18px;
+}
+
+.track-section-heading span {
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+.track-items-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 13px;
+
+  background: #fcfaf9;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.track-item-image {
+  width: 68px;
+  height: 68px;
+
+  flex: 0 0 68px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f4e9e3;
+}
+
+.track-item-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.track-item-image.placeholder {
+  color: var(--primary-light);
+
+  font-size: 25px;
+}
+
+.track-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.track-item-name {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--dark);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.track-item-meta {
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+.track-item-price {
+  flex: 0 0 auto;
+
+  color: var(--dark);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DELIVERY INFO
+   ========================================================= */
+
+.delivery-info-card {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  margin: 25px 30px;
+  padding: 18px;
+
+  border: 1px solid #dcebdd;
+  border-radius: 12px;
+
+  background: #f5fbf6;
+}
+
+.delivery-info-icon {
+  flex: 0 0 auto;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: var(--white);
+
+  font-size: 20px;
+}
+
+.delivery-info-card strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--dark);
+
+  font-size: 14px;
+}
+
+.delivery-info-card p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.track-actions {
+  display: flex;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 5px 30px 30px;
+}
+
+.track-primary-btn,
+.track-secondary-btn {
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.track-primary-btn {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.track-primary-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.track-secondary-btn {
+  border: 1px solid var(--border);
+
+  background: var(--white);
+  color: var(--dark);
+}
+
+.track-secondary-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+
+/* =========================================================
+   NOT FOUND
+   ========================================================= */
+
+.track-not-found {
+  padding: 60px 25px;
+
+  text-align: center;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: 18px;
+
+  box-shadow: var(--shadow);
+}
+
+.not-found-icon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #f8ece7;
+
+  font-size: 30px;
+}
+
+.track-not-found h2 {
+  margin: 0 0 10px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 28px;
+
+  color: var(--dark);
+}
+
+.track-not-found p {
+  max-width: 450px;
+
+  margin: 0 auto 22px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.track-not-found button {
+  min-height: 45px;
+
+  padding: 11px 22px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: var(--primary);
+  color: var(--white);
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TRUST
+   ========================================================= */
+
+.track-trust {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-top: 40px;
+}
+
+.track-trust-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 20px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: 13px;
+}
+
+.track-trust-item > span {
+  flex: 0 0 auto;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f8ece7;
+
+  font-size: 18px;
+}
+
+.track-trust-item strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--dark);
+
+  font-size: 13px;
+}
+
+.track-trust-item p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+.track-input-row input:focus-visible,
+.track-input-row button:focus-visible,
+.track-not-found button:focus-visible,
+.track-primary-btn:focus-visible,
+.track-secondary-btn:focus-visible {
+  outline: 3px solid var(--primary-light);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .track-order-page {
+    padding: 55px 16px 70px;
+  }
+
+  .track-summary-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .timeline-content span {
+    max-width: 120px;
+  }
+
+  .track-trust {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .track-order-page {
+    padding: 42px 14px 55px;
+  }
+
+  .track-page-header {
+    margin-bottom: 28px;
+  }
+
+  .track-page-header h1 {
+    font-size: 36px;
+  }
+
+  .track-page-header p {
+    font-size: 14px;
+  }
+
+  .track-search-card {
+    padding: 20px;
+  }
+
+  .track-input-row {
+    flex-direction: column;
+  }
+
+  .track-input-row button {
+    width: 100%;
+  }
+
+  .track-result-header {
+    align-items: flex-start;
+    flex-direction: column;
+
+    padding: 22px;
+  }
+
+  .track-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .track-summary-item {
+    padding: 17px 22px;
+  }
+
+  .track-timeline {
+    padding: 25px 20px;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+  }
+
+  .timeline::before {
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+
+    width: 2px;
+    height: auto;
+
+    right: auto;
+  }
+
+  .timeline-step {
+    flex-direction: row;
+
+    gap: 14px;
+
+    text-align: left;
+  }
+
+  .timeline-icon {
+    flex: 0 0 42px;
+
+    margin-bottom: 0;
+  }
+
+  .timeline-content span {
+    max-width: none;
+  }
+
+  .track-items {
+    padding: 25px 20px;
+  }
+
+  .track-item {
+    align-items: flex-start;
+  }
+
+  .track-item-image {
+    width: 58px;
+    height: 58px;
+
+    flex-basis: 58px;
+  }
+
+  .track-item-price {
+    font-size: 13px;
+  }
+
+  .delivery-info-card {
+    margin: 20px;
+  }
+
+  .track-actions {
+    flex-direction: column;
+
+    padding: 5px 20px 25px;
+  }
+
+  .track-primary-btn,
+  .track-secondary-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .track-page-header h1 {
+    font-size: 32px;
+  }
+
+  .track-search-card {
+    padding: 17px;
+  }
+
+  .track-item {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .track-item-name {
+    font-size: 13px;
+  }
+
+  .track-item-meta {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .track-input-row input,
+  .track-input-row button,
+  .timeline-icon,
+  .track-primary-btn,
+  .track-secondary-btn {
+    transition: none;
+  }
+
+  }
