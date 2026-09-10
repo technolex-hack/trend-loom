@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Orders — GlowSkin Admin</title>
+
+  <meta
+    name="description"
+    content="Manage GlowSkin customer orders"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/admin.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/admin-orders.css"
+  >
+</head>
+
+<body>
+
+  <!-- =====================================================
+       MOBILE SIDEBAR OVERLAY
+       ===================================================== -->
+
+  <div
+    class="admin-sidebar-overlay"
+    id="adminSidebarOverlay"
+  ></div>
+
+
+  <!-- =====================================================
+       SIDEBAR
+       ===================================================== -->
+
+  <aside
+    class="admin-sidebar"
+    id="adminSidebar"
+  >
+
+    <div class="admin-sidebar-header">
+
+      <a
+        href="index.html"
+        class="admin-logo"
+      >
+
+        <span class="admin-logo-mark">
+          G
+        </span>
+
+        <span>
+          <strong>GlowSkin</strong>
+          <small>Admin Panel</small>
+        </span>
+
+      </a>
+
+
+      <button
+        type="button"
+        class="admin-sidebar-close"
+        id="adminSidebarClose"
+        aria-label="Close sidebar"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <nav class="admin-navigation">
+
+      <a
+        href="index.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">⌂</span>
+        <span>Dashboard</span>
+      </a>
+
+
+      <a
+        href="products.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">▦</span>
+        <span>Products</span>
+      </a>
+
+
+      <a
+        href="orders.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">▤</span>
+        <span>Orders</span>
+
+        <span
+          class="admin-nav-badge"
+          id="sidebarOrderCount"
+        >
+          0
+        </span>
+      </a>
+
+
+      <a
+        href="customers.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">♙</span>
+        <span>Customers</span>
+      </a>
+
+
+      <a
+        href="inventory.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">▥</span>
+        <span>Inventory</span>
+      </a>
+
+
+      <a
+        href="coupons.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">%</span>
+        <span>Coupons</span>
+      </a>
+
+
+      <a
+        href="banners.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">▤</span>
+        <span>Banners</span>
+      </a>
+
+
+      <a
+        href="reviews.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">★</span>
+        <span>Reviews</span>
+      </a>
+
+
+      <a
+        href="blog.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">✎</span>
+        <span>Blog</span>
+      </a>
+
+
+      <a
+        href="shipping.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">▰</span>
+        <span>Shipping</span>
+      </a>
+
+
+      <a
+        href="payments.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">₹</span>
+        <span>Payments</span>
+      </a>
+
+
+      <a
+        href="settings.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">⚙</span>
+        <span>Settings</span>
+      </a>
+
+    </nav>
+
+
+    <div class="admin-sidebar-bottom">
+
+      <a
+        href="../index.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">↗</span>
+        <span>View Store</span>
+      </a>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main class="admin-main">
+
+
+    <!-- ===================================================
+         TOPBAR
+         =================================================== -->
+
+    <header class="admin-topbar">
+
+      <div class="admin-topbar-left">
+
+        <button
+          type="button"
+          class="admin-menu-button"
+          id="adminSidebarOpen"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+
+        <div>
+
+          <span class="admin-topbar-label">
+            Store Management
+          </span>
+
+          <h1 class="admin-topbar-title">
+            Orders
+          </h1>
+
+        </div>
+
+      </div>
+
+
+      <div class="admin-topbar-actions">
+
+        <a
+          href="../index.html"
+          class="admin-topbar-store"
+        >
+          View Store ↗
+        </a>
+
+
+        <button
+          type="button"
+          class="admin-icon-button"
+          aria-label="Notifications"
+        >
+          ♧
+        </button>
+
+
+        <div class="admin-profile">
+
+          <div class="admin-profile-avatar">
+            A
+          </div>
+
+          <div class="admin-profile-info">
+
+            <strong>Admin</strong>
+
+            <span>Store Manager</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- ===================================================
+         PAGE CONTENT
+         =================================================== -->
+
+    <div class="admin-page-content">
+
+
+      <!-- =================================================
+           PAGE HEADER
+           ================================================= -->
+
+      <section class="orders-page-header">
+
+        <div>
+
+          <span class="admin-eyebrow">
+            ORDER MANAGEMENT
+          </span>
+
+          <h2>
+            Orders
+          </h2>
+
+          <p>
+            View customer orders, payment details,
+            delivery information and order status.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           ORDER STATS
+           ================================================= -->
+
+      <section class="orders-stats-grid">
+
+        <div class="orders-stat-card">
+
+          <div class="orders-stat-icon">
+            ▤
+          </div>
+
+          <div>
+
+            <span>
+              Total Orders
+            </span>
+
+            <strong id="ordersTotalCount">
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="orders-stat-card">
+
+          <div class="orders-stat-icon pending">
+            ◷
+          </div>
+
+          <div>
+
+            <span>
+              Pending
+            </span>
+
+            <strong id="ordersPendingCount">
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="orders-stat-card">
+
+          <div class="orders-stat-icon shipped">
+            ▰
+          </div>
+
+          <div>
+
+            <span>
+              Shipped
+            </span>
+
+            <strong id="ordersShippedCount">
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="orders-stat-card">
+
+          <div class="orders-stat-icon delivered">
+            ✓
+          </div>
+
+          <div>
+
+            <span>
+              Delivered
+            </span>
+
+            <strong id="ordersDeliveredCount">
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           FILTER TOOLBAR
+           ================================================= -->
+
+      <section class="admin-orders-toolbar">
+
+        <div class="orders-search">
+
+          <span>
+            ⌕
+          </span>
+
+          <input
+            type="search"
+            id="orderSearch"
+            placeholder="Search order ID, name or email..."
+            autocomplete="off"
+          >
+
+        </div>
+
+
+        <div class="orders-filter">
+
+          <label for="orderStatusFilter">
+            Status
+          </label>
+
+          <select id="orderStatusFilter">
+
+            <option value="all">
+              All Status
+            </option>
+
+            <option value="Placed">
+              Placed
+            </option>
+
+            <option value="Processing">
+              Processing
+            </option>
+
+            <option value="Shipped">
+              Shipped
+            </option>
+
+            <option value="Delivered">
+              Delivered
+            </option>
+
+            <option value="Cancelled">
+              Cancelled
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="orders-filter">
+
+          <label for="orderPaymentFilter">
+            Payment
+          </label>
+
+          <select id="orderPaymentFilter">
+
+            <option value="all">
+              All Payments
+            </option>
+
+            <option value="COD">
+              Cash on Delivery
+            </option>
+
+            <option value="UPI">
+              UPI
+            </option>
+
+            <option value="Card">
+              Card
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="orders-clear-button"
+          id="clearOrderFilters"
+        >
+          Clear
+        </button>
+
+      </section>
+
+
+      <!-- =================================================
+           RESULT BAR
+           ================================================= -->
+
+      <div class="orders-result-bar">
+
+        <span id="orderResultCount">
+          0 orders
+        </span>
+
+      </div>
+
+
+      <!-- =================================================
+           ORDERS TABLE
+           ================================================= -->
+
+      <section class="admin-orders-card">
+
+        <div class="admin-orders-table-wrapper">
+
+          <table class="admin-orders-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Order
+                </th>
+
+                <th>
+                  Customer
+                </th>
+
+                <th>
+                  Date
+                </th>
+
+                <th>
+                  Total
+                </th>
+
+                <th>
+                  Payment
+                </th>
+
+                <th>
+                  Status
+                </th>
+
+                <th>
+                  Action
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody id="ordersTableBody">
+              <!-- Orders rendered by JS -->
+            </tbody>
+
+          </table>
+
+        </div>
+
+
+        <!-- Empty State -->
+
+        <div
+          class="orders-empty-state"
+          id="ordersEmptyState"
+          style="display:none;"
+        >
+
+          <div class="orders-empty-icon">
+            ▤
+          </div>
+
+          <h3>
+            No orders found
+          </h3>
+
+          <p>
+            Orders will appear here after customers
+            place an order.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           DEMO NOTICE
+           ================================================= -->
+
+      <section class="admin-orders-notice">
+
+        <div class="admin-orders-notice-icon">
+          !
+        </div>
+
+        <div>
+
+          <strong>
+            Frontend Demo
+          </strong>
+
+          <p>
+            Order information is currently stored in
+            browser localStorage. Payment processing,
+            database storage and real order fulfillment
+            will be connected later.
+          </p>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ===================================================
+         FOOTER
+         =================================================== -->
+
+    <footer class="admin-footer">
+
+      <span>
+        © 2026 GlowSkin Admin
+      </span>
+
+      <span>
+        Order Management
+      </span>
+
+    </footer>
+
+  </main>
+
+
+  <!-- =====================================================
+       ORDER DETAILS MODAL
+       ===================================================== -->
+
+  <div
+    class="admin-modal"
+    id="orderDetailsModal"
+    aria-hidden="true"
+  >
+
+    <div class="admin-modal-backdrop"></div>
+
+
+    <div
+      class="admin-modal-content order-details-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="orderDetailsTitle"
+    >
+
+      <!-- Modal Header -->
+
+      <div class="admin-modal-header">
+
+        <div>
+
+          <span class="admin-eyebrow">
+            ORDER DETAILS
+          </span>
+
+          <h2 id="orderDetailsTitle">
+            Order Details
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="admin-modal-close"
+          id="orderDetailsClose"
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <!-- Order Details -->
+
+      <div
+        class="order-details-body"
+        id="orderDetailsBody"
+      >
+        <!-- Rendered by JS -->
+      </div>
+
+
+      <!-- Modal Footer -->
+
+      <div class="order-details-footer">
+
+        <button
+          type="button"
+          class="admin-button admin-button-secondary"
+          id="closeOrderDetailsButton"
+        >
+          Close
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       STATUS MODAL
+       ===================================================== -->
+
+  <div
+    class="admin-modal"
+    id="orderStatusModal"
+    aria-hidden="true"
+  >
+
+    <div class="admin-modal-backdrop"></div>
+
+
+    <div
+      class="admin-modal-content order-status-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="orderStatusTitle"
+    >
+
+      <div class="admin-modal-header">
+
+        <div>
+
+          <span class="admin-eyebrow">
+            ORDER MANAGEMENT
+          </span>
+
+          <h2 id="orderStatusTitle">
+            Update Status
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="admin-modal-close"
+          id="orderStatusClose"
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <div class="order-status-body">
+
+        <p>
+          Update the status for
+          <strong id="statusOrderId">
+            this order
+          </strong>.
+        </p>
+
+
+        <label for="newOrderStatus">
+          Order Status
+        </label>
+
+        <select id="newOrderStatus">
+
+          <option value="Placed">
+            Placed
+          </option>
+
+          <option value="Processing">
+            Processing
+          </option>
+
+          <option value="Shipped">
+            Shipped
+          </option>
+
+          <option value="Delivered">
+            Delivered
+          </option>
+
+          <option value="Cancelled">
+            Cancelled
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="order-status-footer">
+
+        <button
+          type="button"
+          class="admin-button admin-button-secondary"
+          id="cancelStatusButton"
+        >
+          Cancel
+        </button>
+
+
+        <button
+          type="button"
+          class="admin-button admin-button-primary"
+          id="saveStatusButton"
+        >
+          Update Status
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       SCRIPTS
+       ===================================================== -->
+
+  <script src="../assets/js/admin.js"></script>
+
+  <script src="../assets/js/admin-orders.js"></script>
+
+</body>
+</html>
