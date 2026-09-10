@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GlowSkin — Shipping & Returns</title>
+
+  <meta
+    name="description"
+    content="Learn about GlowSkin shipping, delivery, returns, cancellations and refund policies."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/shipping-returns.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       ANNOUNCEMENT
+       ===================================================== -->
+
+  <div class="announcement-bar">
+    ✨ Free shipping on orders above ₹999
+  </div>
+
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo">
+        Glow<span>Skin</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="shop.html">Shop</a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+      </nav>
+
+      <div class="header-actions">
+
+        <button
+          type="button"
+          class="header-icon-btn"
+          id="searchOpen"
+          aria-label="Search"
+        >
+          🔍
+        </button>
+
+        <a
+          href="login.html"
+          class="header-icon-btn"
+          aria-label="Account"
+        >
+          👤
+        </a>
+
+        <a
+          href="wishlist.html"
+          class="header-icon-btn count-btn"
+          aria-label="Wishlist"
+        >
+          ♡
+          <span id="wishlistCount" class="count">0</span>
+        </a>
+
+        <a
+          href="cart.html"
+          class="header-icon-btn count-btn"
+          aria-label="Cart"
+        >
+          🛒
+          <span id="cartCount" class="count">0</span>
+        </a>
+
+        <button
+          type="button"
+          class="mobile-menu-btn"
+          id="mobileMenuOpen"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       SEARCH OVERLAY
+       ===================================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+    aria-hidden="true"
+  >
+
+    <div class="search-box">
+
+      <button
+        type="button"
+        class="search-close"
+        id="searchClose"
+        aria-label="Close search"
+      >
+        ×
+      </button>
+
+      <form id="searchForm">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search skincare products..."
+          autocomplete="off"
+        >
+
+        <button type="submit">
+          Search
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MOBILE MENU
+       ===================================================== -->
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <div class="mobile-menu-panel">
+
+      <div class="mobile-menu-header">
+
+        <a href="index.html" class="logo">
+          Glow<span>Skin</span>
+        </a>
+
+        <button
+          type="button"
+          id="mobileMenuClose"
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+
+      </div>
+
+      <nav class="mobile-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+        <a href="about.html">
+          About Us
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       SHIPPING & RETURNS PAGE
+       ===================================================== -->
+
+  <main class="shipping-page">
+
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
+
+    <section class="shipping-hero">
+
+      <div class="container">
+
+        <span class="shipping-eyebrow">
+          CUSTOMER INFORMATION
+        </span>
+
+        <h1>
+          Shipping
+          <span>& Returns</span>
+        </h1>
+
+        <p>
+          Everything you need to know about delivery,
+          cancellations, returns and refunds at GlowSkin.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         QUICK INFO
+         =================================================== -->
+
+    <section class="shipping-quick">
+
+      <div class="container">
+
+        <div class="quick-grid">
+
+          <div class="quick-card">
+
+            <div class="quick-icon">
+              🚚
+            </div>
+
+            <div>
+              <h3>
+                Fast Delivery
+              </h3>
+
+              <p>
+                Estimated delivery within 3–7 business days.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="quick-card">
+
+            <div class="quick-icon">
+              📦
+            </div>
+
+            <div>
+              <h3>
+                Free Shipping
+              </h3>
+
+              <p>
+                Free shipping on orders above ₹999.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="quick-card">
+
+            <div class="quick-icon">
+              ↩️
+            </div>
+
+            <div>
+              <h3>
+                Easy Returns
+              </h3>
+
+              <p>
+                Contact support to check return eligibility.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="quick-card">
+
+            <div class="quick-icon">
+              💬
+            </div>
+
+            <div>
+              <h3>
+                Customer Support
+              </h3>
+
+              <p>
+                We're here to help with your questions.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         POLICY CONTENT
+         =================================================== -->
+
+    <section class="shipping-content">
+
+      <div class="container">
+
+        <div class="policy-layout">
+
+
+          <!-- =============================================
+               SIDE NAV
+               ============================================= -->
+
+          <aside class="policy-sidebar">
+
+            <div class="policy-sidebar-card">
+
+              <h3>
+                On This Page
+              </h3>
+
+              <a href="#shipping">
+                Shipping
+              </a>
+
+              <a href="#delivery">
+                Delivery
+              </a>
+
+              <a href="#cancellation">
+                Order Cancellation
+              </a>
+
+              <a href="#returns">
+                Returns
+              </a>
+
+              <a href="#refunds">
+                Refunds
+              </a>
+
+              <a href="#damaged">
+                Damaged / Wrong Items
+              </a>
+
+            </div>
+
+          </aside>
+
+
+          <!-- =============================================
+               POLICY ARTICLES
+               ============================================= -->
+
+          <div class="policy-main">
+
+
+            <!-- SHIPPING -->
+
+            <article
+              class="policy-card"
+              id="shipping"
+            >
+
+              <div class="policy-icon">
+                🚚
+              </div>
+
+              <div class="policy-card-content">
+
+                <h2>
+                  Shipping
+                </h2>
+
+                <p>
+                  GlowSkin currently delivers skincare products
+                  to serviceable locations within India.
+                </p>
+
+                <ul>
+
+                  <li>
+                    Shipping is free for orders above ₹999.
+                  </li>
+
+                  <li>
+                    Orders below ₹999 may have a standard
+                    shipping charge of ₹49.
+                  </li>
+
+                  <li>
+                    Shipping charges, if applicable, are shown
+                    during checkout.
+                  </li>
+
+                  <li>
+                    Delivery availability may depend on the
+                    destination pincode.
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </article>
+
+
+            <!-- DELIVERY -->
+
+            <article
+              class="policy-card"
+              id="delivery"
+            >
+
+              <div class="policy-icon">
+                📦
+              </div>
+
+              <div class="policy-card-content">
+
+                <h2>
+                  Delivery
+                </h2>
+
+                <p>
+                  Orders are generally estimated to arrive within
+                  <strong>3–7 business days</strong>.
+                </p>
+
+                <ul>
+
+                  <li>
+                    Delivery timelines are estimates and may vary
+                    depending on your location.
+                  </li>
+
+                  <li>
+                    Delays may occur during holidays, extreme
+                    weather or courier-related issues.
+                  </li>
+
+                  <li>
+                    Please make sure your address and mobile
+                    number are correct before placing an order.
+                  </li>
+
+                  <li>
+                    Once an order has been shipped, tracking
+                    information may become available.
+                  </li>
+
+                </ul>
+
+                <a
+                  href="track-order.html"
+                  class="policy-link"
+                >
+                  Track Your Order →
+                </a>
+
+              </div>
+
+            </article>
+
+
+            <!-- CANCELLATION -->
+
+            <article
+              class="policy-card"
+              id="cancellation"
+            >
+
+              <div class="policy-icon">
+                ❌
+              </div>
+
+              <div class="policy-card-content">
+
+                <h2>
+                  Order Cancellation
+                </h2>
+
+                <p>
+                  If you need to cancel an order, contact GlowSkin
+                  support as soon as possible.
+                </p>
+
+                <ul>
+
+                  <li>
+                    Cancellation requests should be submitted
+                    before the order is processed or shipped.
+                  </li>
+
+                  <li>
+                    Once an order has been shipped, cancellation
+                    may no longer be possible.
+                  </li>
+
+                  <li>
+                    Please provide your order ID when contacting
+                    support.
+                  </li>
+
+                </ul>
+
+                <a
+                  href="contact.html"
+                  class="policy-link"
+                >
+                  Contact Support →
+                </a>
+
+              </div>
+
+            </article>
+
+
+            <!-- RETURNS -->
+
+            <article
+              class="policy-card"
+              id="returns"
+            >
+
+              <div class="policy-icon">
+                ↩️
+              </div>
+
+              <div class="policy-card-content">
+
+                <h2>
+                  Returns
+                </h2>
+
+                <p>
+                  We want you to have a smooth shopping experience.
+                  If you receive an eligible product that you need
+                  to return, contact our support team.
+                </p>
+
+                <ul>
+
+                  <li>
+                    Contact support with your order ID and reason
+                    for the return.
+                  </li>
+
+                  <li>
+                    Products may need to meet applicable return
+                    conditions before a return is accepted.
+                  </li>
+
+                  <li>
+                    Some products may not be eligible for return
+                    due to hygiene and safety considerations.
+                  </li>
+
+                  <li>
+                    Do not send a product back without first
+                    contacting customer support.
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </article>
+
+
+            <!-- REFUNDS -->
+
+            <article
+              class="policy-card"
+              id="refunds"
+            >
+
+              <div class="policy-icon">
+                💰
+              </div>
+
+              <div class="policy-card-content">
+
+                <h2>
+                  Refunds
+                </h2>
+
+                <p>
+                  If a refund is approved, the applicable refund
+                  amount and process will be communicated by our
+                  support team.
+                </p>
+
+                <ul>
+
+                  <li>
+                    Refund eligibility depends on the reason for
+                    the return or cancellation.
+                  </li>
+
+                  <li>
+                    Refund processing time may vary depending on
+                    the payment method.
+                  </li>
+
+                  <li>
+                    For prepaid orders, refunds may be processed
+                    through the applicable payment method.
+                  </li>
+
+                  <li>
+                    For Cash on Delivery orders, additional
+                    information may be required to process a refund.
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </article>
+
+
+            <!-- DAMAGED / WRONG -->
+
+            <article
+              class="policy-card"
+              id="damaged"
+            >
+
+              <div class="policy-icon">
+                ⚠️
+              </div>
+
+              <div class="policy-card-content">
+
+                <h2>
+                  Damaged or Wrong Items
+                </h2>
+
+                <p>
+                  If your order arrives damaged, defective or
+                  contains an incorrect item, please contact us
+                  as soon as possible.
+                </p>
+
+                <ul>
+
+                  <li>
+                    Keep the product and original packaging safely.
+                  </li>
+
+                  <li>
+                    Keep your order ID ready.
+                  </li>
+
+                  <li>
+                    Photos or other information may be requested
+                    to help us investigate the issue.
+                  </li>
+
+                  <li>
+                    Our support team will guide you through the
+                    next steps.
+                  </li>
+
+                </ul>
+
+                <a
+                  href="contact.html"
+                  class="policy-link"
+                >
+                  Report an Issue →
+                </a>
+
+              </div>
+
+            </article>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         HELP CTA
+         =================================================== -->
+
+    <section class="shipping-help">
+
+      <div class="container">
+
+        <div class="shipping-help-box">
+
+          <div class="shipping-help-icon">
+            💬
+          </div>
+
+          <div class="shipping-help-content">
+
+            <span>
+              NEED HELP?
+            </span>
+
+            <h2>
+              Have a Question About Your Order?
+            </h2>
+
+            <p>
+              Contact our support team and we'll help you
+              with your order, delivery or return.
+            </p>
+
+          </div>
+
+          <div class="shipping-help-actions">
+
+            <a
+              href="contact.html"
+              class="shipping-help-btn"
+            >
+              Contact Us
+            </a>
+
+            <a
+              href="faq.html"
+              class="shipping-help-link"
+            >
+              View FAQ
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+          Glow<span>Skin</span>
+        </a>
+
+        <p>
+          Simple skincare for healthy,
+          confident-looking skin.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          All Products
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Help
+        </h4>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="track-order.html">
+          Track Order
+        </a>
+
+        <a href="shipping-returns.html">
+          Shipping & Returns
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          GlowSkin
+        </h4>
+
+        <a href="about.html">
+          About Us
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+        <a href="skin-type-guide.html">
+          Skin Type Guide
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>
+          © 2026 GlowSkin. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/shipping-returns.js"></script>
+
+</body>
+</html>
