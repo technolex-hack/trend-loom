@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details — GlowSkin</title>
+
+    <meta
+        name="description"
+        content="View product details, ingredients, benefits and reviews at GlowSkin."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <!-- Product CSS -->
+    <link rel="stylesheet" href="assets/css/product.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         ANNOUNCEMENT BAR
+    ================================= -->
+    <div class="announcement-bar">
+        ✨ Free shipping on orders above ₹999
+    </div>
+
+
+    <!-- ================================
+         HEADER
+    ================================= -->
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="logo-mark">G</span>
+                <span class="logo-text">GlowSkin</span>
+            </a>
+
+
+            <!-- Navigation -->
+            <nav class="main-nav" id="mainNav">
+
+                <a href="index.html">Home</a>
+
+                <a href="shop.html">Shop</a>
+
+                <a href="shop.html?category=face-wash">
+                    Face Care
+                </a>
+
+                <a href="shop.html?category=serums">
+                    Serums
+                </a>
+
+                <a href="shop.html?category=sunscreen">
+                    Sunscreen
+                </a>
+
+                <a href="offers.html">
+                    Offers
+                </a>
+
+            </nav>
+
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <!-- Search -->
+                <button
+                    type="button"
+                    class="header-icon-btn"
+                    id="searchBtn"
+                    aria-label="Search"
+                >
+                    🔍
+                </button>
+
+
+                <!-- Account -->
+                <a
+                    href="login.html"
+                    class="header-icon-btn"
+                    aria-label="Account"
+                >
+                    👤
+                </a>
+
+
+                <!-- Wishlist -->
+                <a
+                    href="wishlist.html"
+                    class="header-icon-btn header-count-btn"
+                    aria-label="Wishlist"
+                >
+                    ♡
+                    <span id="wishlistCount" class="count-badge">0</span>
+                </a>
+
+
+                <!-- Cart -->
+                <a
+                    href="cart.html"
+                    class="header-icon-btn header-count-btn"
+                    aria-label="Cart"
+                >
+                    🛒
+                    <span id="cartCount" class="count-badge">0</span>
+                </a>
+
+
+                <!-- Mobile Menu -->
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================================
+         SEARCH OVERLAY
+    ================================= -->
+    <div class="search-overlay" id="searchOverlay">
+
+        <div class="search-box">
+
+            <button
+                type="button"
+                class="close-search"
+                id="closeSearch"
+                aria-label="Close search"
+            >
+                ×
+            </button>
+
+            <h2>What are you looking for?</h2>
+
+            <form id="searchForm">
+
+                <div class="search-input-wrapper">
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search skincare products..."
+                        autocomplete="off"
+                    >
+
+                    <button type="submit">
+                        Search
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         BREADCRUMB
+    ================================= -->
+    <section class="product-breadcrumb-section">
+
+        <div class="container">
+
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <span>›</span>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <span>›</span>
+
+                <span id="breadcrumbProduct">
+                    Product
+                </span>
+
+            </nav>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         PRODUCT DETAILS
+    ================================= -->
+    <main>
+
+        <section class="product-details-section">
+
+            <div class="container">
+
+                <div class="product-details-layout">
+
+
+                    <!-- =========================
+                         PRODUCT IMAGE GALLERY
+                    ========================== -->
+                    <div class="product-gallery">
+
+                        <!-- Main Image -->
+                        <div class="product-main-image">
+
+                            <button
+                                type="button"
+                                class="gallery-arrow gallery-prev"
+                                id="galleryPrev"
+                                aria-label="Previous image"
+                            >
+                                ‹
+                            </button>
+
+
+                            <img
+                                id="mainProductImage"
+                                src="assets/images/products/vitamin-c-serum-1.jpg"
+                                alt="Product"
+                            >
+
+
+                            <button
+                                type="button"
+                                class="gallery-arrow gallery-next"
+                                id="galleryNext"
+                                aria-label="Next image"
+                            >
+                                ›
+                            </button>
+
+                        </div>
+
+
+                        <!-- Thumbnail Images -->
+                        <div
+                            class="product-thumbnails"
+                            id="productThumbnails"
+                        >
+
+                            <button
+                                type="button"
+                                class="product-thumbnail active"
+                                data-image="assets/images/products/vitamin-c-serum-1.jpg"
+                            >
+                                <img
+                                    src="assets/images/products/vitamin-c-serum-1.jpg"
+                                    alt="Product image 1"
+                                >
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="product-thumbnail"
+                                data-image="assets/images/products/vitamin-c-serum-2.jpg"
+                            >
+                                <img
+                                    src="assets/images/products/vitamin-c-serum-2.jpg"
+                                    alt="Product image 2"
+                                >
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="product-thumbnail"
+                                data-image="assets/images/products/vitamin-c-serum-3.jpg"
+                            >
+                                <img
+                                    src="assets/images/products/vitamin-c-serum-3.jpg"
+                                    alt="Product image 3"
+                                >
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="product-thumbnail"
+                                data-image="assets/images/products/vitamin-c-serum-4.jpg"
+                            >
+                                <img
+                                    src="assets/images/products/vitamin-c-serum-4.jpg"
+                                    alt="Product image 4"
+                                >
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         PRODUCT INFORMATION
+                    ========================== -->
+                    <div class="product-info">
+
+
+                        <!-- Category -->
+                        <div
+                            class="product-category"
+                            id="productCategory"
+                        >
+                            SERUMS
+                        </div>
+
+
+                        <!-- Product Name -->
+                        <h1 id="productName">
+                            Vitamin C Brightening Serum
+                        </h1>
+
+
+                        <!-- Rating -->
+                        <div class="product-rating-row">
+
+                            <div class="product-rating">
+
+                                <span class="stars">
+                                    ★★★★★
+                                </span>
+
+                                <span id="productRating">
+                                    4.8
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="#reviews"
+                                class="review-link"
+                            >
+                                <span id="reviewCount">
+                                    124
+                                </span>
+                                Reviews
+                            </a>
+
+                        </div>
+
+
+                        <!-- Price -->
+                        <div class="product-price-box">
+
+                            <span
+                                class="product-price"
+                                id="productPrice"
+                            >
+                                ₹599
+                            </span>
+
+                            <span
+                                class="product-mrp"
+                                id="productMRP"
+                            >
+                                ₹799
+                            </span>
+
+                            <span
+                                class="product-discount"
+                                id="productDiscount"
+                            >
+                                25% OFF
+                            </span>
+
+                        </div>
+
+
+                        <!-- Short Description -->
+                        <p
+                            class="product-short-description"
+                            id="productDescription"
+                        >
+                            A lightweight Vitamin C serum that helps brighten
+                            dull skin and improve the appearance of dark spots
+                            for a healthy, glowing complexion.
+                        </p>
+
+
+                        <!-- Availability -->
+                        <div class="product-availability">
+
+                            <span class="availability-dot"></span>
+
+                            <span id="stockStatus">
+                                In Stock
+                            </span>
+
+                            <span class="stock-text">
+                                • Fast delivery available
+                            </span>
+
+                        </div>
+
+
+                        <!-- Divider -->
+                        <div class="product-divider"></div>
+
+
+                        <!-- Quantity -->
+                        <div class="quantity-section">
+
+                            <label>
+                                Quantity
+                            </label>
+
+                            <div class="quantity-control">
+
+                                <button
+                                    type="button"
+                                    id="quantityMinus"
+                                    aria-label="Decrease quantity"
+                                >
+                                    −
+                                </button>
+
+                                <input
+                                    type="number"
+                                    id="productQuantity"
+                                    value="1"
+                                    min="1"
+                                    max="10"
+                                    readonly
+                                >
+
+                                <button
+                                    type="button"
+                                    id="quantityPlus"
+                                    aria-label="Increase quantity"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Action Buttons -->
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="add-to-cart-btn"
+                                id="addToCartBtn"
+                            >
+                                🛒 Add to Cart
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="buy-now-btn"
+                                id="buyNowBtn"
+                            >
+                                Buy Now
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="product-wishlist-btn"
+                                id="productWishlistBtn"
+                                aria-label="Add to wishlist"
+                            >
+                                ♡
+                            </button>
+
+                        </div>
+
+
+                        <!-- Delivery Information -->
+                        <div class="delivery-info">
+
+                            <div class="delivery-item">
+
+                                <span class="delivery-icon">
+                                    🚚
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Free Shipping
+                                    </strong>
+
+                                    <p>
+                                        On orders above ₹999
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="delivery-item">
+
+                                <span class="delivery-icon">
+                                    🔒
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Secure Payment
+                                    </strong>
+
+                                    <p>
+                                        100% secure checkout
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="delivery-item">
+
+                                <span class="delivery-icon">
+                                    ↩️
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Easy Returns
+                                    </strong>
+
+                                    <p>
+                                        Simple return process
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             PRODUCT INFORMATION TABS
+        ================================= -->
+        <section class="product-information-section">
+
+            <div class="container">
+
+                <div class="product-tabs">
+
+                    <button
+                        type="button"
+                        class="product-tab active"
+                        data-tab="description"
+                    >
+                        Description
+                    </button>
+
+                    <button
+                        type="button"
+                        class="product-tab"
+                        data-tab="ingredients"
+                    >
+                        Ingredients
+                    </button>
+
+                    <button
+                        type="button"
+                        class="product-tab"
+                        data-tab="benefits"
+                    >
+                        Benefits
+                    </button>
+
+                    <button
+                        type="button"
+                        class="product-tab"
+                        data-tab="how-to-use"
+                    >
+                        How to Use
+                    </button>
+
+                </div>
+
+
+                <!-- Description -->
+                <div
+                    class="product-tab-content active"
+                    id="description"
+                >
+
+                    <h2>
+                        Product Details
+                    </h2>
+
+                    <p>
+                        GlowSkin Vitamin C Brightening Serum is designed
+                        for everyday skincare. Its lightweight texture
+                        absorbs quickly and helps improve the appearance
+                        of dull and uneven-looking skin.
+                    </p>
+
+                    <p>
+                        Use it as part of your daily skincare routine
+                        for skin that looks brighter, smoother and more
+                        refreshed.
+                    </p>
+
+                </div>
+
+
+                <!-- Ingredients -->
+                <div
+                    class="product-tab-content"
+                    id="ingredients"
+                >
+
+                    <h2>
+                        Ingredients
+                    </h2>
+
+                    <ul class="ingredient-list">
+
+                        <li>
+                            Vitamin C
+                        </li>
+
+                        <li>
+                            Niacinamide
+                        </li>
+
+                        <li>
+                            Hyaluronic Acid
+                        </li>
+
+                        <li>
+                            Aloe Vera
+                        </li>
+
+                        <li>
+                            Glycerin
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Benefits -->
+                <div
+                    class="product-tab-content"
+                    id="benefits"
+                >
+
+                    <h2>
+                        Benefits
+                    </h2>
+
+                    <ul class="benefits-list">
+
+                        <li>
+                            ✨ Helps brighten dull-looking skin
+                        </li>
+
+                        <li>
+                            🌿 Helps improve uneven skin tone
+                        </li>
+
+                        <li>
+                            💧 Provides lightweight hydration
+                        </li>
+
+                        <li>
+                            🌟 Helps improve the appearance of dark spots
+                        </li>
+
+                        <li>
+                            ❤️ Suitable for daily skincare
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- How To Use -->
+                <div
+                    class="product-tab-content"
+                    id="how-to-use"
+                >
+
+                    <h2>
+                        How to Use
+                    </h2>
+
+                    <ol class="how-to-use-list">
+
+                        <li>
+                            Cleanse your face with a gentle face wash.
+                        </li>
+
+                        <li>
+                            Take 2–3 drops of serum.
+                        </li>
+
+                        <li>
+                            Gently apply over face and neck.
+                        </li>
+
+                        <li>
+                            Follow with moisturizer.
+                        </li>
+
+                        <li>
+                            Use sunscreen during the daytime.
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             REVIEWS
+        ================================= -->
+        <section
+            class="reviews-section"
+            id="reviews"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-eyebrow">
+                        CUSTOMER LOVE
+                    </span>
+
+                    <h2>
+                        Customer Reviews
+                    </h2>
+
+                    <p>
+                        See what our customers think about this product.
+                    </p>
+
+                </div>
+
+
+                <div class="reviews-summary">
+
+                    <div class="overall-rating">
+
+                        <strong>
+                            4.8
+                        </strong>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <span>
+                            Based on 124 reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="review-bars">
+
+                        <div class="rating-bar">
+                            <span>5 ★</span>
+                            <div>
+                                <span style="width: 88%;"></span>
+                            </div>
+                            <small>88%</small>
+                        </div>
+
+                        <div class="rating-bar">
+                            <span>4 ★</span>
+                            <div>
+                                <span style="width: 8%;"></span>
+                            </div>
+                            <small>8%</small>
+                        </div>
+
+                        <div class="rating-bar">
+                            <span>3 ★</span>
+                            <div>
+                                <span style="width: 3%;"></span>
+                            </div>
+                            <small>3%</small>
+                        </div>
+
+                        <div class="rating-bar">
+                            <span>2 ★</span>
+                            <div>
+                                <span style="width: 1%;"></span>
+                            </div>
+                            <small>1%</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Review Cards -->
+                <div class="review-list">
+
+                    <article class="review-card">
+
+                        <div class="review-card-top">
+
+                            <strong>
+                                Ananya R.
+                            </strong>
+
+                            <span class="verified">
+                                ✓ Verified
+                            </span>
+
+                        </div>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            Really lightweight and easy to use.
+                            My skin feels brighter after regular use.
+                        </p>
+
+                    </article>
+
+
+                    <article class="review-card">
+
+                        <div class="review-card-top">
+
+                            <strong>
+                                Fathima K.
+                            </strong>
+
+                            <span class="verified">
+                                ✓ Verified
+                            </span>
+
+                        </div>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            Good texture and absorbs quickly.
+                            I really like it for my daily routine.
+                        </p>
+
+                    </article>
+
+
+                    <article class="review-card">
+
+                        <div class="review-card-top">
+
+                            <strong>
+                                Meera S.
+                            </strong>
+
+                            <span class="verified">
+                                ✓ Verified
+                            </span>
+
+                        </div>
+
+                        <div class="stars">
+                            ★★★★☆
+                        </div>
+
+                        <p>
+                            Nice serum for the price. Packaging
+                            was also good and delivery was quick.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             RELATED PRODUCTS
+        ================================= -->
+        <section class="related-products-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-eyebrow">
+                        YOU MAY ALSO LIKE
+                    </span>
+
+                    <h2>
+                        Related Products
+                    </h2>
+
+                    <p>
+                        Complete your skincare routine.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="related-products-grid"
+                    id="relatedProducts"
+                >
+
+                    <!-- JS will load related products -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         CART TOAST
+    ================================= -->
+    <div
+        class="cart-toast"
+        id="cartToast"
+        role="status"
+        aria-live="polite"
+    >
+
+        <div class="toast-icon">
+            ✓
+        </div>
+
+        <div class="toast-content">
+
+            <strong>
+                Added to cart
+            </strong>
+
+            <span id="toastProductName">
+                Product
+            </span>
+
+        </div>
+
+        <a href="cart.html">
+            View Cart
+        </a>
+
+    </div>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- Brand -->
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <span class="logo-mark">
+                            G
+                        </span>
+
+                        <span class="logo-text">
+                            GlowSkin
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Simple skincare for healthy,
+                        confident and glowing skin.
+                    </p>
+
+                </div>
+
+
+                <!-- Shop -->
+                <div class="footer-column">
+
+                    <h3>
+                        Shop
+                    </h3>
+
+                    <a href="shop.html">
+                        All Products
+                    </a>
+
+                    <a href="shop.html?category=face-wash">
+                        Face Wash
+                    </a>
+
+                    <a href="shop.html?category=serums">
+                        Serums
+                    </a>
+
+                    <a href="shop.html?category=moisturizers">
+                        Moisturizers
+                    </a>
+
+                    <a href="shop.html?category=sunscreen">
+                        Sunscreen
+                    </a>
+
+                </div>
+
+
+                <!-- Help -->
+                <div class="footer-column">
+
+                    <h3>
+                        Help
+                    </h3>
+
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                    <a href="shipping-returns.html">
+                        Shipping & Returns
+                    </a>
+
+                    <a href="track-order.html">
+                        Track Order
+                    </a>
+
+                </div>
+
+
+                <!-- About -->
+                <div class="footer-column">
+
+                    <h3>
+                        About
+                    </h3>
+
+                    <a href="about.html">
+                        About GlowSkin
+                    </a>
+
+                    <a href="blog.html">
+                        Blog
+                    </a>
+
+                    <a href="privacy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 GlowSkin. All rights reserved.
+                </p>
+
+                <div class="payment-methods">
+
+                    <span>UPI</span>
+                    <span>COD</span>
+                    <span>Cards</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
+    <!-- Main JS -->
+    <script src="assets/js/index.js"></script>
+
+    <!-- Product JS -->
+    <script src="assets/js/product.js"></script>
+
+</body>
+                              </html>
