@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog — GlowSkin Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/admin-blog.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="admin-brand">
+
+            <a href="index.html" class="admin-brand-link">
+                <span class="admin-brand-mark">G</span>
+
+                <span class="admin-brand-text">
+                    <strong>GlowSkin</strong>
+                    <small>Admin Panel</small>
+                </span>
+            </a>
+
+            <button
+                type="button"
+                class="admin-sidebar-close"
+                id="adminSidebarClose"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <div class="admin-nav-section">
+
+                <span class="admin-nav-title">MAIN</span>
+
+                <a href="index.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="products.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">▣</span>
+                    <span>Products</span>
+                </a>
+
+                <a href="orders.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">▤</span>
+                    <span>Orders</span>
+                </a>
+
+                <a href="customers.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">♙</span>
+                    <span>Customers</span>
+                </a>
+
+                <a href="inventory.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">▥</span>
+                    <span>Inventory</span>
+                </a>
+
+            </div>
+
+
+            <div class="admin-nav-section">
+
+                <span class="admin-nav-title">MARKETING</span>
+
+                <a href="coupons.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">%</span>
+                    <span>Coupons</span>
+                </a>
+
+                <a href="banners.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">▧</span>
+                    <span>Banners</span>
+                </a>
+
+                <a href="reviews.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">★</span>
+                    <span>Reviews</span>
+                </a>
+
+                <a href="blog.html" class="admin-nav-link active">
+                    <span class="admin-nav-icon">✎</span>
+                    <span>Blog</span>
+                </a>
+
+            </div>
+
+
+            <div class="admin-nav-section">
+
+                <span class="admin-nav-title">STORE</span>
+
+                <a href="#" class="admin-nav-link" data-coming-soon>
+                    <span class="admin-nav-icon">⌁</span>
+                    <span>Shipping</span>
+                </a>
+
+                <a href="#" class="admin-nav-link" data-coming-soon>
+                    <span class="admin-nav-icon">▣</span>
+                    <span>Payments</span>
+                </a>
+
+                <a href="#" class="admin-nav-link" data-coming-soon>
+                    <span class="admin-nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+                <a href="../index.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">↗</span>
+                    <span>View Store</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <div class="admin-sidebar-footer">
+
+            <div class="admin-user-mini">
+
+                <div class="admin-user-avatar">
+                    A
+                </div>
+
+                <div class="admin-user-info">
+                    <strong>Admin</strong>
+                    <span>Store Manager</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="admin-sidebar-overlay"
+        id="adminSidebarOverlay"
+    ></div>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+    <main class="admin-main">
+
+        <!-- TOPBAR -->
+        <header class="admin-topbar">
+
+            <div class="admin-topbar-left">
+
+                <button
+                    type="button"
+                    class="admin-menu-button"
+                    id="adminSidebarToggle"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+                <div>
+
+                    <h1 class="admin-page-title">
+                        Blog
+                    </h1>
+
+                    <p class="admin-page-subtitle">
+                        Manage skincare articles and blog posts
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-topbar-right">
+
+                <a
+                    href="../blog.html"
+                    class="admin-view-store"
+                >
+                    ↗ View Blog
+                </a>
+
+                <button
+                    type="button"
+                    class="admin-profile-button"
+                    aria-label="Admin profile"
+                >
+                    <span class="admin-profile-avatar">
+                        A
+                    </span>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <div class="admin-content">
+
+            <!-- PAGE HEADER -->
+            <section class="blog-page-header">
+
+                <div>
+
+                    <h2>
+                        Blog Posts
+                    </h2>
+
+                    <p>
+                        Create and manage educational skincare content.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-primary"
+                    id="addBlogButton"
+                >
+                    + Add Blog
+                </button>
+
+            </section>
+
+
+            <!-- STATS -->
+            <section class="blog-stats-grid">
+
+                <article class="blog-stat-card">
+
+                    <div class="blog-stat-icon">
+                        ✎
+                    </div>
+
+                    <div class="blog-stat-content">
+                        <span>Total Posts</span>
+                        <strong id="blogsTotalCount">0</strong>
+                    </div>
+
+                </article>
+
+
+                <article class="blog-stat-card">
+
+                    <div class="blog-stat-icon published">
+                        ✓
+                    </div>
+
+                    <div class="blog-stat-content">
+                        <span>Published</span>
+                        <strong id="blogsPublishedCount">0</strong>
+                    </div>
+
+                </article>
+
+
+                <article class="blog-stat-card">
+
+                    <div class="blog-stat-icon draft">
+                        ◷
+                    </div>
+
+                    <div class="blog-stat-content">
+                        <span>Drafts</span>
+                        <strong id="blogsDraftCount">0</strong>
+                    </div>
+
+                </article>
+
+
+                <article class="blog-stat-card">
+
+                    <div class="blog-stat-icon featured">
+                        ★
+                    </div>
+
+                    <div class="blog-stat-content">
+                        <span>Featured</span>
+                        <strong id="blogsFeaturedCount">0</strong>
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- TOOLBAR -->
+            <section class="blog-toolbar">
+
+                <div class="blog-search">
+
+                    <span class="blog-search-icon">
+                        ⌕
+                    </span>
+
+                    <input
+                        type="search"
+                        id="blogSearch"
+                        placeholder="Search title, author or content..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="blog-filter-group">
+
+                    <select id="blogCategoryFilter">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="ingredients">
+                            Ingredients
+                        </option>
+
+                        <option value="sun-care">
+                            Sun Care
+                        </option>
+
+                        <option value="routine">
+                            Routine
+                        </option>
+
+                        <option value="skincare">
+                            Skincare
+                        </option>
+
+                    </select>
+
+
+                    <select id="blogStatusFilter">
+
+                        <option value="all">
+                            All Status
+                        </option>
+
+                        <option value="published">
+                            Published
+                        </option>
+
+                        <option value="draft">
+                            Draft
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        type="button"
+                        class="blog-clear-button"
+                        id="clearBlogFilters"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- RESULT -->
+            <div class="blog-result-bar">
+
+                <span id="blogResultCount">
+                    0 posts
+                </span>
+
+            </div>
+
+
+            <!-- TABLE -->
+            <section class="admin-card blog-table-card">
+
+                <div class="blog-table-wrap">
+
+                    <table class="blog-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Post</th>
+
+                                <th>Category</th>
+
+                                <th>Author</th>
+
+                                <th>Date</th>
+
+                                <th>Status</th>
+
+                                <th>Featured</th>
+
+                                <th>Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="blogsTableBody">
+                            <!-- Generated by JavaScript -->
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY -->
+                <div
+                    class="blog-empty-state"
+                    id="blogsEmptyState"
+                    hidden
+                >
+
+                    <div class="blog-empty-icon">
+                        ✎
+                    </div>
+
+                    <h3>
+                        No blog posts found
+                    </h3>
+
+                    <p>
+                        Try changing your search or filters,
+                        or create a new blog post.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="admin-button admin-button-secondary"
+                        id="clearEmptyBlogFilters"
+                    >
+                        Clear Filters
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- NOTICE -->
+            <section class="admin-demo-notice blog-demo-notice">
+
+                <div class="admin-demo-icon">
+                    ℹ
+                </div>
+
+                <div>
+
+                    <strong>
+                        Frontend demo
+                    </strong>
+
+                    <p>
+                        Blog data is stored in your browser using
+                        localStorage. This admin panel is currently
+                        frontend-only and does not use a database.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     ADD / EDIT BLOG MODAL
+====================================================== -->
+
+<div
+    class="admin-modal"
+    id="blogModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="admin-modal-backdrop"
+        data-close-blog-modal
+    ></div>
+
+
+    <div
+        class="admin-modal-dialog blog-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="blogModalTitle"
+    >
+
+        <div class="admin-modal-header">
+
+            <div>
+
+                <h2 id="blogModalTitle">
+                    Add Blog Post
+                </h2>
+
+                <p>
+                    Create or update a blog article
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                class="admin-modal-close"
+                id="blogModalClose"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="blogForm">
+
+            <div class="admin-modal-body">
+
+                <input
+                    type="hidden"
+                    id="blogId"
+                >
+
+
+                <div class="blog-form-grid">
+
+                    <div class="admin-form-group blog-form-full">
+
+                        <label for="blogTitle">
+                            Blog Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="blogTitle"
+                            placeholder="Enter blog title"
+                            maxlength="160"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="blogCategory">
+                            Category
+                        </label>
+
+                        <select id="blogCategory" required>
+
+                            <option value="ingredients">
+                                Ingredients
+                            </option>
+
+                            <option value="sun-care">
+                                Sun Care
+                            </option>
+
+                            <option value="routine">
+                                Routine
+                            </option>
+
+                            <option value="skincare">
+                                Skincare
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="blogAuthor">
+                            Author
+                        </label>
+
+                        <input
+                            type="text"
+                            id="blogAuthor"
+                            placeholder="GlowSkin Team"
+                            maxlength="80"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="admin-form-group blog-form-full">
+
+                        <label for="blogExcerpt">
+                            Short Description
+                        </label>
+
+                        <textarea
+                            id="blogExcerpt"
+                            rows="3"
+                            maxlength="260"
+                            placeholder="Write a short description..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="admin-form-group blog-form-full">
+
+                        <label for="blogContent">
+                            Blog Content
+                        </label>
+
+                        <textarea
+                            id="blogContent"
+                            rows="9"
+                            placeholder="Write your blog content..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="blogImage">
+                            Image Path
+                        </label>
+
+                        <input
+                            type="text"
+                            id="blogImage"
+                            placeholder="assets/images/blog/example.jpg"
+                        >
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="blogDate">
+                            Publish Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="blogDate"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="blogStatus">
+                            Status
+                        </label>
+
+                        <select id="blogStatus">
+
+                            <option value="published">
+                                Published
+                            </option>
+
+                            <option value="draft">
+                                Draft
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="admin-form-group blog-featured-field">
+
+                        <label class="blog-checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="blogFeatured"
+                            >
+
+                            <span>
+                                Featured Post
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-modal-footer">
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-secondary"
+                    id="cancelBlogButton"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="admin-button admin-button-primary"
+                    id="saveBlogButton"
+                >
+                    Save Blog
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     VIEW BLOG MODAL
+====================================================== -->
+
+<div
+    class="admin-modal"
+    id="viewBlogModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="admin-modal-backdrop"
+        data-close-view-blog
+    ></div>
+
+
+    <div
+        class="admin-modal-dialog view-blog-modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="viewBlogTitle"
+    >
+
+        <div class="admin-modal-header">
+
+            <div>
+
+                <h2 id="viewBlogTitle">
+                    Blog Preview
+                </h2>
+
+                <p>
+                    Preview article content
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                class="admin-modal-close"
+                id="viewBlogClose"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="admin-modal-body">
+
+            <article class="blog-preview">
+
+                <div class="blog-preview-meta">
+
+                    <span id="viewBlogCategory">
+                        Skincare
+                    </span>
+
+                    <span>•</span>
+
+                    <span id="viewBlogDate">
+                        —
+                    </span>
+
+                </div>
+
+
+                <h3 id="viewBlogHeading">
+                    Blog Title
+                </h3>
+
+
+                <p
+                    class="blog-preview-excerpt"
+                    id="viewBlogExcerpt"
+                >
+                    Blog description
+                </p>
+
+
+                <div
+                    class="blog-preview-content"
+                    id="viewBlogContent"
+                >
+                    Blog content
+                </div>
+
+
+                <div class="blog-preview-author">
+
+                    By
+                    <strong id="viewBlogAuthor">
+                        GlowSkin Team
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="admin-modal-footer">
+
+            <button
+                type="button"
+                class="admin-button admin-button-secondary"
+                id="viewBlogCancel"
+            >
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     DELETE MODAL
+====================================================== -->
+
+<div
+    class="admin-modal"
+    id="deleteBlogModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="admin-modal-backdrop"
+        data-close-delete-blog
+    ></div>
+
+
+    <div
+        class="admin-modal-dialog blog-delete-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="deleteBlogTitle"
+    >
+
+        <div class="admin-modal-header">
+
+            <div>
+
+                <h2 id="deleteBlogTitle">
+                    Delete Blog
+                </h2>
+
+                <p>
+                    This action cannot be undone.
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                class="admin-modal-close"
+                id="deleteBlogClose"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="admin-modal-body">
+
+            <div class="delete-blog-warning">
+
+                <div class="delete-blog-icon">
+                    !
+                </div>
+
+                <p>
+                    Are you sure you want to permanently delete
+                    <strong id="deleteBlogName">
+                        this blog post
+                    </strong>?
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-modal-footer">
+
+            <button
+                type="button"
+                class="admin-button admin-button-secondary"
+                id="cancelDeleteBlog"
+            >
+                Cancel
+            </button>
+
+            <button
+                type="button"
+                class="admin-button admin-button-danger"
+                id="confirmDeleteBlog"
+            >
+                Delete Blog
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SCRIPTS -->
+<script src="../assets/js/admin.js"></script>
+<script src="../assets/js/admin-blog.js"></script>
+
+</body>
+                      </html>
