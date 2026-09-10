@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Find skincare products for acne, dark spots, dryness and dull skin at GlowSkin."
+  >
+
+  <title>Skin Concerns — GlowSkin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+
+  <!-- Skin Concerns CSS -->
+  <link rel="stylesheet" href="assets/css/skin-concerns.css">
+</head>
+
+<body>
+
+  <!-- =========================================
+       ANNOUNCEMENT
+  ========================================== -->
+
+  <div class="announcement-bar">
+    ✨ Free shipping on orders above ₹999
+  </div>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GlowSkin</span>
+      </a>
+
+
+      <nav class="main-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+      </nav>
+
+
+      <div class="header-actions">
+
+        <button
+          type="button"
+          class="header-action"
+          id="searchOpen"
+          aria-label="Search"
+        >
+          🔍
+        </button>
+
+
+        <a
+          href="login.html"
+          class="header-action"
+          aria-label="Account"
+        >
+          👤
+        </a>
+
+
+        <a
+          href="wishlist.html"
+          class="header-action action-with-count"
+          aria-label="Wishlist"
+        >
+          ♡
+
+          <span
+            id="wishlistCount"
+            class="action-count"
+          >
+            0
+          </span>
+
+        </a>
+
+
+        <a
+          href="cart.html"
+          class="header-action action-with-count"
+          aria-label="Cart"
+        >
+          🛒
+
+          <span
+            id="cartCount"
+            class="action-count"
+          >
+            0
+          </span>
+
+        </a>
+
+
+        <button
+          type="button"
+          class="header-action mobile-menu-button"
+          id="mobileMenuOpen"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================
+       SEARCH OVERLAY
+  ========================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+    aria-hidden="true"
+  >
+
+    <div class="search-box">
+
+      <button
+        type="button"
+        class="search-close"
+        id="searchClose"
+        aria-label="Close search"
+      >
+        ×
+      </button>
+
+      <form id="searchForm">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search skincare products..."
+          autocomplete="off"
+        >
+
+        <button type="submit">
+          Search
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       MOBILE MENU
+  ========================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-hidden="true"
+  >
+
+    <div class="mobile-menu-inner">
+
+      <button
+        type="button"
+        class="mobile-menu-close"
+        id="mobileMenuClose"
+        aria-label="Close menu"
+      >
+        ×
+      </button>
+
+
+      <div class="mobile-menu-logo">
+
+        <span class="logo-mark">G</span>
+
+        <span class="logo-text">
+          GlowSkin
+        </span>
+
+      </div>
+
+
+      <nav class="mobile-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+        <a
+          href="skin-concerns.html"
+          class="active"
+        >
+          Skin Concerns
+        </a>
+
+        <a href="wishlist.html">
+          Wishlist
+        </a>
+
+        <a href="account.html">
+          My Account
+        </a>
+
+        <a href="track-order.html">
+          Track Order
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       MAIN
+  ========================================== -->
+
+  <main class="skin-concerns-page">
+
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="concerns-hero">
+
+      <div class="container">
+
+        <div class="concerns-hero-content">
+
+          <span class="concerns-eyebrow">
+            YOUR SKIN, YOUR ROUTINE
+          </span>
+
+          <h1>
+            Skincare for<br>
+            Every Concern
+          </h1>
+
+          <p>
+            Find products designed to help you
+            care for your skin and build a simple,
+            effective routine.
+          </p>
+
+          <a
+            href="#concerns"
+            class="btn btn-primary"
+          >
+            Explore Concerns
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CONCERNS
+    ====================================== -->
+
+    <section
+      class="concerns-section"
+      id="concerns"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-eyebrow">
+            FIND YOUR MATCH
+          </span>
+
+          <h2>
+            What Is Your Skin Concern?
+          </h2>
+
+          <p>
+            Choose a concern to discover
+            suitable GlowSkin products.
+          </p>
+
+        </div>
+
+
+        <div class="concerns-grid">
+
+
+          <!-- Acne -->
+
+          <a
+            href="shop.html?concern=acne"
+            class="concern-card"
+          >
+
+            <div class="concern-icon">
+              ✦
+            </div>
+
+            <div class="concern-content">
+
+              <span>
+                CONCERN 01
+              </span>
+
+              <h3>
+                Acne & Breakouts
+              </h3>
+
+              <p>
+                Gentle skincare to help manage
+                blemishes and breakout-prone skin.
+              </p>
+
+              <strong>
+                Shop for Acne →
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- Dark Spots -->
+
+          <a
+            href="shop.html?concern=dark-spots"
+            class="concern-card"
+          >
+
+            <div class="concern-icon">
+              ✧
+            </div>
+
+            <div class="concern-content">
+
+              <span>
+                CONCERN 02
+              </span>
+
+              <h3>
+                Dark Spots
+              </h3>
+
+              <p>
+                Brightening-focused products for
+                the appearance of uneven skin tone.
+              </p>
+
+              <strong>
+                Shop for Dark Spots →
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- Dullness -->
+
+          <a
+            href="shop.html?concern=dullness"
+            class="concern-card"
+          >
+
+            <div class="concern-icon">
+              ☼
+            </div>
+
+            <div class="concern-content">
+
+              <span>
+                CONCERN 03
+              </span>
+
+              <h3>
+                Dull Skin
+              </h3>
+
+              <p>
+                Glow-enhancing skincare for skin
+                that looks tired or lacklustre.
+              </p>
+
+              <strong>
+                Shop for Dullness →
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- Dryness -->
+
+          <a
+            href="shop.html?concern=dryness"
+            class="concern-card"
+          >
+
+            <div class="concern-icon">
+              ♡
+            </div>
+
+            <div class="concern-content">
+
+              <span>
+                CONCERN 04
+              </span>
+
+              <h3>
+                Dry Skin
+              </h3>
+
+              <p>
+                Hydrating products to support
+                soft, comfortable-looking skin.
+              </p>
+
+              <strong>
+                Shop for Dryness →
+              </strong>
+
+            </div>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         ROUTINE GUIDE
+    ====================================== -->
+
+    <section class="routine-section">
+
+      <div class="container">
+
+        <div class="routine-layout">
+
+
+          <div class="routine-content">
+
+            <span class="section-eyebrow">
+              SIMPLE ROUTINE
+            </span>
+
+            <h2>
+              Start With the Basics
+            </h2>
+
+            <p>
+              A good skincare routine does not have
+              to be complicated. Start with a few
+              essential steps and stay consistent.
+            </p>
+
+            <a
+              href="shop.html"
+              class="btn btn-outline"
+            >
+              Build Your Routine
+            </a>
+
+          </div>
+
+
+          <div class="routine-steps">
+
+
+            <div class="routine-step">
+
+              <div class="routine-number">
+                01
+              </div>
+
+              <div>
+                <h3>
+                  Cleanse
+                </h3>
+
+                <p>
+                  Remove dirt, oil and impurities.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="routine-step">
+
+              <div class="routine-number">
+                02
+              </div>
+
+              <div>
+                <h3>
+                  Treat
+                </h3>
+
+                <p>
+                  Use a serum based on your concern.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="routine-step">
+
+              <div class="routine-number">
+                03
+              </div>
+
+              <div>
+                <h3>
+                  Moisturize
+                </h3>
+
+                <p>
+                  Keep your skin hydrated and comfortable.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="routine-step">
+
+              <div class="routine-number">
+                04
+              </div>
+
+              <div>
+                <h3>
+                  Protect
+                </h3>
+
+                <p>
+                  Finish with sunscreen during the day.
+                </p>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CTA
+    ====================================== -->
+
+    <section class="concerns-cta">
+
+      <div class="container">
+
+        <div class="cta-box">
+
+          <span class="section-eyebrow">
+            NOT SURE WHERE TO START?
+          </span>
+
+          <h2>
+            Find Products for Your Skin
+          </h2>
+
+          <p>
+            Explore our complete collection and
+            discover your everyday skincare essentials.
+          </p>
+
+          <a
+            href="shop.html"
+            class="btn btn-primary"
+          >
+            Shop All Products
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+      <div class="footer-brand">
+
+        <a
+          href="index.html"
+          class="logo"
+        >
+
+          <span class="logo-mark">
+            G
+          </span>
+
+          <span class="logo-text">
+            GlowSkin
+          </span>
+
+        </a>
+
+        <p>
+          Simple skincare for healthy,
+          confident and glowing skin.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          All Products
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Explore
+        </h4>
+
+        <a href="skin-concerns.html">
+          Skin Concerns
+        </a>
+
+        <a href="skin-type-guide.html">
+          Skin Type Guide
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+        <a href="about.html">
+          About GlowSkin
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Help
+        </h4>
+
+        <a href="track-order.html">
+          Track Order
+        </a>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="shipping-returns.html">
+          Shipping & Returns
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>
+          © 2026 GlowSkin. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script src="assets/js/index.js"></script>
+
+  <script src="assets/js/skin-concerns.js"></script>
+
+</body>
+</html>
