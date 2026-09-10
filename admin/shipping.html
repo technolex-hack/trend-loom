@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shipping — GlowSkin Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/admin-shipping.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ADMIN SIDEBAR
+    ====================================================== -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="admin-brand">
+            <a href="index.html" class="admin-brand-link">
+                <span class="admin-brand-mark">G</span>
+                <span class="admin-brand-text">GlowSkin</span>
+            </a>
+
+            <button
+                type="button"
+                class="admin-sidebar-close"
+                id="adminSidebarClose"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <div class="admin-nav-section">
+                <div class="admin-nav-title">Main</div>
+
+                <a href="index.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="products.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">▣</span>
+                    <span>Products</span>
+                </a>
+
+                <a href="orders.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">▤</span>
+                    <span>Orders</span>
+                </a>
+
+                <a href="customers.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">♙</span>
+                    <span>Customers</span>
+                </a>
+
+                <a href="inventory.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">▥</span>
+                    <span>Inventory</span>
+                </a>
+            </div>
+
+
+            <div class="admin-nav-section">
+                <div class="admin-nav-title">Marketing</div>
+
+                <a href="coupons.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">%</span>
+                    <span>Coupons</span>
+                </a>
+
+                <a href="banners.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">▰</span>
+                    <span>Banners</span>
+                </a>
+
+                <a href="reviews.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">★</span>
+                    <span>Reviews</span>
+                </a>
+
+                <a href="blog.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">▤</span>
+                    <span>Blog</span>
+                </a>
+            </div>
+
+
+            <div class="admin-nav-section">
+                <div class="admin-nav-title">Settings</div>
+
+                <a href="shipping.html" class="admin-nav-link active">
+                    <span class="admin-nav-icon">➜</span>
+                    <span>Shipping</span>
+                </a>
+
+                <a href="payments.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">₹</span>
+                    <span>Payments</span>
+                </a>
+
+                <a href="settings.html" class="admin-nav-link">
+                    <span class="admin-nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+            </div>
+
+        </nav>
+
+
+        <div class="admin-sidebar-footer">
+
+            <div class="admin-user-mini">
+                <div class="admin-user-avatar">A</div>
+
+                <div class="admin-user-info">
+                    <strong>Admin</strong>
+                    <span>GlowSkin Store</span>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="admin-sidebar-overlay"
+        id="adminSidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="admin-main">
+
+        <!-- TOPBAR -->
+
+        <header class="admin-topbar">
+
+            <div class="admin-topbar-left">
+
+                <button
+                    type="button"
+                    class="admin-menu-button"
+                    id="adminMenuButton"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+                <div>
+                    <h1 class="admin-page-title">
+                        Shipping
+                    </h1>
+
+                    <p class="admin-page-subtitle">
+                        Manage shipping methods and delivery charges.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="admin-topbar-right">
+
+                <a
+                    href="../index.html"
+                    class="admin-view-store"
+                    target="_blank"
+                >
+                    View Store
+                </a>
+
+                <button
+                    type="button"
+                    class="admin-profile-button"
+                    id="adminProfileButton"
+                >
+                    <span class="admin-profile-avatar">A</span>
+                    <span>Admin</span>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <div class="admin-content">
+
+            <div class="shipping-page-header">
+
+                <div>
+                    <h2>Shipping Settings</h2>
+
+                    <p>
+                        Configure delivery charges and shipping rules for your store.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-primary"
+                    id="saveShippingButton"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 SHIPPING SUMMARY
+            ================================================== -->
+
+            <div class="shipping-stats-grid">
+
+                <div class="shipping-stat-card">
+
+                    <div class="shipping-stat-icon">
+                        🚚
+                    </div>
+
+                    <div class="shipping-stat-content">
+                        <span>Standard Shipping</span>
+                        <strong id="standardShippingDisplay">
+                            ₹49
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="shipping-stat-card">
+
+                    <div class="shipping-stat-icon free">
+                        ✓
+                    </div>
+
+                    <div class="shipping-stat-content">
+                        <span>Free Shipping Above</span>
+                        <strong id="freeShippingDisplay">
+                            ₹999
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="shipping-stat-card">
+
+                    <div class="shipping-stat-icon cod">
+                        ₹
+                    </div>
+
+                    <div class="shipping-stat-content">
+                        <span>COD Charge</span>
+                        <strong id="codShippingDisplay">
+                            ₹30
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="shipping-stat-card">
+
+                    <div class="shipping-stat-icon">
+                        ⏱
+                    </div>
+
+                    <div class="shipping-stat-content">
+                        <span>Delivery Time</span>
+                        <strong id="deliveryTimeDisplay">
+                            3–7 Days
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SHIPPING METHOD
+            ================================================== -->
+
+            <section class="shipping-card">
+
+                <div class="shipping-card-header">
+
+                    <div>
+                        <h3>Standard Shipping</h3>
+
+                        <p>
+                            Main delivery method available to customers.
+                        </p>
+                    </div>
+
+                    <label class="shipping-toggle">
+                        <input
+                            type="checkbox"
+                            id="standardShippingEnabled"
+                            checked
+                        >
+
+                        <span class="shipping-toggle-slider"></span>
+                    </label>
+
+                </div>
+
+
+                <div class="shipping-form-grid">
+
+                    <div class="shipping-form-group">
+
+                        <label for="standardShippingCharge">
+                            Shipping Charge
+                        </label>
+
+                        <div class="shipping-input-prefix">
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="standardShippingCharge"
+                                min="0"
+                                step="1"
+                                value="49"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="shipping-form-group">
+
+                        <label for="freeShippingThreshold">
+                            Free Shipping Above
+                        </label>
+
+                        <div class="shipping-input-prefix">
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="freeShippingThreshold"
+                                min="0"
+                                step="1"
+                                value="999"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="shipping-form-group">
+
+                        <label for="minimumOrderAmount">
+                            Minimum Order Amount
+                        </label>
+
+                        <div class="shipping-input-prefix">
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="minimumOrderAmount"
+                                min="0"
+                                step="1"
+                                value="0"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="shipping-form-group">
+
+                        <label for="maximumOrderAmount">
+                            Maximum Order Amount
+                        </label>
+
+                        <div class="shipping-input-prefix">
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="maximumOrderAmount"
+                                min="0"
+                                step="1"
+                                value="0"
+                            >
+                        </div>
+
+                        <small>
+                            Set 0 for no maximum.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 DELIVERY
+            ================================================== -->
+
+            <section class="shipping-card">
+
+                <div class="shipping-card-header">
+
+                    <div>
+                        <h3>Delivery Information</h3>
+
+                        <p>
+                            Set the estimated delivery period shown to customers.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="shipping-form-grid">
+
+                    <div class="shipping-form-group">
+
+                        <label for="deliveryMinDays">
+                            Minimum Delivery Days
+                        </label>
+
+                        <input
+                            type="number"
+                            id="deliveryMinDays"
+                            min="1"
+                            value="3"
+                        >
+
+                    </div>
+
+
+                    <div class="shipping-form-group">
+
+                        <label for="deliveryMaxDays">
+                            Maximum Delivery Days
+                        </label>
+
+                        <input
+                            type="number"
+                            id="deliveryMaxDays"
+                            min="1"
+                            value="7"
+                        >
+
+                    </div>
+
+
+                    <div class="shipping-form-group shipping-form-full">
+
+                        <label for="deliveryMessage">
+                            Delivery Message
+                        </label>
+
+                        <input
+                            type="text"
+                            id="deliveryMessage"
+                            value="Delivered within 3–7 business days."
+                            placeholder="Example: Delivered within 3–7 business days."
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 COD
+            ================================================== -->
+
+            <section class="shipping-card">
+
+                <div class="shipping-card-header">
+
+                    <div>
+                        <h3>Cash on Delivery</h3>
+
+                        <p>
+                            Configure COD availability and additional charges.
+                        </p>
+                    </div>
+
+                    <label class="shipping-toggle">
+                        <input
+                            type="checkbox"
+                            id="codEnabled"
+                            checked
+                        >
+
+                        <span class="shipping-toggle-slider"></span>
+                    </label>
+
+                </div>
+
+
+                <div class="shipping-form-grid">
+
+                    <div class="shipping-form-group">
+
+                        <label for="codCharge">
+                            COD Charge
+                        </label>
+
+                        <div class="shipping-input-prefix">
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="codCharge"
+                                min="0"
+                                step="1"
+                                value="30"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="shipping-form-group">
+
+                        <label for="codMaximumAmount">
+                            Maximum COD Order Amount
+                        </label>
+
+                        <div class="shipping-input-prefix">
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="codMaximumAmount"
+                                min="0"
+                                step="1"
+                                value="5000"
+                            >
+                        </div>
+
+                        <small>
+                            Set 0 for no maximum.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SHIPPING NOTES
+            ================================================== -->
+
+            <section class="shipping-card">
+
+                <div class="shipping-card-header">
+
+                    <div>
+                        <h3>Customer Shipping Note</h3>
+
+                        <p>
+                            This message can be shown during checkout.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="shipping-form-grid">
+
+                    <div class="shipping-form-group shipping-form-full">
+
+                        <label for="shippingNote">
+                            Shipping Note
+                        </label>
+
+                        <textarea
+                            id="shippingNote"
+                            rows="4"
+                            placeholder="Enter a message for customers..."
+                        >Free shipping is available on orders above ₹999.</textarea>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 DEMO NOTICE
+            ================================================== -->
+
+            <div class="admin-notice shipping-demo-notice">
+
+                <span class="admin-notice-icon">ℹ</span>
+
+                <div>
+                    <strong>Frontend Demo</strong>
+
+                    <p>
+                        These settings are stored in your browser using
+                        localStorage. For a real store, connect shipping
+                        settings to your backend or e-commerce platform.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="../assets/js/admin.js"></script>
+    <script src="../assets/js/admin-shipping.js"></script>
+
+</body>
+  </html>
