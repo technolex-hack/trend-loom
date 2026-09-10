@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="GlowSkin customer account"
+  >
+
+  <title>My Account — GlowSkin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link
+    rel="stylesheet"
+    href="assets/css/index.css"
+  >
+
+  <!-- Account CSS -->
+  <link
+    rel="stylesheet"
+    href="assets/css/account.css"
+  >
+</head>
+
+<body>
+
+  <!-- =====================================================
+       ANNOUNCEMENT
+       ===================================================== -->
+
+  <div class="announcement-bar">
+    ✨ Free shipping on orders above ₹999
+  </div>
+
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="header-container">
+
+      <!-- Logo -->
+
+      <a
+        href="index.html"
+        class="brand-logo"
+      >
+        <span class="brand-mark">G</span>
+
+        <span class="brand-text">
+          GlowSkin
+        </span>
+      </a>
+
+
+      <!-- Desktop Navigation -->
+
+      <nav class="main-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="shop.html?category=offers">
+          Offers
+        </a>
+
+      </nav>
+
+
+      <!-- Header Actions -->
+
+      <div class="header-actions">
+
+        <!-- Search -->
+
+        <button
+          type="button"
+          class="header-icon-btn"
+          id="searchOpen"
+          aria-label="Search"
+        >
+          🔍
+        </button>
+
+
+        <!-- Account -->
+
+        <a
+          href="account.html"
+          class="header-icon-btn active"
+          aria-label="My Account"
+        >
+          👤
+        </a>
+
+
+        <!-- Wishlist -->
+
+        <a
+          href="wishlist.html"
+          class="header-icon-btn"
+          aria-label="Wishlist"
+        >
+          ♡
+
+          <span
+            class="header-count"
+            id="wishlistCount"
+            hidden
+          >
+            0
+          </span>
+        </a>
+
+
+        <!-- Cart -->
+
+        <a
+          href="cart.html"
+          class="header-icon-btn"
+          aria-label="Cart"
+        >
+          🛒
+
+          <span
+            class="header-count"
+            id="cartCount"
+            hidden
+          >
+            0
+          </span>
+        </a>
+
+
+        <!-- Mobile Menu -->
+
+        <button
+          type="button"
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       SEARCH OVERLAY
+       ===================================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+  >
+
+    <div class="search-box">
+
+      <button
+        type="button"
+        class="search-close"
+        id="searchClose"
+        aria-label="Close search"
+      >
+        ×
+      </button>
+
+      <form
+        id="searchForm"
+        class="search-form"
+      >
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search skincare products..."
+          autocomplete="off"
+        >
+
+        <button type="submit">
+          Search
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MOBILE MENU
+       ===================================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <div class="mobile-menu-inner">
+
+      <div class="mobile-menu-header">
+
+        <strong>
+          GlowSkin
+        </strong>
+
+        <button
+          type="button"
+          id="mobileMenuClose"
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <nav class="mobile-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="shop.html?category=offers">
+          Offers
+        </a>
+
+        <a href="account.html">
+          My Account
+        </a>
+
+        <a href="wishlist.html">
+          Wishlist
+        </a>
+
+        <a href="cart.html">
+          Cart
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       ACCOUNT PAGE
+       ===================================================== -->
+
+  <main class="account-page">
+
+    <div class="account-container">
+
+
+      <!-- Page Header -->
+
+      <div class="account-page-header">
+
+        <div>
+
+          <span class="account-eyebrow">
+            MY GLOWSKIN
+          </span>
+
+          <h1>
+            My Account
+          </h1>
+
+          <p>
+            Manage your profile, orders and skincare shopping.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           ACCOUNT LAYOUT
+           ================================================= -->
+
+      <div class="account-layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="account-sidebar">
+
+          <div class="account-user">
+
+            <div
+              class="account-avatar"
+              id="accountAvatar"
+            >
+              G
+            </div>
+
+            <div>
+
+              <strong id="sidebarUserName">
+                Guest
+              </strong>
+
+              <span id="sidebarUserEmail">
+                Please login
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <nav class="account-nav">
+
+            <button
+              type="button"
+              class="account-nav-item active"
+              data-section="overview"
+            >
+              <span>🏠</span>
+              Overview
+            </button>
+
+            <button
+              type="button"
+              class="account-nav-item"
+              data-section="profile"
+            >
+              <span>👤</span>
+              Profile
+            </button>
+
+            <button
+              type="button"
+              class="account-nav-item"
+              data-section="orders"
+            >
+              <span>📦</span>
+              My Orders
+            </button>
+
+            <a
+              href="wishlist.html"
+              class="account-nav-item"
+            >
+              <span>♡</span>
+              Wishlist
+            </a>
+
+            <a
+              href="cart.html"
+              class="account-nav-item"
+            >
+              <span>🛒</span>
+              Cart
+            </a>
+
+          </nav>
+
+
+          <button
+            type="button"
+            class="account-logout"
+            id="logoutBtn"
+          >
+            🚪 Logout
+          </button>
+
+        </aside>
+
+
+        <!-- =================================================
+             CONTENT
+             ================================================= -->
+
+        <section class="account-content">
+
+
+          <!-- =================================================
+               OVERVIEW
+               ================================================= -->
+
+          <section
+            class="account-section active"
+            id="overviewSection"
+          >
+
+            <div class="section-heading">
+
+              <div>
+
+                <span>
+                  ACCOUNT OVERVIEW
+                </span>
+
+                <h2>
+                  Welcome back,
+                  <strong id="welcomeUserName">
+                    Guest
+                  </strong>
+                </h2>
+
+              </div>
+
+            </div>
+
+
+            <!-- Statistics -->
+
+            <div class="account-stats">
+
+              <div class="account-stat-card">
+
+                <div class="stat-icon">
+                  📦
+                </div>
+
+                <div>
+
+                  <strong id="orderCount">
+                    0
+                  </strong>
+
+                  <span>
+                    Orders
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="account-stat-card">
+
+                <div class="stat-icon">
+                  ♡
+                </div>
+
+                <div>
+
+                  <strong id="wishlistTotal">
+                    0
+                  </strong>
+
+                  <span>
+                    Wishlist
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <div class="account-stat-card">
+
+                <div class="stat-icon">
+                  🛒
+                </div>
+
+                <div>
+
+                  <strong id="cartTotal">
+                    0
+                  </strong>
+
+                  <span>
+                    Cart Items
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Quick Actions -->
+
+            <div class="account-card">
+
+              <div class="card-heading">
+
+                <h3>
+                  Quick Actions
+                </h3>
+
+              </div>
+
+
+              <div class="quick-actions">
+
+                <a
+                  href="shop.html"
+                  class="quick-action"
+                >
+                  <span>🛍️</span>
+
+                  <div>
+                    <strong>
+                      Continue Shopping
+                    </strong>
+
+                    <small>
+                      Explore skincare products
+                    </small>
+                  </div>
+
+                  <b>→</b>
+                </a>
+
+
+                <a
+                  href="cart.html"
+                  class="quick-action"
+                >
+                  <span>🛒</span>
+
+                  <div>
+                    <strong>
+                      View Cart
+                    </strong>
+
+                    <small>
+                      Review your selected products
+                    </small>
+                  </div>
+
+                  <b>→</b>
+                </a>
+
+
+                <a
+                  href="wishlist.html"
+                  class="quick-action"
+                >
+                  <span>♡</span>
+
+                  <div>
+                    <strong>
+                      My Wishlist
+                    </strong>
+
+                    <small>
+                      View your saved products
+                    </small>
+                  </div>
+
+                  <b>→</b>
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- Recent Orders -->
+
+            <div class="account-card">
+
+              <div class="card-heading">
+
+                <h3>
+                  Recent Orders
+                </h3>
+
+                <button
+                  type="button"
+                  class="view-all-btn"
+                  data-section-target="orders"
+                >
+                  View All
+                </button>
+
+              </div>
+
+              <div id="recentOrders">
+
+                <div class="account-empty-mini">
+
+                  <span>
+                    📦
+                  </span>
+
+                  <p>
+                    You haven't placed any orders yet.
+                  </p>
+
+                  <a href="shop.html">
+                    Start Shopping
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- =================================================
+               PROFILE
+               ================================================= -->
+
+          <section
+            class="account-section"
+            id="profileSection"
+          >
+
+            <div class="section-heading">
+
+              <div>
+
+                <span>
+                  PERSONAL DETAILS
+                </span>
+
+                <h2>
+                  My Profile
+                </h2>
+
+              </div>
+
+            </div>
+
+
+            <div class="account-card profile-card">
+
+              <div class="profile-header">
+
+                <div
+                  class="profile-avatar"
+                  id="profileAvatar"
+                >
+                  G
+                </div>
+
+                <div>
+
+                  <h3 id="profileName">
+                    Guest
+                  </h3>
+
+                  <p id="profileEmail">
+                    —
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="profile-details">
+
+                <div class="profile-detail">
+
+                  <span>
+                    Full Name
+                  </span>
+
+                  <strong id="profileFullName">
+                    —
+                  </strong>
+
+                </div>
+
+
+                <div class="profile-detail">
+
+                  <span>
+                    Email Address
+                  </span>
+
+                  <strong id="profileEmailAddress">
+                    —
+                  </strong>
+
+                </div>
+
+
+                <div class="profile-detail">
+
+                  <span>
+                    Mobile Number
+                  </span>
+
+                  <strong id="profilePhone">
+                    —
+                  </strong>
+
+                </div>
+
+
+                <div class="profile-detail">
+
+                  <span>
+                    Account Status
+                  </span>
+
+                  <strong class="account-status">
+                    Active
+                  </strong>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="account-info-box">
+
+              <span>
+                🔒
+              </span>
+
+              <p>
+                Your account information is stored locally in this
+                frontend demo. Secure server-side authentication
+                will be added when the backend is connected.
+              </p>
+
+            </div>
+
+          </section>
+
+
+          <!-- =================================================
+               ORDERS
+               ================================================= -->
+
+          <section
+            class="account-section"
+            id="ordersSection"
+          >
+
+            <div class="section-heading">
+
+              <div>
+
+                <span>
+                  PURCHASE HISTORY
+                </span>
+
+                <h2>
+                  My Orders
+                </h2>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="orders-list"
+              id="ordersList"
+            >
+
+              <div class="account-empty-mini">
+
+                <span>
+                  📦
+                </span>
+
+                <p>
+                  You haven't placed any orders yet.
+                </p>
+
+                <a href="shop.html">
+                  Start Shopping
+                </a>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </section>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-container">
+
+      <div class="footer-brand">
+
+        <a
+          href="index.html"
+          class="brand-logo"
+        >
+          <span class="brand-mark">
+            G
+          </span>
+
+          <span class="brand-text">
+            GlowSkin
+          </span>
+        </a>
+
+        <p>
+          Simple skincare for healthy,
+          confident and glowing skin.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          All Products
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="shop.html?category=moisturizers">
+          Moisturizers
+        </a>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Help
+        </h4>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a href="shipping-returns.html">
+          Shipping & Returns
+        </a>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Account
+        </h4>
+
+        <a href="account.html">
+          My Account
+        </a>
+
+        <a href="wishlist.html">
+          Wishlist
+        </a>
+
+        <a href="cart.html">
+          Cart
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 GlowSkin. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="assets/js/index.js"></script>
+
+  <script src="assets/js/account.js"></script>
+
+</body>
+  </html>
