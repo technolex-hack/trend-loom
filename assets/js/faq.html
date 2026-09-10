@@ -1,0 +1,603 @@
+/* =========================================================
+   GLOWSKIN — FAQ PAGE JAVASCRIPT
+   ========================================================= */
+
+(function () {
+  "use strict";
+
+  /* =======================================================
+     STORAGE
+     ======================================================= */
+
+  const CART_KEY = "glowskin_cart";
+  const WISHLIST_KEY = "glowskin_wishlist";
+
+
+  /* =======================================================
+     HELPERS
+     ======================================================= */
+
+  function getStorageArray(key) {
+    try {
+      const data = JSON.parse(localStorage.getItem(key));
+
+      return Array.isArray(data) ? data : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+
+  function updateHeaderCounts() {
+    const cart = getStorageArray(CART_KEY);
+    const wishlist = getStorageArray(WISHLIST_KEY);
+
+    const cartCount = document.getElementById("cartCount");
+    const wishlistCount = document.getElementById("wishlistCount");
+
+    if (cartCount) {
+      let totalItems = 0;
+
+      cart.forEach(function (item) {
+        if (typeof item === "object" && item !== null) {
+          totalItems += Number(item.quantity) || 1;
+        } else {
+          totalItems += 1;
+        }
+      });
+
+      cartCount.textContent = totalItems;
+    }
+
+    if (wishlistCount) {
+      wishlistCount.textContent = wishlist.length;
+    }
+  }
+
+
+  /* =======================================================
+     FAQ ELEMENTS
+     ======================================================= */
+
+  const faqItems = Array.from(
+    document.querySelectorAll(".faq-item")
+  );
+
+  const faqCategories = Array.from(
+    document.querySelectorAll(".faq-category")
+  );
+
+  const faqSearch = document.getElementById("faqSearch");
+  const faqSearchClear = document.getElementById("faqSearchClear");
+  const faqNoResults = document.getElementById("faqNoResults");
+  const faqReset = document.getElementById("faqReset");
+
+  let activeCategory = "all";
+
+
+  /* =======================================================
+     FAQ ACCORDION
+     ======================================================= */
+
+  function closeFaqItem(item) {
+    const question = item.querySelector(".faq-question");
+
+    item.classList.remove("open");
+
+    if (question) {
+      question.setAttribute("aria-expanded", "false");
+    }
+  }
+
+
+  function openFaqItem(item) {
+    const question = item.querySelector(".faq-question");
+
+    item.classList.add("open");
+
+    if (question) {
+      question.setAttribute("aria-expanded", "true");
+    }
+  }
+
+
+  function setupAccordion() {
+    faqItems.forEach(function (item) {
+      const question = item.querySelector(".faq-question");
+
+      if (!question) {
+        return;
+      }
+
+      question.addEventListener("click", function () {
+        const isOpen = item.classList.contains("open");
+
+        /*
+         * Close other FAQ items
+         */
+        faqItems.forEach(function (otherItem) {
+          if (otherItem !== item) {
+            closeFaqItem(otherItem);
+          }
+        });
+
+        /*
+         * Toggle current item
+         */
+        if (isOpen) {
+          closeFaqItem(item);
+        } else {
+          openFaqItem(item);
+        }
+      });
+    });
+  }
+
+
+  /* =======================================================
+     FAQ FILTER
+     ======================================================= */
+
+  function getSearchText(item) {
+    const question = item.getAttribute("data-question") || "";
+
+    const content = item.textContent || "";
+
+    return (
+      question +
+      " " +
+      content
+    ).toLowerCase();
+  }
+
+
+  function filterFaqs() {
+    const searchTerm = faqSearch
+      ? faqSearch.value.trim().toLowerCase()
+      : "";
+
+    let visibleCount = 0;
+
+    faqItems.forEach(function (item) {
+      const category =
+        item.getAttribute("data-category") || "";
+
+      const matchesCategory =
+        activeCategory === "all" ||
+        category === activeCategory;
+
+      const matchesSearch =
+        !searchTerm ||
+        getSearchText(item).includes(searchTerm);
+
+      const shouldShow =
+        matchesCategory &&
+        matchesSearch;
+
+      item.hidden = !shouldShow;
+
+      if (shouldShow) {
+        visibleCount++;
+      } else {
+        closeFaqItem(item);
+      }
+    });
+
+    if (faqNoResults) {
+      faqNoResults.hidden = visibleCount !== 0;
+    }
+  }
+
+
+  /* =======================================================
+     CATEGORY BUTTONS
+     ======================================================= */
+
+  function setupCategories() {
+    faqCategories.forEach(function (button) {
+      button.addEventListener("click", function () {
+
+        faqCategories.forEach(function (categoryButton) {
+          categoryButton.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        activeCategory =
+          button.getAttribute("data-category") || "all";
+
+        filterFaqs();
+      });
+    });
+  }
+
+
+  /* =======================================================
+     FAQ SEARCH
+     ======================================================= */
+
+  function setupFaqSearch() {
+    if (!faqSearch) {
+      return;
+    }
+
+    faqSearch.addEventListener("input", function () {
+      filterFaqs();
+    });
+
+    faqSearch.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        faqSearch.value = "";
+        filterFaqs();
+        faqSearch.blur();
+      }
+    });
+  }
+
+
+  /* =======================================================
+     CLEAR SEARCH
+     ======================================================= */
+
+  function setupSearchClear() {
+    if (!faqSearchClear || !faqSearch) {
+      return;
+    }
+
+    faqSearchClear.addEventListener("click", function () {
+      faqSearch.value = "";
+
+      activeCategory = "all";
+
+      faqCategories.forEach(function (button) {
+        button.classList.toggle(
+          "active",
+          button.getAttribute("data-category") === "all"
+        );
+      });
+
+      filterFaqs();
+
+      faqSearch.focus();
+    });
+  }
+
+
+  /* =======================================================
+     RESET FAQ
+     ======================================================= */
+
+  function setupReset() {
+    if (!faqReset) {
+      return;
+    }
+
+    faqReset.addEventListener("click", function () {
+
+      if (faqSearch) {
+        faqSearch.value = "";
+      }
+
+      activeCategory = "all";
+
+      faqCategories.forEach(function (button) {
+        button.classList.toggle(
+          "active",
+          button.getAttribute("data-category") === "all"
+        );
+      });
+
+      faqItems.forEach(function (item) {
+        item.hidden = false;
+        closeFaqItem(item);
+      });
+
+      if (faqNoResults) {
+        faqNoResults.hidden = true;
+      }
+
+      if (faqSearch) {
+        faqSearch.focus();
+      }
+    });
+  }
+
+
+  /* =======================================================
+     MAIN SEARCH OVERLAY
+     ======================================================= */
+
+  function setupSearchOverlay() {
+    const searchOverlay =
+      document.getElementById("searchOverlay");
+
+    const searchOpen =
+      document.getElementById("searchOpen");
+
+    const searchClose =
+      document.getElementById("searchClose");
+
+    const searchForm =
+      document.getElementById("searchForm");
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+
+    function openSearch() {
+      if (!searchOverlay) {
+        return;
+      }
+
+      searchOverlay.classList.add("active");
+      searchOverlay.setAttribute("aria-hidden", "false");
+
+      document.body.classList.add("search-open");
+
+      if (searchInput) {
+        setTimeout(function () {
+          searchInput.focus();
+        }, 50);
+      }
+    }
+
+
+    function closeSearch() {
+      if (!searchOverlay) {
+        return;
+      }
+
+      searchOverlay.classList.remove("active");
+      searchOverlay.setAttribute("aria-hidden", "true");
+
+      document.body.classList.remove("search-open");
+    }
+
+
+    if (searchOpen) {
+      searchOpen.addEventListener("click", openSearch);
+    }
+
+    if (searchClose) {
+      searchClose.addEventListener("click", closeSearch);
+    }
+
+
+    if (searchOverlay) {
+      searchOverlay.addEventListener("click", function (event) {
+        if (event.target === searchOverlay) {
+          closeSearch();
+        }
+      });
+    }
+
+
+    if (searchForm) {
+      searchForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const value = searchInput
+          ? searchInput.value.trim()
+          : "";
+
+        if (!value) {
+          if (searchInput) {
+            searchInput.focus();
+          }
+
+          return;
+        }
+
+        window.location.href =
+          "shop.html?search=" +
+          encodeURIComponent(value);
+      });
+    }
+
+
+    return {
+      closeSearch: closeSearch
+    };
+  }
+
+
+  /* =======================================================
+     MOBILE MENU
+     ======================================================= */
+
+  function setupMobileMenu() {
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+    const mobileMenuOpen =
+      document.getElementById("mobileMenuOpen");
+
+    const mobileMenuClose =
+      document.getElementById("mobileMenuClose");
+
+
+    function openMenu() {
+      if (!mobileMenu) {
+        return;
+      }
+
+      mobileMenu.classList.add("active");
+      document.body.classList.add("menu-open");
+    }
+
+
+    function closeMenu() {
+      if (!mobileMenu) {
+        return;
+      }
+
+      mobileMenu.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    }
+
+
+    if (mobileMenuOpen) {
+      mobileMenuOpen.addEventListener("click", openMenu);
+    }
+
+    if (mobileMenuClose) {
+      mobileMenuClose.addEventListener("click", closeMenu);
+    }
+
+
+    if (mobileMenu) {
+      mobileMenu.addEventListener("click", function (event) {
+
+        if (event.target === mobileMenu) {
+          closeMenu();
+        }
+
+      });
+    }
+
+
+    /*
+     * Close menu when clicking a navigation link
+     */
+
+    if (mobileMenu) {
+      const links =
+        mobileMenu.querySelectorAll("a");
+
+      links.forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+      });
+    }
+
+
+    return {
+      closeMenu: closeMenu
+    };
+  }
+
+
+  /* =======================================================
+     ESCAPE KEY
+     ======================================================= */
+
+  function setupEscapeKey(searchController, menuController) {
+
+    document.addEventListener("keydown", function (event) {
+
+      if (event.key !== "Escape") {
+        return;
+      }
+
+      if (searchController) {
+        searchController.closeSearch();
+      }
+
+      if (menuController) {
+        menuController.closeMenu();
+      }
+
+    });
+  }
+
+
+  /* =======================================================
+     HEADER SCROLL EFFECT
+     ======================================================= */
+
+  function setupHeaderScroll() {
+    const header =
+      document.querySelector(".site-header");
+
+    if (!header) {
+      return;
+    }
+
+    function handleScroll() {
+      if (window.scrollY > 20) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    }
+
+    window.addEventListener(
+      "scroll",
+      handleScroll,
+      { passive: true }
+    );
+
+    handleScroll();
+  }
+
+
+  /* =======================================================
+     INITIAL FAQ FILTER
+     ======================================================= */
+
+  function initializeFaq() {
+    faqItems.forEach(function (item) {
+      item.hidden = false;
+      closeFaqItem(item);
+    });
+
+    if (faqNoResults) {
+      faqNoResults.hidden = true;
+    }
+
+    filterFaqs();
+  }
+
+
+  /* =======================================================
+     INITIALIZE
+     ======================================================= */
+
+  function init() {
+
+    updateHeaderCounts();
+
+    setupAccordion();
+
+    setupCategories();
+
+    setupFaqSearch();
+
+    setupSearchClear();
+
+    setupReset();
+
+    const searchController =
+      setupSearchOverlay();
+
+    const menuController =
+      setupMobileMenu();
+
+    setupEscapeKey(
+      searchController,
+      menuController
+    );
+
+    setupHeaderScroll();
+
+    initializeFaq();
+  }
+
+
+  /* =======================================================
+     DOM READY
+     ======================================================= */
+
+  if (document.readyState === "loading") {
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      init
+    );
+
+  } else {
+
+    init();
+
+  }
+
+})();
