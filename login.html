@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Login or create your GlowSkin account."
+  >
+
+  <title>Login / Register — GlowSkin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+
+  <!-- Login CSS -->
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+
+  <!-- =====================================
+       Announcement
+       ===================================== -->
+
+  <div class="announcement">
+    ✨ Free shipping on orders above ₹999
+  </div>
+
+
+  <!-- =====================================
+       Header
+       ===================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo">
+        <span class="logo-mark">G</span>
+
+        <span class="logo-text">
+          Glow<span>Skin</span>
+        </span>
+      </a>
+
+
+      <nav class="main-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="shop.html?category=offers">
+          Offers
+        </a>
+
+      </nav>
+
+
+      <div class="header-actions">
+
+        <button
+          class="header-icon-btn"
+          id="searchToggle"
+          type="button"
+          aria-label="Search"
+        >
+          🔍
+        </button>
+
+        <a
+          href="login.html"
+          class="header-icon-btn active"
+          aria-label="Account"
+        >
+          👤
+        </a>
+
+        <a
+          href="wishlist.html"
+          class="header-icon-btn icon-with-count"
+          aria-label="Wishlist"
+        >
+          ♡
+
+          <span
+            class="header-count"
+            id="wishlistCount"
+          >
+            0
+          </span>
+        </a>
+
+        <a
+          href="cart.html"
+          class="header-icon-btn icon-with-count"
+          aria-label="Cart"
+        >
+          🛒
+
+          <span
+            class="header-count"
+            id="cartCount"
+          >
+            0
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================
+       Mobile Menu
+       ===================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <div class="mobile-menu-header">
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-mark">
+          G
+        </span>
+
+        <span class="logo-text">
+          Glow<span>Skin</span>
+        </span>
+
+      </a>
+
+      <button
+        id="mobileMenuClose"
+        type="button"
+        aria-label="Close menu"
+      >
+        ✕
+      </button>
+
+    </div>
+
+
+    <nav class="mobile-nav">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="shop.html">
+        Shop
+      </a>
+
+      <a href="shop.html?category=face-wash">
+        Face Care
+      </a>
+
+      <a href="shop.html?category=serums">
+        Serums
+      </a>
+
+      <a href="shop.html?category=sunscreen">
+        Sunscreen
+      </a>
+
+      <a href="shop.html?category=offers">
+        Offers
+      </a>
+
+      <a href="login.html">
+        My Account
+      </a>
+
+      <a href="wishlist.html">
+        Wishlist
+      </a>
+
+      <a href="cart.html">
+        Cart
+      </a>
+
+    </nav>
+
+  </div>
+
+
+  <!-- =====================================
+       Search Overlay
+       ===================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+  >
+
+    <div class="search-box">
+
+      <button
+        class="search-close"
+        id="searchClose"
+        type="button"
+        aria-label="Close search"
+      >
+        ✕
+      </button>
+
+      <h2>
+        Search GlowSkin
+      </h2>
+
+      <form id="searchForm">
+
+        <div class="search-input-wrap">
+
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search skincare products..."
+            autocomplete="off"
+          >
+
+          <button type="submit">
+            Search
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================
+       Main
+       ===================================== -->
+
+  <main class="auth-page">
+
+    <div class="container auth-container">
+
+
+      <!-- =================================
+           Auth Card
+           ================================= -->
+
+      <section class="auth-card">
+
+
+        <!-- Left Side -->
+        <div class="auth-intro">
+
+          <p class="eyebrow">
+            WELCOME TO GLOWSKIN
+          </p>
+
+          <h1>
+            Your skin,
+            <span>your account.</span>
+          </h1>
+
+          <p class="auth-intro-text">
+            Sign in to manage your orders, save your
+            favourite products and enjoy a smoother
+            shopping experience.
+          </p>
+
+
+          <div class="auth-benefits">
+
+            <div class="auth-benefit">
+
+              <span>
+                ✓
+              </span>
+
+              <div>
+                <strong>
+                  Track Orders
+                </strong>
+
+                <p>
+                  Easily check your order status.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="auth-benefit">
+
+              <span>
+                ✓
+              </span>
+
+              <div>
+                <strong>
+                  Save Wishlist
+                </strong>
+
+                <p>
+                  Keep your favourite skincare products.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="auth-benefit">
+
+              <span>
+                ✓
+              </span>
+
+              <div>
+                <strong>
+                  Faster Checkout
+                </strong>
+
+                <p>
+                  Your details stay ready for checkout.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Right Side -->
+        <div class="auth-form-area">
+
+
+          <!-- Tabs -->
+
+          <div class="auth-tabs">
+
+            <button
+              type="button"
+              class="auth-tab active"
+              id="loginTab"
+            >
+              Login
+            </button>
+
+            <button
+              type="button"
+              class="auth-tab"
+              id="registerTab"
+            >
+              Create Account
+            </button>
+
+          </div>
+
+
+          <!-- =============================
+               Login Form
+               ============================= -->
+
+          <form
+            id="loginForm"
+            class="auth-form active"
+            novalidate
+          >
+
+            <div class="form-heading">
+
+              <h2>
+                Welcome back
+              </h2>
+
+              <p>
+                Login to continue shopping.
+              </p>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="loginEmail">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                id="loginEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+              >
+
+              <small
+                class="field-error"
+                id="loginEmailError"
+              ></small>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <div class="label-row">
+
+                <label for="loginPassword">
+                  Password
+                </label>
+
+                <button
+                  type="button"
+                  class="forgot-btn"
+                  id="forgotPasswordBtn"
+                >
+                  Forgot password?
+                </button>
+
+              </div>
+
+              <div class="password-wrap">
+
+                <input
+                  type="password"
+                  id="loginPassword"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-target="loginPassword"
+                  aria-label="Show password"
+                >
+                  👁
+                </button>
+
+              </div>
+
+              <small
+                class="field-error"
+                id="loginPasswordError"
+              ></small>
+
+            </div>
+
+
+            <label class="remember-option">
+
+              <input
+                type="checkbox"
+                id="rememberMe"
+              >
+
+              <span>
+                Remember me
+              </span>
+
+            </label>
+
+
+            <button
+              type="submit"
+              class="auth-submit"
+              id="loginSubmit"
+            >
+              Login
+            </button>
+
+
+            <p
+              class="auth-message"
+              id="loginMessage"
+            ></p>
+
+          </form>
+
+
+          <!-- =============================
+               Register Form
+               ============================= -->
+
+          <form
+            id="registerForm"
+            class="auth-form"
+            novalidate
+          >
+
+            <div class="form-heading">
+
+              <h2>
+                Create your account
+              </h2>
+
+              <p>
+                Join GlowSkin and start your skincare journey.
+              </p>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="registerName">
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                id="registerName"
+                placeholder="Your full name"
+                autocomplete="name"
+              >
+
+              <small
+                class="field-error"
+                id="registerNameError"
+              ></small>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="registerEmail">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                id="registerEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+              >
+
+              <small
+                class="field-error"
+                id="registerEmailError"
+              ></small>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="registerPhone">
+                Mobile Number
+              </label>
+
+              <input
+                type="tel"
+                id="registerPhone"
+                placeholder="10-digit mobile number"
+                maxlength="10"
+                inputmode="numeric"
+                autocomplete="tel"
+              >
+
+              <small
+                class="field-error"
+                id="registerPhoneError"
+              ></small>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="registerPassword">
+                Password
+              </label>
+
+              <div class="password-wrap">
+
+                <input
+                  type="password"
+                  id="registerPassword"
+                  placeholder="Create a password"
+                  autocomplete="new-password"
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-target="registerPassword"
+                  aria-label="Show password"
+                >
+                  👁
+                </button>
+
+              </div>
+
+              <small
+                class="field-error"
+                id="registerPasswordError"
+              ></small>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="registerConfirmPassword">
+                Confirm Password
+              </label>
+
+              <div class="password-wrap">
+
+                <input
+                  type="password"
+                  id="registerConfirmPassword"
+                  placeholder="Confirm your password"
+                  autocomplete="new-password"
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-target="registerConfirmPassword"
+                  aria-label="Show password"
+                >
+                  👁
+                </button>
+
+              </div>
+
+              <small
+                class="field-error"
+                id="registerConfirmPasswordError"
+              ></small>
+
+            </div>
+
+
+            <label class="terms-option">
+
+              <input
+                type="checkbox"
+                id="registerTerms"
+              >
+
+              <span>
+                I agree to the
+                <a href="terms.html">
+                  Terms & Conditions
+                </a>
+                and
+                <a href="privacy-policy.html">
+                  Privacy Policy
+                </a>.
+              </span>
+
+            </label>
+
+            <small
+              class="field-error"
+              id="registerTermsError"
+            ></small>
+
+
+            <button
+              type="submit"
+              class="auth-submit"
+              id="registerSubmit"
+            >
+              Create Account
+            </button>
+
+
+            <p
+              class="auth-message"
+              id="registerMessage"
+            ></p>
+
+          </form>
+
+
+          <!-- Forgot Password -->
+
+          <div
+            class="forgot-panel"
+            id="forgotPanel"
+          >
+
+            <button
+              type="button"
+              class="forgot-back"
+              id="forgotBack"
+            >
+              ← Back to Login
+            </button>
+
+            <div class="form-heading">
+
+              <h2>
+                Reset your password
+              </h2>
+
+              <p>
+                Enter your email and we’ll help you
+                reset your password.
+              </p>
+
+            </div>
+
+            <form id="forgotForm" novalidate>
+
+              <div class="form-group">
+
+                <label for="forgotEmail">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  id="forgotEmail"
+                  placeholder="you@example.com"
+                >
+
+                <small
+                  class="field-error"
+                  id="forgotEmailError"
+                ></small>
+
+              </div>
+
+              <button
+                type="submit"
+                class="auth-submit"
+              >
+                Send Reset Request
+              </button>
+
+              <p
+                class="auth-message"
+                id="forgotMessage"
+              ></p>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================
+           Security Note
+           ================================= -->
+
+      <div class="auth-security">
+
+        <span>
+          🔒
+        </span>
+
+        <p>
+          Your account information is stored locally
+          in this frontend demo. Real authentication
+          will be connected when the backend is added.
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- =====================================
+       Footer
+       ===================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+
+          <span class="logo-mark">
+            G
+          </span>
+
+          <span class="logo-text">
+            Glow<span>Skin</span>
+          </span>
+
+        </a>
+
+        <p>
+          Simple, effective skincare for healthy,
+          glowing skin.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Shop
+        </h3>
+
+        <a href="shop.html">
+          All Products
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Wash
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=moisturizers">
+          Moisturizers
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Help
+        </h3>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="shipping-returns.html">
+          Shipping & Returns
+        </a>
+
+        <a href="track-order.html">
+          Track Order
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Company
+        </h3>
+
+        <a href="about.html">
+          About GlowSkin
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+        <a href="privacy-policy.html">
+          Privacy Policy
+        </a>
+
+        <a href="terms.html">
+          Terms & Conditions
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>
+          © 2026 GlowSkin. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Main JS -->
+  <script src="assets/js/index.js"></script>
+
+  <!-- Login JS -->
+  <script src="assets/js/login.js"></script>
+
+</body>
+                </html>
