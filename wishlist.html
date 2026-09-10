@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Your saved skincare products — GlowSkin"
+  >
+
+  <title>My Wishlist — GlowSkin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link
+    rel="stylesheet"
+    href="assets/css/index.css"
+  >
+
+  <!-- Wishlist CSS -->
+  <link
+    rel="stylesheet"
+    href="assets/css/wishlist.css"
+  >
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       ANNOUNCEMENT
+       ===================================================== -->
+
+  <div class="announcement-bar">
+    ✨ Free shipping on orders above ₹999
+  </div>
+
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="header-container">
+
+
+      <!-- Logo -->
+
+      <a
+        href="index.html"
+        class="brand-logo"
+      >
+
+        <span class="brand-mark">
+          G
+        </span>
+
+        <span class="brand-text">
+          GlowSkin
+        </span>
+
+      </a>
+
+
+      <!-- Desktop Navigation -->
+
+      <nav class="main-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="shop.html?category=offers">
+          Offers
+        </a>
+
+      </nav>
+
+
+      <!-- Header Actions -->
+
+      <div class="header-actions">
+
+
+        <!-- Search -->
+
+        <button
+          type="button"
+          class="header-icon-btn"
+          id="searchOpen"
+          aria-label="Search"
+        >
+          🔍
+        </button>
+
+
+        <!-- Account -->
+
+        <a
+          href="account.html"
+          class="header-icon-btn"
+          aria-label="My Account"
+        >
+          👤
+        </a>
+
+
+        <!-- Wishlist -->
+
+        <a
+          href="wishlist.html"
+          class="header-icon-btn active"
+          aria-label="Wishlist"
+        >
+
+          ♡
+
+          <span
+            class="header-count"
+            id="wishlistCount"
+            hidden
+          >
+            0
+          </span>
+
+        </a>
+
+
+        <!-- Cart -->
+
+        <a
+          href="cart.html"
+          class="header-icon-btn"
+          aria-label="Cart"
+        >
+
+          🛒
+
+          <span
+            class="header-count"
+            id="cartCount"
+            hidden
+          >
+            0
+          </span>
+
+        </a>
+
+
+        <!-- Mobile Menu -->
+
+        <button
+          type="button"
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       SEARCH OVERLAY
+       ===================================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+  >
+
+    <div class="search-box">
+
+      <button
+        type="button"
+        class="search-close"
+        id="searchClose"
+        aria-label="Close search"
+      >
+        ×
+      </button>
+
+
+      <form
+        id="searchForm"
+        class="search-form"
+      >
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search skincare products..."
+          autocomplete="off"
+        >
+
+        <button type="submit">
+          Search
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MOBILE MENU
+       ===================================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <div class="mobile-menu-inner">
+
+
+      <div class="mobile-menu-header">
+
+        <strong>
+          GlowSkin
+        </strong>
+
+        <button
+          type="button"
+          id="mobileMenuClose"
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <nav class="mobile-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="shop.html?category=offers">
+          Offers
+        </a>
+
+        <a href="account.html">
+          My Account
+        </a>
+
+        <a href="wishlist.html">
+          Wishlist
+        </a>
+
+        <a href="cart.html">
+          Cart
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       WISHLIST PAGE
+       ===================================================== -->
+
+  <main class="wishlist-page">
+
+    <div class="wishlist-container">
+
+
+      <!-- Page Header -->
+
+      <div class="wishlist-page-header">
+
+        <div>
+
+          <span class="wishlist-eyebrow">
+            SAVED FOR LATER
+          </span>
+
+          <h1>
+            My Wishlist
+          </h1>
+
+          <p id="wishlistSubtitle">
+            Products you've saved for your skincare routine.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           WISHLIST GRID
+           ================================================= -->
+
+      <section
+        class="wishlist-content"
+        aria-label="Wishlist products"
+      >
+
+        <div
+          class="wishlist-grid"
+          id="wishlistGrid"
+        >
+          <!-- Products will be loaded by JavaScript -->
+        </div>
+
+
+        <!-- =================================================
+             EMPTY WISHLIST
+             ================================================= -->
+
+        <div
+          class="wishlist-empty"
+          id="wishlistEmpty"
+          hidden
+        >
+
+          <div class="wishlist-empty-icon">
+            ♡
+          </div>
+
+          <h2>
+            Your wishlist is empty
+          </h2>
+
+          <p>
+            Save your favourite skincare products here
+            and come back to them anytime.
+          </p>
+
+          <a
+            href="shop.html"
+            class="wishlist-shop-btn"
+          >
+            Explore Products
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           BOTTOM INFO
+           ================================================= -->
+
+      <section class="wishlist-info">
+
+        <div class="wishlist-info-card">
+
+          <span>
+            ❤️
+          </span>
+
+          <div>
+
+            <strong>
+              Save your favourites
+            </strong>
+
+            <p>
+              Add products to your wishlist and
+              keep them ready for your next order.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="wishlist-info-card">
+
+          <span>
+            🛒
+          </span>
+
+          <div>
+
+            <strong>
+              Easy shopping
+            </strong>
+
+            <p>
+              Move any saved product directly
+              to your cart whenever you're ready.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="wishlist-info-card">
+
+          <span>
+            ✨
+          </span>
+
+          <div>
+
+            <strong>
+              Find your glow
+            </strong>
+
+            <p>
+              Build a skincare routine that works
+              for your skin goals.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-container">
+
+
+      <div class="footer-brand">
+
+        <a
+          href="index.html"
+          class="brand-logo"
+        >
+
+          <span class="brand-mark">
+            G
+          </span>
+
+          <span class="brand-text">
+            GlowSkin
+          </span>
+
+        </a>
+
+        <p>
+          Simple skincare for healthy,
+          confident and glowing skin.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          All Products
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="shop.html?category=moisturizers">
+          Moisturizers
+        </a>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Help
+        </h4>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a href="shipping-returns.html">
+          Shipping & Returns
+        </a>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>
+          Account
+        </h4>
+
+        <a href="account.html">
+          My Account
+        </a>
+
+        <a href="wishlist.html">
+          Wishlist
+        </a>
+
+        <a href="cart.html">
+          Cart
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 GlowSkin. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       CART TOAST
+       ===================================================== -->
+
+  <div
+    class="wishlist-toast"
+    id="wishlistToast"
+    role="status"
+    aria-live="polite"
+  >
+    <span id="wishlistToastText">
+      Added to cart
+    </span>
+  </div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="assets/js/index.js"></script>
+
+  <script src="assets/js/wishlist.js"></script>
+
+</body>
+
+</html>
