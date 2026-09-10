@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Payments — GlowSkin Admin</title>
+
+    <!-- Admin Base CSS -->
+    <link
+        rel="stylesheet"
+        href="../assets/css/admin.css"
+    >
+
+    <!-- Payments Page CSS -->
+    <link
+        rel="stylesheet"
+        href="../assets/css/admin-payments.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ADMIN LAYOUT
+    ====================================================== -->
+
+    <div class="admin-layout">
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="admin-sidebar">
+
+            <div class="admin-sidebar-header">
+
+                <a
+                    href="index.html"
+                    class="admin-logo"
+                >
+                    <span class="admin-logo-mark">G</span>
+
+                    <span class="admin-logo-text">
+                        GlowSkin
+                        <small>Admin</small>
+                    </span>
+                </a>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="admin-navigation">
+
+                <div class="admin-nav-section">
+
+                    <span class="admin-nav-label">
+                        MAIN
+                    </span>
+
+
+                    <a
+                        href="index.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▦</span>
+                        <span>Dashboard</span>
+                    </a>
+
+
+                    <a
+                        href="products.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▣</span>
+                        <span>Products</span>
+                    </a>
+
+
+                    <a
+                        href="orders.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▤</span>
+                        <span>Orders</span>
+                    </a>
+
+
+                    <a
+                        href="customers.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">♙</span>
+                        <span>Customers</span>
+                    </a>
+
+
+                    <a
+                        href="inventory.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▥</span>
+                        <span>Inventory</span>
+                    </a>
+
+                </div>
+
+
+                <div class="admin-nav-section">
+
+                    <span class="admin-nav-label">
+                        STORE
+                    </span>
+
+
+                    <a
+                        href="coupons.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">%</span>
+                        <span>Coupons</span>
+                    </a>
+
+
+                    <a
+                        href="banners.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▱</span>
+                        <span>Banners</span>
+                    </a>
+
+
+                    <a
+                        href="reviews.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">★</span>
+                        <span>Reviews</span>
+                    </a>
+
+
+                    <a
+                        href="blog.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▤</span>
+                        <span>Blog</span>
+                    </a>
+
+
+                    <a
+                        href="shipping.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▰</span>
+                        <span>Shipping</span>
+                    </a>
+
+
+                    <a
+                        href="payments.html"
+                        class="admin-nav-link active"
+                    >
+                        <span class="admin-nav-icon">₹</span>
+                        <span>Payments</span>
+                    </a>
+
+                </div>
+
+
+                <div class="admin-nav-section">
+
+                    <span class="admin-nav-label">
+                        SYSTEM
+                    </span>
+
+
+                    <a
+                        href="#"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">⚙</span>
+                        <span>Settings</span>
+                    </a>
+
+
+                    <a
+                        href="../index.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">↗</span>
+                        <span>View Store</span>
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- Sidebar Footer -->
+
+            <div class="admin-sidebar-footer">
+
+                <div class="admin-user-card">
+
+                    <div class="admin-user-avatar">
+                        A
+                    </div>
+
+                    <div class="admin-user-info">
+                        <strong>Admin</strong>
+                        <span>Store Manager</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN AREA
+        ================================================== -->
+
+        <main class="admin-main">
+
+            <!-- Topbar -->
+
+            <header class="admin-topbar">
+
+                <button
+                    type="button"
+                    class="admin-menu-button"
+                    id="adminMenuButton"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div class="admin-topbar-title">
+
+                    <h1>Payments</h1>
+
+                    <p>
+                        Manage payment methods and payment settings
+                    </p>
+
+                </div>
+
+
+                <div class="admin-topbar-actions">
+
+                    <a
+                        href="../index.html"
+                        class="admin-view-store-button"
+                    >
+                        View Store ↗
+                    </a>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+            ================================================== -->
+
+            <div class="admin-content payments-page">
+
+
+                <!-- Page Header -->
+
+                <div class="payments-page-header">
+
+                    <div>
+                        <span class="payments-eyebrow">
+                            PAYMENT MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Payment Settings
+                        </h2>
+
+                        <p>
+                            Configure the payment methods available
+                            to your customers.
+                        </p>
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="payments-save-button"
+                        id="savePaymentButton"
+                    >
+                        <span>✓</span>
+                        Save Changes
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     PAYMENT STATS
+                ================================================== -->
+
+                <section class="payments-stats-grid">
+
+                    <div class="payments-stat-card">
+
+                        <div class="payments-stat-icon">
+                            ₹
+                        </div>
+
+                        <div class="payments-stat-content">
+
+                            <span>
+                                Payment Methods
+                            </span>
+
+                            <strong id="paymentMethodsCount">
+                                4
+                            </strong>
+
+                            <small>
+                                Enabled methods
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payments-stat-card">
+
+                        <div class="payments-stat-icon upi">
+                            U
+                        </div>
+
+                        <div class="payments-stat-content">
+
+                            <span>
+                                UPI
+                            </span>
+
+                            <strong id="upiPaymentDisplay">
+                                Enabled
+                            </strong>
+
+                            <small>
+                                Digital payment
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payments-stat-card">
+
+                        <div class="payments-stat-icon card">
+                            💳
+                        </div>
+
+                        <div class="payments-stat-content">
+
+                            <span>
+                                Card
+                            </span>
+
+                            <strong id="cardPaymentDisplay">
+                                Enabled
+                            </strong>
+
+                            <small>
+                                Debit / Credit Card
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payments-stat-card">
+
+                        <div class="payments-stat-icon cod">
+                            COD
+                        </div>
+
+                        <div class="payments-stat-content">
+
+                            <span>
+                                Cash on Delivery
+                            </span>
+
+                            <strong id="codPaymentDisplay">
+                                Enabled
+                            </strong>
+
+                            <small>
+                                Pay on delivery
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     PAYMENT METHODS
+                ================================================== -->
+
+                <section class="payments-card">
+
+                    <div class="payments-card-header">
+
+                        <div>
+
+                            <h3>
+                                Payment Methods
+                            </h3>
+
+                            <p>
+                                Choose which payment methods
+                                customers can use at checkout.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-method-list">
+
+
+                        <!-- COD -->
+
+                        <div class="payment-method-item">
+
+                            <div class="payment-method-info">
+
+                                <div class="payment-method-icon cod-icon">
+                                    ₹
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Cash on Delivery
+                                    </h4>
+
+                                    <p>
+                                        Allow customers to pay
+                                        when their order is delivered.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <label class="payment-toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="codPaymentEnabled"
+                                    checked
+                                >
+
+                                <span class="payment-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- UPI -->
+
+                        <div class="payment-method-item">
+
+                            <div class="payment-method-info">
+
+                                <div class="payment-method-icon upi-icon">
+                                    UPI
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        UPI
+                                    </h4>
+
+                                    <p>
+                                        Accept payments through
+                                        UPI apps and QR payments.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <label class="payment-toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="upiPaymentEnabled"
+                                    checked
+                                >
+
+                                <span class="payment-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- CARD -->
+
+                        <div class="payment-method-item">
+
+                            <div class="payment-method-info">
+
+                                <div class="payment-method-icon card-icon">
+                                    💳
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Debit / Credit Card
+                                    </h4>
+
+                                    <p>
+                                        Accept Visa, Mastercard and
+                                        other supported cards.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <label class="payment-toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="cardPaymentEnabled"
+                                    checked
+                                >
+
+                                <span class="payment-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- NET BANKING -->
+
+                        <div class="payment-method-item">
+
+                            <div class="payment-method-info">
+
+                                <div class="payment-method-icon banking-icon">
+                                    🏦
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Net Banking
+                                    </h4>
+
+                                    <p>
+                                        Allow customers to pay
+                                        directly from their bank account.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <label class="payment-toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="netBankingEnabled"
+                                    checked
+                                >
+
+                                <span class="payment-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- WALLET -->
+
+                        <div class="payment-method-item">
+
+                            <div class="payment-method-info">
+
+                                <div class="payment-method-icon wallet-icon">
+                                    W
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Wallets
+                                    </h4>
+
+                                    <p>
+                                        Accept supported digital
+                                        wallet payments.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <label class="payment-toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="walletPaymentEnabled"
+                                    checked
+                                >
+
+                                <span class="payment-slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     COD SETTINGS
+                ================================================== -->
+
+                <section class="payments-card">
+
+                    <div class="payments-card-header">
+
+                        <div>
+
+                            <h3>
+                                Cash on Delivery Settings
+                            </h3>
+
+                            <p>
+                                Configure COD charges and limits.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payments-form-grid">
+
+                        <div class="payments-form-group">
+
+                            <label for="codCharge">
+                                COD Charge
+                            </label>
+
+                            <div class="payments-input-prefix">
+
+                                <span>₹</span>
+
+                                <input
+                                    type="number"
+                                    id="codCharge"
+                                    min="0"
+                                    step="1"
+                                    value="30"
+                                >
+
+                            </div>
+
+                            <small>
+                                Additional charge applied to COD orders.
+                            </small>
+
+                        </div>
+
+
+                        <div class="payments-form-group">
+
+                            <label for="codMaximumAmount">
+                                COD Maximum Order Amount
+                            </label>
+
+                            <div class="payments-input-prefix">
+
+                                <span>₹</span>
+
+                                <input
+                                    type="number"
+                                    id="codMaximumAmount"
+                                    min="0"
+                                    step="1"
+                                    value="5000"
+                                >
+
+                            </div>
+
+                            <small>
+                                Set 0 for no maximum limit.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     PAYMENT LIMITS
+                ================================================== -->
+
+                <section class="payments-card">
+
+                    <div class="payments-card-header">
+
+                        <div>
+
+                            <h3>
+                                Payment Limits
+                            </h3>
+
+                            <p>
+                                Set optional limits for online payments.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payments-form-grid">
+
+                        <div class="payments-form-group">
+
+                            <label for="minimumPaymentAmount">
+                                Minimum Payment Amount
+                            </label>
+
+                            <div class="payments-input-prefix">
+
+                                <span>₹</span>
+
+                                <input
+                                    type="number"
+                                    id="minimumPaymentAmount"
+                                    min="0"
+                                    step="1"
+                                    value="0"
+                                >
+
+                            </div>
+
+                            <small>
+                                Set 0 to disable the minimum limit.
+                            </small>
+
+                        </div>
+
+
+                        <div class="payments-form-group">
+
+                            <label for="maximumPaymentAmount">
+                                Maximum Payment Amount
+                            </label>
+
+                            <div class="payments-input-prefix">
+
+                                <span>₹</span>
+
+                                <input
+                                    type="number"
+                                    id="maximumPaymentAmount"
+                                    min="0"
+                                    step="1"
+                                    value="0"
+                                >
+
+                            </div>
+
+                            <small>
+                                Set 0 to disable the maximum limit.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     PAYMENT GATEWAY
+                ================================================== -->
+
+                <section class="payments-card">
+
+                    <div class="payments-card-header">
+
+                        <div>
+
+                            <h3>
+                                Payment Gateway
+                            </h3>
+
+                            <p>
+                                Configure your online payment gateway.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payments-form-grid">
+
+                        <div class="payments-form-group">
+
+                            <label for="paymentGateway">
+                                Payment Gateway
+                            </label>
+
+                            <select id="paymentGateway">
+
+                                <option value="none">
+                                    Not Connected
+                                </option>
+
+                                <option value="razorpay">
+                                    Razorpay
+                                </option>
+
+                                <option value="stripe">
+                                    Stripe
+                                </option>
+
+                                <option value="cashfree">
+                                    Cashfree
+                                </option>
+
+                            </select>
+
+                            <small>
+                                Select the gateway you plan to connect.
+                            </small>
+
+                        </div>
+
+
+                        <div class="payments-form-group">
+
+                            <label for="paymentMode">
+                                Payment Mode
+                            </label>
+
+                            <select id="paymentMode">
+
+                                <option value="test">
+                                    Test Mode
+                                </option>
+
+                                <option value="live">
+                                    Live Mode
+                                </option>
+
+                            </select>
+
+                            <small>
+                                Use Test Mode while configuring payments.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-gateway-notice">
+
+                        <span class="payment-notice-icon">
+                            !
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Payment gateway not connected
+                            </strong>
+
+                            <p>
+                                This frontend demo only saves payment
+                                settings locally. Real payments require
+                                a secure backend and payment gateway
+                                integration.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     PAYMENT NOTE
+                ================================================== -->
+
+                <section class="payments-card">
+
+                    <div class="payments-card-header">
+
+                        <div>
+
+                            <h3>
+                                Payment Note
+                            </h3>
+
+                            <p>
+                                Add a note about your payment settings.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payments-form-group payments-form-full">
+
+                        <label for="paymentNote">
+                            Store Payment Note
+                        </label>
+
+                        <textarea
+                            id="paymentNote"
+                            rows="4"
+                            placeholder="Enter payment information..."
+                        >Secure payment options are available at checkout.</textarea>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     DEMO NOTICE
+                ================================================== -->
+
+                <div class="payments-demo-notice">
+
+                    <div class="payments-demo-icon">
+                        ⚙
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Frontend Demo Mode
+                        </strong>
+
+                        <p>
+                            Payment settings are stored in your browser's
+                            localStorage. No real payment is processed
+                            from this admin page. For production use,
+                            connect a secure backend and payment gateway.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Bottom Save -->
+
+                <div class="payments-bottom-actions">
+
+                    <button
+                        type="button"
+                        class="payments-save-button"
+                        id="savePaymentButtonBottom"
+                    >
+                        ✓ Save Payment Settings
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         ADMIN BASE JS
+    ====================================================== -->
+
+    <script src="../assets/js/admin.js"></script>
+
+    <!-- =====================================================
+         PAYMENTS JS
+    ====================================================== -->
+
+    <script src="../assets/js/admin-payments.js"></script>
+
+</body>
+  </html>
