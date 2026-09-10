@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GlowSkin — Contact Us</title>
+
+  <meta
+    name="description"
+    content="Contact GlowSkin for product questions, orders, shipping and skincare assistance."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       ANNOUNCEMENT
+       ===================================================== -->
+
+  <div class="announcement-bar">
+    ✨ Free shipping on orders above ₹999
+  </div>
+
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo">
+        Glow<span>Skin</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+
+        <a href="index.html">Home</a>
+
+        <a href="shop.html">Shop</a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+      </nav>
+
+      <div class="header-actions">
+
+        <button
+          type="button"
+          class="header-icon-btn"
+          id="searchOpen"
+          aria-label="Search"
+        >
+          🔍
+        </button>
+
+        <a
+          href="login.html"
+          class="header-icon-btn"
+          aria-label="Account"
+        >
+          👤
+        </a>
+
+        <a
+          href="wishlist.html"
+          class="header-icon-btn count-btn"
+          aria-label="Wishlist"
+        >
+          ♡
+          <span id="wishlistCount" class="count">0</span>
+        </a>
+
+        <a
+          href="cart.html"
+          class="header-icon-btn count-btn"
+          aria-label="Cart"
+        >
+          🛒
+          <span id="cartCount" class="count">0</span>
+        </a>
+
+        <button
+          type="button"
+          class="mobile-menu-btn"
+          id="mobileMenuOpen"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       SEARCH OVERLAY
+       ===================================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+    aria-hidden="true"
+  >
+
+    <div class="search-box">
+
+      <button
+        type="button"
+        class="search-close"
+        id="searchClose"
+        aria-label="Close search"
+      >
+        ×
+      </button>
+
+      <form id="searchForm">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search skincare products..."
+          autocomplete="off"
+        >
+
+        <button type="submit">
+          Search
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MOBILE MENU
+       ===================================================== -->
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <div class="mobile-menu-panel">
+
+      <div class="mobile-menu-header">
+
+        <a href="index.html" class="logo">
+          Glow<span>Skin</span>
+        </a>
+
+        <button
+          type="button"
+          id="mobileMenuClose"
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+
+      </div>
+
+      <nav class="mobile-nav">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="shop.html">
+          Shop
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+        <a href="about.html">
+          About Us
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       CONTACT PAGE
+       ===================================================== -->
+
+  <main class="contact-page">
+
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
+
+    <section class="contact-hero">
+
+      <div class="container">
+
+        <span class="contact-eyebrow">
+          GET IN TOUCH
+        </span>
+
+        <h1>
+          We're Here to
+          <span>Help</span>
+        </h1>
+
+        <p>
+          Have a question about a product, order or skincare
+          routine? Send us a message and we'll be happy to help.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         CONTACT CONTENT
+         =================================================== -->
+
+    <section class="contact-section">
+
+      <div class="container contact-grid">
+
+
+        <!-- ===============================================
+             CONTACT INFORMATION
+             =============================================== -->
+
+        <div class="contact-info">
+
+          <span class="contact-section-label">
+            CONTACT US
+          </span>
+
+          <h2>
+            Let's Talk Skincare
+          </h2>
+
+          <p class="contact-intro">
+            Whether you need help choosing a product or have
+            a question about your order, you can reach us
+            through the options below.
+          </p>
+
+
+          <div class="contact-info-list">
+
+
+            <div class="contact-info-card">
+
+              <div class="contact-info-icon">
+                📧
+              </div>
+
+              <div>
+                <span>
+                  Email
+                </span>
+
+                <a href="mailto:support@glowskin.com">
+                  support@glowskin.com
+                </a>
+              </div>
+
+            </div>
+
+
+            <div class="contact-info-card">
+
+              <div class="contact-info-icon">
+                📱
+              </div>
+
+              <div>
+                <span>
+                  Phone
+                </span>
+
+                <a href="tel:+919000000000">
+                  +91 90000 00000
+                </a>
+              </div>
+
+            </div>
+
+
+            <div class="contact-info-card">
+
+              <div class="contact-info-icon">
+                💬
+              </div>
+
+              <div>
+                <span>
+                  WhatsApp
+                </span>
+
+                <a
+                  href="https://wa.me/919000000000"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Chat with us
+                </a>
+              </div>
+
+            </div>
+
+
+            <div class="contact-info-card">
+
+              <div class="contact-info-icon">
+                🕘
+              </div>
+
+              <div>
+                <span>
+                  Support Hours
+                </span>
+
+                <strong>
+                  Mon – Sat, 9 AM – 6 PM
+                </strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-help-box">
+
+            <strong>
+              Need help with an order?
+            </strong>
+
+            <p>
+              Keep your order ID ready so we can assist you
+              faster.
+            </p>
+
+            <a href="track-order.html">
+              Track Your Order →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- ===============================================
+             CONTACT FORM
+             =============================================== -->
+
+        <div class="contact-form-card">
+
+          <div class="contact-form-heading">
+
+            <span>
+              SEND A MESSAGE
+            </span>
+
+            <h2>
+              How Can We Help?
+            </h2>
+
+            <p>
+              Fill in the form below and we'll get back to you.
+            </p>
+
+          </div>
+
+
+          <form id="contactForm" novalidate>
+
+
+            <!-- Name -->
+
+            <div class="contact-form-group">
+
+              <label for="contactName">
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                id="contactName"
+                name="name"
+                placeholder="Enter your name"
+                autocomplete="name"
+              >
+
+              <small
+                class="contact-error"
+                id="contactNameError"
+              ></small>
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="contact-form-group">
+
+              <label for="contactEmail">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                id="contactEmail"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+              >
+
+              <small
+                class="contact-error"
+                id="contactEmailError"
+              ></small>
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="contact-form-group">
+
+              <label for="contactPhone">
+                Mobile Number
+              </label>
+
+              <input
+                type="tel"
+                id="contactPhone"
+                name="phone"
+                placeholder="10-digit mobile number"
+                inputmode="numeric"
+                maxlength="10"
+                autocomplete="tel"
+              >
+
+              <small
+                class="contact-error"
+                id="contactPhoneError"
+              ></small>
+
+            </div>
+
+
+            <!-- Subject -->
+
+            <div class="contact-form-group">
+
+              <label for="contactSubject">
+                Subject
+              </label>
+
+              <select
+                id="contactSubject"
+                name="subject"
+              >
+
+                <option value="">
+                  Select a subject
+                </option>
+
+                <option value="product">
+                  Product Question
+                </option>
+
+                <option value="order">
+                  Order Help
+                </option>
+
+                <option value="shipping">
+                  Shipping
+                </option>
+
+                <option value="return">
+                  Return / Refund
+                </option>
+
+                <option value="skincare">
+                  Skincare Guidance
+                </option>
+
+                <option value="other">
+                  Other
+                </option>
+
+              </select>
+
+              <small
+                class="contact-error"
+                id="contactSubjectError"
+              ></small>
+
+            </div>
+
+
+            <!-- Message -->
+
+            <div class="contact-form-group">
+
+              <label for="contactMessage">
+                Message
+              </label>
+
+              <textarea
+                id="contactMessage"
+                name="message"
+                rows="6"
+                maxlength="1000"
+                placeholder="Write your message..."
+              ></textarea>
+
+              <small
+                class="contact-error"
+                id="contactMessageError"
+              ></small>
+
+              <div class="message-counter">
+                <span id="messageCount">
+                  0
+                </span>
+                / 1000
+              </div>
+
+            </div>
+
+
+            <!-- Submit -->
+
+            <button
+              type="submit"
+              class="contact-submit-btn"
+              id="contactSubmitBtn"
+            >
+              Send Message
+            </button>
+
+
+            <!-- Success -->
+
+            <div
+              class="contact-success"
+              id="contactSuccess"
+              hidden
+            >
+
+              <div class="contact-success-icon">
+                ✓
+              </div>
+
+              <div>
+                <strong>
+                  Message Sent!
+                </strong>
+
+                <p>
+                  Thank you for contacting GlowSkin.
+                  We'll get back to you soon.
+                </p>
+              </div>
+
+            </div>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FAQ CTA
+         =================================================== -->
+
+    <section class="contact-faq">
+
+      <div class="container">
+
+        <div class="contact-faq-box">
+
+          <div>
+
+            <span>
+              QUICK HELP
+            </span>
+
+            <h2>
+              Looking for an answer?
+            </h2>
+
+            <p>
+              Check our frequently asked questions before
+              sending us a message.
+            </p>
+
+          </div>
+
+          <a
+            href="faq.html"
+            class="contact-faq-btn"
+          >
+            Visit FAQ
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+          Glow<span>Skin</span>
+        </a>
+
+        <p>
+          Simple skincare for healthy,
+          confident-looking skin.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Shop
+        </h4>
+
+        <a href="shop.html">
+          All Products
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          Help
+        </h4>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="track-order.html">
+          Track Order
+        </a>
+
+        <a href="shipping-returns.html">
+          Shipping & Returns
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>
+          GlowSkin
+        </h4>
+
+        <a href="about.html">
+          About Us
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+        <a href="offers.html">
+          Offers
+        </a>
+
+        <a href="skin-type-guide.html">
+          Skin Type Guide
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>
+          © 2026 GlowSkin. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       TOAST
+       ===================================================== -->
+
+  <div
+    class="contact-toast"
+    id="contactToast"
+    role="status"
+    aria-live="polite"
+  >
+    <span id="contactToastText"></span>
+  </div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/contact.js"></script>
+
+</body>
+  </html>
