@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop All Products — GlowSkin</title>
+
+    <meta
+        name="description"
+        content="Shop premium skincare products at GlowSkin. Face wash, serums, moisturizers, sunscreen and more."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <!-- Shop CSS -->
+    <link rel="stylesheet" href="assets/css/shop.css">
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- ANNOUNCEMENT BAR -->
+    <!-- ============================= -->
+
+    <div class="announcement-bar">
+        ✨ Free shipping on orders above ₹999
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- HEADER -->
+    <!-- ============================= -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container header-inner">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span class="logo-main">GlowSkin</span>
+                <span class="logo-sub">PREMIUM SKINCARE</span>
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <nav class="main-nav" id="mainNav">
+
+                <a href="index.html">Home</a>
+
+                <a href="shop.html" class="active">
+                    Shop
+                </a>
+
+                <a href="shop.html?category=face-wash">
+                    Face Care
+                </a>
+
+                <a href="shop.html?category=serums">
+                    Serums
+                </a>
+
+                <a href="shop.html?category=sunscreen">
+                    Sunscreen
+                </a>
+
+                <a href="shop.html?category=offers">
+                    Offers
+                </a>
+
+            </nav>
+
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <!-- Search -->
+                <button
+                    type="button"
+                    class="header-icon-btn"
+                    id="searchBtn"
+                    aria-label="Search"
+                >
+                    🔍
+                </button>
+
+
+                <!-- Account -->
+                <a
+                    href="login.html"
+                    class="header-icon-btn"
+                    aria-label="Account"
+                >
+                    👤
+                </a>
+
+
+                <!-- Wishlist -->
+                <a
+                    href="wishlist.html"
+                    class="header-icon-btn count-wrapper"
+                    aria-label="Wishlist"
+                >
+                    ♡
+                    <span id="wishlistCount" class="count-badge">
+                        0
+                    </span>
+                </a>
+
+
+                <!-- Cart -->
+                <a
+                    href="cart.html"
+                    class="header-icon-btn count-wrapper"
+                    aria-label="Shopping Cart"
+                >
+                    🛒
+                    <span id="cartCount" class="count-badge">
+                        0
+                    </span>
+                </a>
+
+
+                <!-- Mobile Menu -->
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open Menu"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ============================= -->
+    <!-- SEARCH OVERLAY -->
+    <!-- ============================= -->
+
+    <div
+        class="search-overlay"
+        id="searchOverlay"
+        aria-hidden="true"
+    >
+
+        <div class="search-overlay-inner">
+
+            <button
+                type="button"
+                class="search-close"
+                id="closeSearch"
+                aria-label="Close Search"
+            >
+                ×
+            </button>
+
+            <h2>What are you looking for?</h2>
+
+            <form id="searchForm" class="search-form">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search skincare products..."
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Search
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- SHOP HERO -->
+    <!-- ============================= -->
+
+    <main>
+
+        <section class="shop-hero">
+
+            <div class="container">
+
+                <div class="shop-hero-content">
+
+                    <span class="section-eyebrow">
+                        GLOWSKIN COLLECTION
+                    </span>
+
+                    <h1>
+                        Shop All Skincare
+                    </h1>
+
+                    <p>
+                        Discover skincare essentials carefully selected
+                        to help your skin look healthy, fresh and radiant.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- SHOP AREA -->
+        <!-- ============================= -->
+
+        <section class="shop-section">
+
+            <div class="container">
+
+
+                <!-- ============================= -->
+                <!-- SHOP TOOLBAR -->
+                <!-- ============================= -->
+
+                <div class="shop-toolbar">
+
+                    <div class="shop-result-info">
+                        <strong id="productCount">
+                            12
+                        </strong>
+                        <span>products</span>
+                    </div>
+
+
+                    <div class="shop-toolbar-actions">
+
+                        <!-- Mobile Filter -->
+                        <button
+                            type="button"
+                            class="filter-toggle"
+                            id="filterToggle"
+                        >
+                            ☰ Filters
+                        </button>
+
+
+                        <!-- Sort -->
+                        <div class="sort-box">
+
+                            <label for="sortProducts">
+                                Sort by
+                            </label>
+
+                            <select id="sortProducts">
+
+                                <option value="default">
+                                    Featured
+                                </option>
+
+                                <option value="price-low">
+                                    Price: Low to High
+                                </option>
+
+                                <option value="price-high">
+                                    Price: High to Low
+                                </option>
+
+                                <option value="name-a-z">
+                                    Name: A to Z
+                                </option>
+
+                                <option value="name-z-a">
+                                    Name: Z to A
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ============================= -->
+                <!-- SHOP LAYOUT -->
+                <!-- ============================= -->
+
+                <div class="shop-layout">
+
+
+                    <!-- ============================= -->
+                    <!-- FILTER SIDEBAR -->
+                    <!-- ============================= -->
+
+                    <aside
+                        class="shop-sidebar"
+                        id="shopSidebar"
+                    >
+
+                        <div class="sidebar-header">
+
+                            <h3>
+                                Filters
+                            </h3>
+
+                            <button
+                                type="button"
+                                id="clearFilters"
+                                class="clear-filters"
+                            >
+                                Clear All
+                            </button>
+
+                        </div>
+
+
+                        <!-- Category -->
+                        <div class="filter-group">
+
+                            <h4>
+                                Category
+                            </h4>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="all"
+                                    checked
+                                >
+
+                                <span>
+                                    All Products
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="face-wash"
+                                >
+
+                                <span>
+                                    Face Wash
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="serums"
+                                >
+
+                                <span>
+                                    Serums
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="moisturizers"
+                                >
+
+                                <span>
+                                    Moisturizers
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="sunscreen"
+                                >
+
+                                <span>
+                                    Sunscreen
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="toners"
+                                >
+
+                                <span>
+                                    Toners
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="category"
+                                    value="lip-care"
+                                >
+
+                                <span>
+                                    Lip Care
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Price -->
+                        <div class="filter-group">
+
+                            <h4>
+                                Price
+                            </h4>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="price"
+                                    value="all"
+                                    checked
+                                >
+
+                                <span>
+                                    All Prices
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="price"
+                                    value="under-500"
+                                >
+
+                                <span>
+                                    Under ₹500
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="price"
+                                    value="500-1000"
+                                >
+
+                                <span>
+                                    ₹500 – ₹1,000
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="price"
+                                    value="1000-1500"
+                                >
+
+                                <span>
+                                    ₹1,000 – ₹1,500
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="radio"
+                                    name="price"
+                                    value="above-1500"
+                                >
+
+                                <span>
+                                    Above ₹1,500
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Skin Concern -->
+                        <div class="filter-group">
+
+                            <h4>
+                                Skin Concern
+                            </h4>
+
+
+                            <label class="filter-option checkbox-option">
+
+                                <input
+                                    type="checkbox"
+                                    name="concern"
+                                    value="acne"
+                                >
+
+                                <span>
+                                    Acne & Breakouts
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option checkbox-option">
+
+                                <input
+                                    type="checkbox"
+                                    name="concern"
+                                    value="dryness"
+                                >
+
+                                <span>
+                                    Dry & Dehydrated
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option checkbox-option">
+
+                                <input
+                                    type="checkbox"
+                                    name="concern"
+                                    value="dark-spots"
+                                >
+
+                                <span>
+                                    Dark Spots
+                                </span>
+
+                            </label>
+
+
+                            <label class="filter-option checkbox-option">
+
+                                <input
+                                    type="checkbox"
+                                    name="concern"
+                                    value="dullness"
+                                >
+
+                                <span>
+                                    Dull Skin
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </aside>
+
+
+                    <!-- ============================= -->
+                    <!-- PRODUCTS -->
+                    <!-- ============================= -->
+
+                    <div class="shop-products-area">
+
+
+                        <!-- Search Result -->
+                        <div
+                            class="active-search"
+                            id="activeSearch"
+                            hidden
+                        >
+
+                            <span>
+                                Search results for:
+                            </span>
+
+                            <strong id="searchTerm"></strong>
+
+                            <button
+                                type="button"
+                                id="clearSearch"
+                                aria-label="Clear search"
+                            >
+                                ×
+                            </button>
+
+                        </div>
+
+
+                        <!-- Product Grid -->
+                        <div
+                            class="shop-product-grid"
+                            id="productGrid"
+                        >
+
+
+                            <!-- PRODUCT 1 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="Vitamin C Brightening Serum"
+                                data-price="599"
+                                data-category="serums"
+                                data-concerns="dark-spots,dullness"
+                            >
+
+                                <div class="product-image">
+
+                                    <span class="product-badge">
+                                        BESTSELLER
+                                    </span>
+
+                                    <div class="product-placeholder">
+                                        ✨
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="Vitamin C Brightening Serum"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="Vitamin C Brightening Serum"
+                                        data-price="599"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Serum
+                                    </span>
+
+                                    <h3>
+                                        Vitamin C Brightening Serum
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.8
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹599
+                                        </strong>
+
+                                        <del>
+                                            ₹799
+                                        </del>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 2 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="Daily Sunscreen SPF 50"
+                                data-price="479"
+                                data-category="sunscreen"
+                                data-concerns="dullness"
+                            >
+
+                                <div class="product-image">
+
+                                    <span class="product-badge">
+                                        SPF 50
+                                    </span>
+
+                                    <div class="product-placeholder">
+                                        ☀️
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="Daily Sunscreen SPF 50"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="Daily Sunscreen SPF 50"
+                                        data-price="479"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Sunscreen
+                                    </span>
+
+                                    <h3>
+                                        Daily Sunscreen SPF 50
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.7
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹479
+                                        </strong>
+
+                                        <del>
+                                            ₹599
+                                        </del>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 3 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="Niacinamide Pore Serum"
+                                data-price="549"
+                                data-category="serums"
+                                data-concerns="acne,dullness"
+                            >
+
+                                <div class="product-image">
+
+                                    <span class="product-badge">
+                                        POPULAR
+                                    </span>
+
+                                    <div class="product-placeholder">
+                                        💧
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="Niacinamide Pore Serum"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="Niacinamide Pore Serum"
+                                        data-price="549"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Serum
+                                    </span>
+
+                                    <h3>
+                                        Niacinamide Pore Serum
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.6
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹549
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 4 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="Daily Hydrating Moisturizer"
+                                data-price="449"
+                                data-category="moisturizers"
+                                data-concerns="dryness,dullness"
+                            >
+
+                                <div class="product-image">
+
+                                    <span class="product-badge">
+                                        NEW
+                                    </span>
+
+                                    <div class="product-placeholder">
+                                        🌿
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="Daily Hydrating Moisturizer"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="Daily Hydrating Moisturizer"
+                                        data-price="449"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Moisturizer
+                                    </span>
+
+                                    <h3>
+                                        Daily Hydrating Moisturizer
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.8
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹449
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 5 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="Gentle Foaming Face Wash"
+                                data-price="349"
+                                data-category="face-wash"
+                                data-concerns="acne,dullness"
+                            >
+
+                                <div class="product-image">
+
+                                    <div class="product-placeholder">
+                                        🫧
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="Gentle Foaming Face Wash"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="Gentle Foaming Face Wash"
+                                        data-price="349"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Face Wash
+                                    </span>
+
+                                    <h3>
+                                        Gentle Foaming Face Wash
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.7
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹349
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 6 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="Hydrating Hyaluronic Serum"
+                                data-price="699"
+                                data-category="serums"
+                                data-concerns="dryness,dullness"
+                            >
+
+                                <div class="product-image">
+
+                                    <span class="product-badge">
+                                        NEW
+                                    </span>
+
+                                    <div class="product-placeholder">
+                                        💦
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="Hydrating Hyaluronic Serum"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="Hydrating Hyaluronic Serum"
+                                        data-price="699"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Serum
+                                    </span>
+
+                                    <h3>
+                                        Hydrating Hyaluronic Serum
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.9
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹699
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 7 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="Brightening Face Cleanser"
+                                data-price="399"
+                                data-category="face-wash"
+                                data-concerns="dark-spots,dullness"
+                            >
+
+                                <div class="product-image">
+
+                                    <div class="product-placeholder">
+                                        🍊
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="Brightening Face Cleanser"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="Brightening Face Cleanser"
+                                        data-price="399"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Face Wash
+                                    </span>
+
+                                    <h3>
+                                        Brightening Face Cleanser
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.6
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹399
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 8 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="Barrier Repair Moisturizer"
+                                data-price="799"
+                                data-category="moisturizers"
+                                data-concerns="dryness"
+                            >
+
+                                <div class="product-image">
+
+                                    <span class="product-badge">
+                                        BESTSELLER
+                                    </span>
+
+                                    <div class="product-placeholder">
+                                        🧴
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="Barrier Repair Moisturizer"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="Barrier Repair Moisturizer"
+                                        data-price="799"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Moisturizer
+                                    </span>
+
+                                    <h3>
+                                        Barrier Repair Moisturizer
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.8
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹799
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 9 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="Hydrating Rose Toner"
+                                data-price="429"
+                                data-category="toners"
+                                data-concerns="dryness,dullness"
+                            >
+
+                                <div class="product-image">
+
+                                    <div class="product-placeholder">
+                                        🌹
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="Hydrating Rose Toner"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="Hydrating Rose Toner"
+                                        data-price="429"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Toner
+                                    </span>
+
+                                    <h3>
+                                        Hydrating Rose Toner
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.5
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹429
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 10 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="Acne Control Face Wash"
+                                data-price="499"
+                                data-category="face-wash"
+                                data-concerns="acne"
+                            >
+
+                                <div class="product-image">
+
+                                    <span class="product-badge">
+                                        SALE
+                                    </span>
+
+                                    <div class="product-placeholder">
+                                        🌱
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="Acne Control Face Wash"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="Acne Control Face Wash"
+                                        data-price="499"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Face Wash
+                                    </span>
+
+                                    <h3>
+                                        Acne Control Face Wash
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.6
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹499
+                                        </strong>
+
+                                        <del>
+                                            ₹599
+                                        </del>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 11 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="SPF 50 Matte Sunscreen"
+                                data-price="599"
+                                data-category="sunscreen"
+                                data-concerns="acne,dullness"
+                            >
+
+                                <div class="product-image">
+
+                                    <span class="product-badge">
+                                        SPF 50
+                                    </span>
+
+                                    <div class="product-placeholder">
+                                        🧴
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="SPF 50 Matte Sunscreen"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="SPF 50 Matte Sunscreen"
+                                        data-price="599"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Sunscreen
+                                    </span>
+
+                                    <h3>
+                                        SPF 50 Matte Sunscreen
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.8
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹599
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- PRODUCT 12 -->
+                            <article
+                                class="product-card shop-product-card"
+                                data-name="Nourishing Lip Care Balm"
+                                data-price="299"
+                                data-category="lip-care"
+                                data-concerns="dryness"
+                            >
+
+                                <div class="product-image">
+
+                                    <span class="product-badge">
+                                        NEW
+                                    </span>
+
+                                    <div class="product-placeholder">
+                                        💋
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="wishlist-btn"
+                                        data-product="Nourishing Lip Care Balm"
+                                        aria-label="Add to wishlist"
+                                    >
+                                        ♡
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="quick-add"
+                                        data-product="Nourishing Lip Care Balm"
+                                        data-price="299"
+                                    >
+                                        Quick Add
+                                    </button>
+
+                                </div>
+
+
+                                <div class="product-info">
+
+                                    <span class="product-category">
+                                        Lip Care
+                                    </span>
+
+                                    <h3>
+                                        Nourishing Lip Care Balm
+                                    </h3>
+
+                                    <div class="product-rating">
+                                        ★★★★★
+                                        <span>
+                                            4.7
+                                        </span>
+                                    </div>
+
+                                    <div class="product-price">
+
+                                        <strong>
+                                            ₹299
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- ============================= -->
+                        <!-- NO PRODUCTS -->
+                        <!-- ============================= -->
+
+                        <div
+                            class="no-products"
+                            id="noProducts"
+                            hidden
+                        >
+
+                            <div class="no-products-icon">
+                                🔍
+                            </div>
+
+                            <h3>
+                                No products found
+                            </h3>
+
+                            <p>
+                                Try changing your filters or search
+                                for another skincare product.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                id="resetProducts"
+                            >
+                                View All Products
+                            </button>
+
+                        </div>
+
+
+                        <!-- ============================= -->
+                        <!-- PAGINATION -->
+                        <!-- ============================= -->
+
+                        <div
+                            class="pagination"
+                            id="pagination"
+                        >
+
+                            <button
+                                type="button"
+                                class="pagination-btn active"
+                                data-page="1"
+                            >
+                                1
+                            </button>
+
+                            <button
+                                type="button"
+                                class="pagination-btn"
+                                data-page="2"
+                            >
+                                2
+                            </button>
+
+                            <button
+                                type="button"
+                                class="pagination-btn"
+                                data-page="3"
+                            >
+                                3
+                            </button>
+
+                            <button
+                                type="button"
+                                class="pagination-next"
+                                data-page="2"
+                                aria-label="Next page"
+                            >
+                                →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- SHOP TRUST SECTION -->
+        <!-- ============================= -->
+
+        <section class="shop-trust">
+
+            <div class="container">
+
+                <div class="shop-trust-grid">
+
+                    <div class="shop-trust-item">
+
+                        <div class="trust-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>
+                                100% Authentic
+                            </strong>
+
+                            <span>
+                                Genuine skincare products
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-trust-item">
+
+                        <div class="trust-icon">
+                            🚚
+                        </div>
+
+                        <div>
+                            <strong>
+                                Fast Delivery
+                            </strong>
+
+                            <span>
+                                Quick & reliable shipping
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-trust-item">
+
+                        <div class="trust-icon">
+                            🔒
+                        </div>
+
+                        <div>
+                            <strong>
+                                Secure Payments
+                            </strong>
+
+                            <span>
+                                Safe checkout experience
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-trust-item">
+
+                        <div class="trust-icon">
+                            ♡
+                        </div>
+
+                        <div>
+                            <strong>
+                                Customer First
+                            </strong>
+
+                            <span>
+                                We're here to help
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- Brand -->
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo footer-logo">
+                        <span class="logo-main">
+                            GlowSkin
+                        </span>
+
+                        <span class="logo-sub">
+                            PREMIUM SKINCARE
+                        </span>
+                    </a>
+
+                    <p>
+                        Simple, effective skincare for
+                        healthy-looking skin every day.
+                    </p>
+
+                    <div class="footer-socials">
+
+                        <a href="#" aria-label="Instagram">
+                            Instagram
+                        </a>
+
+                        <a href="#" aria-label="Facebook">
+                            Facebook
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            YouTube
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Shop -->
+                <div class="footer-column">
+
+                    <h4>
+                        Shop
+                    </h4>
+
+                    <a href="shop.html">
+                        All Products
+                    </a>
+
+                    <a href="shop.html?category=face-wash">
+                        Face Wash
+                    </a>
+
+                    <a href="shop.html?category=serums">
+                        Serums
+                    </a>
+
+                    <a href="shop.html?category=moisturizers">
+                        Moisturizers
+                    </a>
+
+                    <a href="shop.html?category=sunscreen">
+                        Sunscreen
+                    </a>
+
+                    <a href="shop.html?category=offers">
+                        Offers
+                    </a>
+
+                </div>
+
+
+                <!-- Help -->
+                <div class="footer-column">
+
+                    <h4>
+                        Help
+                    </h4>
+
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                    <a href="track-order.html">
+                        Track Order
+                    </a>
+
+                    <a href="shipping-returns.html">
+                        Shipping & Returns
+                    </a>
+
+                </div>
+
+
+                <!-- About -->
+                <div class="footer-column">
+
+                    <h4>
+                        About
+                    </h4>
+
+                    <a href="about.html">
+                        Our Story
+                    </a>
+
+                    <a href="blog.html">
+                        Blog
+                    </a>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 GlowSkin. All rights reserved.
+                </p>
+
+                <div class="payment-methods">
+
+                    <span>UPI</span>
+                    <span>Visa</span>
+                    <span>Mastercard</span>
+                    <span>COD</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ============================= -->
+    <!-- CART TOAST -->
+    <!-- ============================= -->
+
+    <div
+        class="cart-toast"
+        id="cartToast"
+        role="status"
+        aria-live="polite"
+    >
+
+        <div class="cart-toast-icon">
+            ✓
+        </div>
+
+        <div class="cart-toast-content">
+
+            <strong>
+                Added to cart
+            </strong>
+
+            <span id="toastProductName">
+                Product
+            </span>
+
+        </div>
+
+        <a href="cart.html">
+            View Cart
+        </a>
+
+        <button
+            type="button"
+            id="closeToast"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <!-- Main JS -->
+    <script src="assets/js/index.js"></script>
+
+    <!-- Shop JS -->
+    <script src="asset/js/shop.js"></script>
+
+</body>
+                                  </html>
