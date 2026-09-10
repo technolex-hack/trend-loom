@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Your GlowSkin order has been successfully placed."
+  >
+
+  <title>Order Confirmed — GlowSkin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="assets/css/order-success.css">
+</head>
+
+<body>
+
+  <!-- =====================================
+       Announcement
+       ===================================== -->
+
+  <div class="announcement">
+    ✨ Free shipping on orders above ₹999
+  </div>
+
+
+  <!-- =====================================
+       Header
+       ===================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo">
+        <span class="logo-mark">G</span>
+
+        <span class="logo-text">
+          Glow<span>Skin</span>
+        </span>
+      </a>
+
+
+      <!-- Desktop Navigation -->
+
+      <nav class="main-nav">
+
+        <a href="index.html">Home</a>
+
+        <a href="shop.html">Shop</a>
+
+        <a href="shop.html?category=face-wash">
+          Face Care
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=sunscreen">
+          Sunscreen
+        </a>
+
+        <a href="shop.html?category=offers">
+          Offers
+        </a>
+
+      </nav>
+
+
+      <!-- Header Actions -->
+
+      <div class="header-actions">
+
+        <button
+          class="header-icon-btn"
+          id="searchToggle"
+          aria-label="Search"
+          type="button"
+        >
+          🔍
+        </button>
+
+        <a
+          href="login.html"
+          class="header-icon-btn"
+          aria-label="Account"
+        >
+          👤
+        </a>
+
+        <a
+          href="wishlist.html"
+          class="header-icon-btn icon-with-count"
+          aria-label="Wishlist"
+        >
+          ♡
+          <span
+            class="header-count"
+            id="wishlistCount"
+          >
+            0
+          </span>
+        </a>
+
+        <a
+          href="cart.html"
+          class="header-icon-btn icon-with-count"
+          aria-label="Cart"
+        >
+          🛒
+          <span
+            class="header-count"
+            id="cartCount"
+          >
+            0
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================
+       Mobile Menu
+       ===================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <div class="mobile-menu-header">
+
+      <a href="index.html" class="logo">
+        <span class="logo-mark">G</span>
+
+        <span class="logo-text">
+          Glow<span>Skin</span>
+        </span>
+      </a>
+
+      <button
+        id="mobileMenuClose"
+        type="button"
+        aria-label="Close menu"
+      >
+        ✕
+      </button>
+
+    </div>
+
+
+    <nav class="mobile-nav">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="shop.html">
+        Shop
+      </a>
+
+      <a href="shop.html?category=face-wash">
+        Face Care
+      </a>
+
+      <a href="shop.html?category=serums">
+        Serums
+      </a>
+
+      <a href="shop.html?category=sunscreen">
+        Sunscreen
+      </a>
+
+      <a href="shop.html?category=offers">
+        Offers
+      </a>
+
+      <a href="login.html">
+        My Account
+      </a>
+
+      <a href="wishlist.html">
+        Wishlist
+      </a>
+
+      <a href="cart.html">
+        Cart
+      </a>
+
+    </nav>
+
+  </div>
+
+
+  <!-- =====================================
+       Search Overlay
+       ===================================== -->
+
+  <div
+    class="search-overlay"
+    id="searchOverlay"
+  >
+
+    <div class="search-box">
+
+      <button
+        class="search-close"
+        id="searchClose"
+        type="button"
+        aria-label="Close search"
+      >
+        ✕
+      </button>
+
+      <h2>
+        Search GlowSkin
+      </h2>
+
+      <form id="searchForm">
+
+        <div class="search-input-wrap">
+
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search skincare products..."
+            autocomplete="off"
+          >
+
+          <button type="submit">
+            Search
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================
+       Main
+       ===================================== -->
+
+  <main class="order-success-page">
+
+    <div class="container">
+
+
+      <!-- Success Card -->
+
+      <section class="success-card">
+
+        <div class="success-icon">
+          ✓
+        </div>
+
+        <p class="success-label">
+          ORDER CONFIRMED
+        </p>
+
+        <h1>
+          Thank You,
+          <span id="customerName">
+            Customer
+          </span>!
+        </h1>
+
+        <p class="success-message">
+          Your order has been successfully placed.
+          We’ll start preparing your skincare essentials
+          right away.
+        </p>
+
+
+        <!-- Order ID -->
+
+        <div class="order-id-box">
+
+          <span>
+            Order ID
+          </span>
+
+          <strong id="orderId">
+            —
+          </strong>
+
+        </div>
+
+
+        <!-- Order Summary -->
+
+        <div class="order-summary">
+
+          <div class="summary-row">
+
+            <span>
+              Order Total
+            </span>
+
+            <strong id="orderTotal">
+              ₹0
+            </strong>
+
+          </div>
+
+
+          <div class="summary-row">
+
+            <span>
+              Payment Method
+            </span>
+
+            <strong id="paymentMethod">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="summary-row">
+
+            <span>
+              Order Status
+            </span>
+
+            <strong class="status-success" id="orderStatus">
+              Placed
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <!-- Delivery -->
+
+        <div class="delivery-box">
+
+          <div class="delivery-icon">
+            🚚
+          </div>
+
+          <div>
+
+            <strong>
+              Estimated Delivery
+            </strong>
+
+            <p id="deliveryDate">
+              3–7 business days
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Actions -->
+
+        <div class="success-actions">
+
+          <a
+            href="shop.html"
+            class="btn btn-primary"
+          >
+            Continue Shopping
+          </a>
+
+          <a
+            href="track-order.html"
+            class="btn btn-outline"
+            id="trackOrderBtn"
+          >
+            Track Order
+          </a>
+
+        </div>
+
+
+        <a
+          href="index.html"
+          class="back-home"
+        >
+          ← Back to GlowSkin
+        </a>
+
+      </section>
+
+
+      <!-- =====================================
+           What Happens Next
+           ===================================== -->
+
+      <section class="next-steps">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            WHAT HAPPENS NEXT
+          </p>
+
+          <h2>
+            Your GlowSkin journey
+          </h2>
+
+        </div>
+
+
+        <div class="steps-grid">
+
+          <div class="step-card">
+
+            <div class="step-number">
+              01
+            </div>
+
+            <div class="step-icon">
+              📦
+            </div>
+
+            <h3>
+              Order Processing
+            </h3>
+
+            <p>
+              We’ll carefully pack your skincare
+              products.
+            </p>
+
+          </div>
+
+
+          <div class="step-card">
+
+            <div class="step-number">
+              02
+            </div>
+
+            <div class="step-icon">
+              🚚
+            </div>
+
+            <h3>
+              Order Shipped
+            </h3>
+
+            <p>
+              Your package will be handed over
+              to our delivery partner.
+            </p>
+
+          </div>
+
+
+          <div class="step-card">
+
+            <div class="step-number">
+              03
+            </div>
+
+            <div class="step-icon">
+              ✨
+            </div>
+
+            <h3>
+              Delivered
+            </h3>
+
+            <p>
+              Your skincare essentials arrive
+              at your doorstep.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================
+           Support
+           ===================================== -->
+
+      <section class="support-box">
+
+        <div>
+
+          <p class="eyebrow">
+            NEED HELP?
+          </p>
+
+          <h2>
+            We’re here for you.
+          </h2>
+
+          <p>
+            If you have any questions about your order,
+            our support team is happy to help.
+          </p>
+
+        </div>
+
+        <a
+          href="contact.html"
+          class="btn btn-outline"
+        >
+          Contact Us
+        </a>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <!-- =====================================
+       Footer
+       ===================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+
+          <span class="logo-mark">
+            G
+          </span>
+
+          <span class="logo-text">
+            Glow<span>Skin</span>
+          </span>
+
+        </a>
+
+        <p>
+          Simple, effective skincare for healthy,
+          glowing skin.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Shop
+        </h3>
+
+        <a href="shop.html">
+          All Products
+        </a>
+
+        <a href="shop.html?category=face-wash">
+          Face Wash
+        </a>
+
+        <a href="shop.html?category=serums">
+          Serums
+        </a>
+
+        <a href="shop.html?category=moisturizers">
+          Moisturizers
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Help
+        </h3>
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="shipping-returns.html">
+          Shipping & Returns
+        </a>
+
+        <a href="track-order.html">
+          Track Order
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Company
+        </h3>
+
+        <a href="about.html">
+          About GlowSkin
+        </a>
+
+        <a href="blog.html">
+          Blog
+        </a>
+
+        <a href="privacy-policy.html">
+          Privacy Policy
+        </a>
+
+        <a href="terms.html">
+          Terms & Conditions
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>
+          © 2026 GlowSkin. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Main JS -->
+  <script src="assets/js/index.js"></script>
+
+  <!-- Page JS -->
+  <script src="assets/js/order-success.js"></script>
+
+</body>
+        </html>
