@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Settings — GlowSkin Admin</title>
+
+    <!-- Admin Base CSS -->
+    <link
+        rel="stylesheet"
+        href="../assets/css/admin.css"
+    >
+
+    <!-- Settings Page CSS -->
+    <link
+        rel="stylesheet"
+        href="../assets/css/admin-settings.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ADMIN LAYOUT
+    ====================================================== -->
+
+    <div class="admin-layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="admin-sidebar">
+
+            <div class="admin-sidebar-header">
+
+                <a
+                    href="index.html"
+                    class="admin-logo"
+                >
+                    <span class="admin-logo-mark">
+                        G
+                    </span>
+
+                    <span class="admin-logo-text">
+                        GlowSkin
+                        <small>Admin</small>
+                    </span>
+                </a>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="admin-navigation">
+
+                <!-- MAIN -->
+
+                <div class="admin-nav-section">
+
+                    <span class="admin-nav-label">
+                        MAIN
+                    </span>
+
+                    <a
+                        href="index.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▦</span>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a
+                        href="products.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▣</span>
+                        <span>Products</span>
+                    </a>
+
+                    <a
+                        href="orders.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▤</span>
+                        <span>Orders</span>
+                    </a>
+
+                    <a
+                        href="customers.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">♙</span>
+                        <span>Customers</span>
+                    </a>
+
+                    <a
+                        href="inventory.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▥</span>
+                        <span>Inventory</span>
+                    </a>
+
+                </div>
+
+
+                <!-- STORE -->
+
+                <div class="admin-nav-section">
+
+                    <span class="admin-nav-label">
+                        STORE
+                    </span>
+
+                    <a
+                        href="coupons.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">%</span>
+                        <span>Coupons</span>
+                    </a>
+
+                    <a
+                        href="banners.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▱</span>
+                        <span>Banners</span>
+                    </a>
+
+                    <a
+                        href="reviews.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">★</span>
+                        <span>Reviews</span>
+                    </a>
+
+                    <a
+                        href="blog.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▤</span>
+                        <span>Blog</span>
+                    </a>
+
+                    <a
+                        href="shipping.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">▰</span>
+                        <span>Shipping</span>
+                    </a>
+
+                    <a
+                        href="payments.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">₹</span>
+                        <span>Payments</span>
+                    </a>
+
+                </div>
+
+
+                <!-- SYSTEM -->
+
+                <div class="admin-nav-section">
+
+                    <span class="admin-nav-label">
+                        SYSTEM
+                    </span>
+
+                    <a
+                        href="settings.html"
+                        class="admin-nav-link active"
+                    >
+                        <span class="admin-nav-icon">⚙</span>
+                        <span>Settings</span>
+                    </a>
+
+                    <a
+                        href="../index.html"
+                        class="admin-nav-link"
+                    >
+                        <span class="admin-nav-icon">↗</span>
+                        <span>View Store</span>
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- Sidebar Footer -->
+
+            <div class="admin-sidebar-footer">
+
+                <div class="admin-user-card">
+
+                    <div class="admin-user-avatar">
+                        A
+                    </div>
+
+                    <div class="admin-user-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <span>
+                            Store Manager
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <main class="admin-main">
+
+
+            <!-- Topbar -->
+
+            <header class="admin-topbar">
+
+                <button
+                    type="button"
+                    class="admin-menu-button"
+                    id="adminMenuButton"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div class="admin-topbar-title">
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                    <p>
+                        Manage your GlowSkin store settings
+                    </p>
+
+                </div>
+
+
+                <div class="admin-topbar-actions">
+
+                    <a
+                        href="../index.html"
+                        class="admin-view-store-button"
+                    >
+                        View Store ↗
+                    </a>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 CONTENT
+            ================================================== -->
+
+            <div class="admin-content settings-page">
+
+
+                <!-- Page Header -->
+
+                <div class="settings-page-header">
+
+                    <div>
+
+                        <span class="settings-eyebrow">
+                            STORE CONFIGURATION
+                        </span>
+
+                        <h2>
+                            General Settings
+                        </h2>
+
+                        <p>
+                            Manage your store information,
+                            checkout preferences and notifications.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="settings-save-button"
+                        id="saveSettingsButton"
+                    >
+                        <span>✓</span>
+                        Save Changes
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     STORE INFORMATION
+                ================================================== -->
+
+                <section class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div>
+
+                            <h3>
+                                Store Information
+                            </h3>
+
+                            <p>
+                                Basic information about your GlowSkin store.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-form-grid">
+
+
+                        <!-- Store Name -->
+
+                        <div class="settings-form-group">
+
+                            <label for="storeName">
+                                Store Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="storeName"
+                                value="GlowSkin"
+                                placeholder="Enter store name"
+                            >
+
+                        </div>
+
+
+                        <!-- Store Email -->
+
+                        <div class="settings-form-group">
+
+                            <label for="storeEmail">
+                                Store Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="storeEmail"
+                                value="hello@glowskin.com"
+                                placeholder="Enter store email"
+                            >
+
+                        </div>
+
+
+                        <!-- Store Phone -->
+
+                        <div class="settings-form-group">
+
+                            <label for="storePhone">
+                                Store Phone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="storePhone"
+                                value="+91 83300 76133"
+                                placeholder="Enter phone number"
+                            >
+
+                        </div>
+
+
+                        <!-- Website -->
+
+                        <div class="settings-form-group">
+
+                            <label for="storeWebsite">
+                                Website URL
+                            </label>
+
+                            <input
+                                type="url"
+                                id="storeWebsite"
+                                value=""
+                                placeholder="https://yourstore.com"
+                            >
+
+                        </div>
+
+
+                        <!-- Address -->
+
+                        <div class="settings-form-group settings-form-full">
+
+                            <label for="storeAddress">
+                                Store Address
+                            </label>
+
+                            <textarea
+                                id="storeAddress"
+                                rows="3"
+                                placeholder="Enter complete store address"
+                            >Kerala, India</textarea>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     REGIONAL SETTINGS
+                ================================================== -->
+
+                <section class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div>
+
+                            <h3>
+                                Regional Settings
+                            </h3>
+
+                            <p>
+                                Configure currency, language and timezone.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-form-grid">
+
+
+                        <!-- Currency -->
+
+                        <div class="settings-form-group">
+
+                            <label for="storeCurrency">
+                                Currency
+                            </label>
+
+                            <select id="storeCurrency">
+
+                                <option value="INR" selected>
+                                    INR — Indian Rupee (₹)
+                                </option>
+
+                                <option value="USD">
+                                    USD — US Dollar ($)
+                                </option>
+
+                                <option value="EUR">
+                                    EUR — Euro (€)
+                                </option>
+
+                                <option value="GBP">
+                                    GBP — British Pound (£)
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Language -->
+
+                        <div class="settings-form-group">
+
+                            <label for="storeLanguage">
+                                Store Language
+                            </label>
+
+                            <select id="storeLanguage">
+
+                                <option value="en" selected>
+                                    English
+                                </option>
+
+                                <option value="ml">
+                                    Malayalam
+                                </option>
+
+                                <option value="hi">
+                                    Hindi
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Timezone -->
+
+                        <div class="settings-form-group">
+
+                            <label for="storeTimezone">
+                                Timezone
+                            </label>
+
+                            <select id="storeTimezone">
+
+                                <option
+                                    value="Asia/Kolkata"
+                                    selected
+                                >
+                                    India Standard Time (IST)
+                                </option>
+
+                                <option value="UTC">
+                                    UTC
+                                </option>
+
+                                <option value="Asia/Dubai">
+                                    Gulf Standard Time
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     ORDER SETTINGS
+                ================================================== -->
+
+                <section class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div>
+
+                            <h3>
+                                Order Settings
+                            </h3>
+
+                            <p>
+                                Configure how customer orders are handled.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-form-grid">
+
+
+                        <!-- Order Prefix -->
+
+                        <div class="settings-form-group">
+
+                            <label for="orderPrefix">
+                                Order ID Prefix
+                            </label>
+
+                            <input
+                                type="text"
+                                id="orderPrefix"
+                                value="GS"
+                                maxlength="10"
+                                placeholder="GS"
+                            >
+
+                            <small>
+                                Example: GS20260910XXXXXX
+                            </small>
+
+                        </div>
+
+
+                        <!-- Guest Checkout -->
+
+                        <div class="settings-form-group">
+
+                            <label>
+                                Guest Checkout
+                            </label>
+
+                            <div class="settings-toggle-row">
+
+                                <div>
+
+                                    <strong>
+                                        Allow Guest Checkout
+                                    </strong>
+
+                                    <small>
+                                        Customers can place orders
+                                        without creating an account.
+                                    </small>
+
+                                </div>
+
+
+                                <label class="settings-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        id="guestCheckoutEnabled"
+                                        checked
+                                    >
+
+                                    <span class="settings-slider"></span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Auto Order Confirmation -->
+
+                        <div class="settings-form-group">
+
+                            <label>
+                                Order Confirmation
+                            </label>
+
+                            <div class="settings-toggle-row">
+
+                                <div>
+
+                                    <strong>
+                                        Auto Confirm Orders
+                                    </strong>
+
+                                    <small>
+                                        Automatically mark new orders
+                                        as confirmed.
+                                    </small>
+
+                                </div>
+
+
+                                <label class="settings-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        id="autoConfirmOrders"
+                                        checked
+                                    >
+
+                                    <span class="settings-slider"></span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Stock Check -->
+
+                        <div class="settings-form-group">
+
+                            <label>
+                                Inventory Check
+                            </label>
+
+                            <div class="settings-toggle-row">
+
+                                <div>
+
+                                    <strong>
+                                        Check Stock Before Order
+                                    </strong>
+
+                                    <small>
+                                        Prevent orders when products
+                                        are out of stock.
+                                    </small>
+
+                                </div>
+
+
+                                <label class="settings-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        id="stockCheckEnabled"
+                                        checked
+                                    >
+
+                                    <span class="settings-slider"></span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     NOTIFICATIONS
+                ================================================== -->
+
+                <section class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div>
+
+                            <h3>
+                                Notifications
+                            </h3>
+
+                            <p>
+                                Choose which store notifications are enabled.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-notification-list">
+
+
+                        <!-- New Order -->
+
+                        <div class="settings-notification-item">
+
+                            <div>
+
+                                <h4>
+                                    New Order Notification
+                                </h4>
+
+                                <p>
+                                    Get notified when a new order is placed.
+                                </p>
+
+                            </div>
+
+
+                            <label class="settings-toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="newOrderNotification"
+                                    checked
+                                >
+
+                                <span class="settings-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Low Stock -->
+
+                        <div class="settings-notification-item">
+
+                            <div>
+
+                                <h4>
+                                    Low Stock Notification
+                                </h4>
+
+                                <p>
+                                    Get notified when products reach
+                                    low stock levels.
+                                </p>
+
+                            </div>
+
+
+                            <label class="settings-toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="lowStockNotification"
+                                    checked
+                                >
+
+                                <span class="settings-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Customer Registration -->
+
+                        <div class="settings-notification-item">
+
+                            <div>
+
+                                <h4>
+                                    New Customer Notification
+                                </h4>
+
+                                <p>
+                                    Get notified when a new customer
+                                    creates an account.
+                                </p>
+
+                            </div>
+
+
+                            <label class="settings-toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="newCustomerNotification"
+                                    checked
+                                >
+
+                                <span class="settings-slider"></span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Review -->
+
+                        <div class="settings-notification-item">
+
+                            <div>
+
+                                <h4>
+                                    New Review Notification
+                                </h4>
+
+                                <p>
+                                    Get notified when a customer submits
+                                    a product review.
+                                </p>
+
+                            </div>
+
+
+                            <label class="settings-toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="newReviewNotification"
+                                    checked
+                                >
+
+                                <span class="settings-slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     STORE APPEARANCE
+                ================================================== -->
+
+                <section class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div>
+
+                            <h3>
+                                Store Appearance
+                            </h3>
+
+                            <p>
+                                Configure basic store branding.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-form-grid">
+
+
+                        <!-- Logo -->
+
+                        <div class="settings-form-group">
+
+                            <label for="storeLogo">
+                                Logo Image Path
+                            </label>
+
+                            <input
+                                type="text"
+                                id="storeLogo"
+                                value="assets/images/logo/logo.png"
+                                placeholder="assets/images/logo/logo.png"
+                            >
+
+                            <small>
+                                Example:
+                                assets/images/logo/logo.png
+                            </small>
+
+                        </div>
+
+
+                        <!-- Favicon -->
+
+                        <div class="settings-form-group">
+
+                            <label for="storeFavicon">
+                                Favicon Image Path
+                            </label>
+
+                            <input
+                                type="text"
+                                id="storeFavicon"
+                                value="assets/images/logo/favicon.png"
+                                placeholder="assets/images/logo/favicon.png"
+                            >
+
+                        </div>
+
+
+                        <!-- Announcement -->
+
+                        <div class="settings-form-group settings-form-full">
+
+                            <label for="storeAnnouncement">
+                                Store Announcement
+                            </label>
+
+                            <input
+                                type="text"
+                                id="storeAnnouncement"
+                                value="✨ Free shipping on orders above ₹999"
+                                placeholder="Enter announcement"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     DEMO NOTICE
+                ================================================== -->
+
+                <div class="settings-demo-notice">
+
+                    <div class="settings-demo-icon">
+                        ⚙
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Frontend Demo Mode
+                        </strong>
+
+                        <p>
+                            These settings are currently stored in your
+                            browser's localStorage. For a production store,
+                            connect these settings to a secure backend or
+                            e-commerce platform.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     BOTTOM SAVE
+                ================================================== -->
+
+                <div class="settings-bottom-actions">
+
+                    <button
+                        type="button"
+                        class="settings-save-button"
+                        id="saveSettingsButtonBottom"
+                    >
+                        ✓ Save Settings
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         ADMIN BASE JS
+    ====================================================== -->
+
+    <script src="../assets/js/admin.js"></script>
+
+
+    <!-- =====================================================
+         SETTINGS JS
+    ====================================================== -->
+
+    <script src="../assets/js/admin-settings.js"></script>
+
+</body>
+                          </html>
