@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reviews — GlowSkin Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/admin-reviews.css">
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+        <aside class="admin-sidebar" id="adminSidebar">
+
+            <div class="admin-brand">
+                <a href="index.html" class="admin-brand-link">
+                    <span class="admin-brand-mark">G</span>
+
+                    <span class="admin-brand-text">
+                        <strong>GlowSkin</strong>
+                        <small>Admin Panel</small>
+                    </span>
+                </a>
+
+                <button
+                    type="button"
+                    class="admin-sidebar-close"
+                    id="adminSidebarClose"
+                    aria-label="Close menu"
+                >
+                    ×
+                </button>
+            </div>
+
+            <nav class="admin-nav">
+
+                <div class="admin-nav-section">
+                    <span class="admin-nav-title">MAIN</span>
+
+                    <a href="index.html" class="admin-nav-link">
+                        <span class="admin-nav-icon">⌂</span>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a href="products.html" class="admin-nav-link">
+                        <span class="admin-nav-icon">▣</span>
+                        <span>Products</span>
+                    </a>
+
+                    <a href="orders.html" class="admin-nav-link">
+                        <span class="admin-nav-icon">▤</span>
+                        <span>Orders</span>
+                    </a>
+
+                    <a href="customers.html" class="admin-nav-link">
+                        <span class="admin-nav-icon">♙</span>
+                        <span>Customers</span>
+                    </a>
+
+                    <a href="inventory.html" class="admin-nav-link">
+                        <span class="admin-nav-icon">▥</span>
+                        <span>Inventory</span>
+                    </a>
+                </div>
+
+                <div class="admin-nav-section">
+                    <span class="admin-nav-title">MARKETING</span>
+
+                    <a href="coupons.html" class="admin-nav-link">
+                        <span class="admin-nav-icon">%</span>
+                        <span>Coupons</span>
+                    </a>
+
+                    <a href="banners.html" class="admin-nav-link">
+                        <span class="admin-nav-icon">▧</span>
+                        <span>Banners</span>
+                    </a>
+
+                    <a href="reviews.html" class="admin-nav-link active">
+                        <span class="admin-nav-icon">★</span>
+                        <span>Reviews</span>
+                    </a>
+
+                    <a href="#" class="admin-nav-link" data-coming-soon>
+                        <span class="admin-nav-icon">✎</span>
+                        <span>Blog</span>
+                    </a>
+                </div>
+
+                <div class="admin-nav-section">
+                    <span class="admin-nav-title">STORE</span>
+
+                    <a href="#" class="admin-nav-link" data-coming-soon>
+                        <span class="admin-nav-icon">⌁</span>
+                        <span>Shipping</span>
+                    </a>
+
+                    <a href="#" class="admin-nav-link" data-coming-soon>
+                        <span class="admin-nav-icon">▣</span>
+                        <span>Payments</span>
+                    </a>
+
+                    <a href="#" class="admin-nav-link" data-coming-soon>
+                        <span class="admin-nav-icon">⚙</span>
+                        <span>Settings</span>
+                    </a>
+
+                    <a href="../index.html" class="admin-nav-link">
+                        <span class="admin-nav-icon">↗</span>
+                        <span>View Store</span>
+                    </a>
+                </div>
+
+            </nav>
+
+            <div class="admin-sidebar-footer">
+                <div class="admin-user-mini">
+                    <div class="admin-user-avatar">A</div>
+
+                    <div class="admin-user-info">
+                        <strong>Admin</strong>
+                        <span>Store Manager</span>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- =========================
+             OVERLAY
+        ========================== -->
+        <div class="admin-sidebar-overlay" id="adminSidebarOverlay"></div>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+        <main class="admin-main">
+
+            <!-- TOPBAR -->
+            <header class="admin-topbar">
+
+                <div class="admin-topbar-left">
+
+                    <button
+                        type="button"
+                        class="admin-menu-button"
+                        id="adminSidebarToggle"
+                        aria-label="Open menu"
+                    >
+                        ☰
+                    </button>
+
+                    <div>
+                        <h1 class="admin-page-title">Reviews</h1>
+                        <p class="admin-page-subtitle">
+                            Manage customer reviews and ratings
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="admin-topbar-right">
+
+                    <a href="../index.html" class="admin-view-store">
+                        ↗ View Store
+                    </a>
+
+                    <button
+                        type="button"
+                        class="admin-profile-button"
+                        aria-label="Admin profile"
+                    >
+                        <span class="admin-profile-avatar">A</span>
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- PAGE -->
+            <div class="admin-content">
+
+                <!-- =========================
+                     PAGE HEADER
+                ========================== -->
+                <section class="reviews-page-header">
+
+                    <div>
+                        <h2>Customer Reviews</h2>
+                        <p>
+                            Review, approve, hide, or remove customer feedback.
+                        </p>
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     STATS
+                ========================== -->
+                <section class="reviews-stats-grid">
+
+                    <article class="review-stat-card">
+
+                        <div class="review-stat-icon">★</div>
+
+                        <div class="review-stat-content">
+                            <span>Total Reviews</span>
+                            <strong id="reviewsTotalCount">0</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="review-stat-card">
+
+                        <div class="review-stat-icon pending">◷</div>
+
+                        <div class="review-stat-content">
+                            <span>Pending Reviews</span>
+                            <strong id="reviewsPendingCount">0</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="review-stat-card">
+
+                        <div class="review-stat-icon approved">✓</div>
+
+                        <div class="review-stat-content">
+                            <span>Published</span>
+                            <strong id="reviewsApprovedCount">0</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="review-stat-card">
+
+                        <div class="review-stat-icon rating">★</div>
+
+                        <div class="review-stat-content">
+                            <span>Average Rating</span>
+                            <strong id="reviewsAverageRating">0.0</strong>
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =========================
+                     TOOLBAR
+                ========================== -->
+                <section class="reviews-toolbar">
+
+                    <div class="reviews-search">
+
+                        <span class="reviews-search-icon">⌕</span>
+
+                        <input
+                            type="search"
+                            id="reviewSearch"
+                            placeholder="Search reviewer, product or review..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <div class="reviews-filter-group">
+
+                        <select id="reviewRatingFilter">
+                            <option value="all">All Ratings</option>
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+
+
+                        <select id="reviewStatusFilter">
+                            <option value="all">All Status</option>
+                            <option value="pending">Pending</option>
+                            <option value="approved">Published</option>
+                            <option value="hidden">Hidden</option>
+                        </select>
+
+
+                        <button
+                            type="button"
+                            class="reviews-clear-button"
+                            id="clearReviewFilters"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     RESULT BAR
+                ========================== -->
+                <div class="reviews-result-bar">
+
+                    <span id="reviewResultCount">
+                        0 reviews
+                    </span>
+
+                </div>
+
+
+                <!-- =========================
+                     REVIEWS TABLE
+                ========================== -->
+                <section class="admin-card reviews-table-card">
+
+                    <div class="reviews-table-wrap">
+
+                        <table class="reviews-table">
+
+                            <thead>
+                                <tr>
+
+                                    <th>Customer</th>
+
+                                    <th>Product</th>
+
+                                    <th>Rating</th>
+
+                                    <th>Review</th>
+
+                                    <th>Date</th>
+
+                                    <th>Status</th>
+
+                                    <th>Actions</th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody id="reviewsTableBody">
+                                <!-- Reviews generated by JavaScript -->
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- EMPTY STATE -->
+                    <div
+                        class="reviews-empty-state"
+                        id="reviewsEmptyState"
+                        hidden
+                    >
+
+                        <div class="reviews-empty-icon">
+                            ★
+                        </div>
+
+                        <h3>No reviews found</h3>
+
+                        <p>
+                            Try changing your search or filter options.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="admin-button admin-button-secondary"
+                            id="clearEmptyReviewFilters"
+                        >
+                            Clear Filters
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     DEMO NOTICE
+                ========================== -->
+                <section class="admin-demo-notice reviews-demo-notice">
+
+                    <div class="admin-demo-icon">ℹ</div>
+
+                    <div>
+                        <strong>Frontend demo</strong>
+
+                        <p>
+                            Review data is stored in your browser using
+                            localStorage. This admin page is currently a
+                            frontend-only demo and does not connect to a
+                            real database.
+                        </p>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         VIEW REVIEW MODAL
+    ========================== -->
+    <div
+        class="admin-modal"
+        id="reviewModal"
+        aria-hidden="true"
+    >
+
+        <div class="admin-modal-backdrop" data-close-review-modal></div>
+
+        <div
+            class="admin-modal-dialog review-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="reviewModalTitle"
+        >
+
+            <div class="admin-modal-header">
+
+                <div>
+                    <h2 id="reviewModalTitle">
+                        Review Details
+                    </h2>
+
+                    <p>
+                        View customer feedback
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    class="admin-modal-close"
+                    id="reviewModalClose"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="admin-modal-body">
+
+                <div class="review-detail-header">
+
+                    <div
+                        class="review-detail-avatar"
+                        id="reviewDetailAvatar"
+                    >
+                        A
+                    </div>
+
+                    <div class="review-detail-customer">
+
+                        <strong id="reviewDetailCustomer">
+                            Customer
+                        </strong>
+
+                        <span id="reviewDetailEmail">
+                            customer@example.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="review-detail-product">
+
+                    <span class="review-detail-label">
+                        Product
+                    </span>
+
+                    <strong id="reviewDetailProduct">
+                        Product Name
+                    </strong>
+
+                </div>
+
+
+                <div class="review-detail-rating">
+
+                    <span class="review-detail-label">
+                        Rating
+                    </span>
+
+                    <div
+                        class="review-stars"
+                        id="reviewDetailRating"
+                    >
+                        ★★★★★
+                    </div>
+
+                </div>
+
+
+                <div class="review-detail-message">
+
+                    <span class="review-detail-label">
+                        Customer Review
+                    </span>
+
+                    <div id="reviewDetailText">
+                        Review text
+                    </div>
+
+                </div>
+
+
+                <div class="review-detail-meta">
+
+                    <div>
+                        <span class="review-detail-label">
+                            Date
+                        </span>
+
+                        <strong id="reviewDetailDate">
+                            —
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span class="review-detail-label">
+                            Status
+                        </span>
+
+                        <span
+                            class="review-status-badge"
+                            id="reviewDetailStatus"
+                        >
+                            Pending
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-modal-footer">
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-secondary"
+                    id="reviewModalCancel"
+                >
+                    Close
+                </button>
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-danger"
+                    id="reviewModalDelete"
+                >
+                    Delete
+                </button>
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-primary"
+                    id="reviewModalAction"
+                >
+                    Approve
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         DELETE REVIEW MODAL
+    ========================== -->
+    <div
+        class="admin-modal"
+        id="deleteReviewModal"
+        aria-hidden="true"
+    >
+
+        <div class="admin-modal-backdrop" data-close-delete-review></div>
+
+        <div
+            class="admin-modal-dialog review-delete-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="deleteReviewTitle"
+        >
+
+            <div class="admin-modal-header">
+
+                <div>
+                    <h2 id="deleteReviewTitle">
+                        Delete Review
+                    </h2>
+
+                    <p>
+                        This action cannot be undone.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    class="admin-modal-close"
+                    id="deleteReviewClose"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="admin-modal-body">
+
+                <div class="delete-review-warning">
+
+                    <div class="delete-review-icon">
+                        !
+                    </div>
+
+                    <p>
+                        Are you sure you want to permanently delete
+                        the review from
+                        <strong id="deleteReviewCustomer">
+                            Customer
+                        </strong>?
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-modal-footer">
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-secondary"
+                    id="cancelDeleteReview"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-danger"
+                    id="confirmDeleteReview"
+                >
+                    Delete Review
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         SCRIPTS
+    ========================== -->
+    <script src="../assets/js/admin.js"></script>
+    <script src="../assets/js/admin-reviews.js"></script>
+
+</body>
+</html>
