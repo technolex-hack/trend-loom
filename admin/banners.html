@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Banners — GlowSkin Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/admin-banners.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ADMIN SIDEBAR
+         ========================= -->
+
+    <aside
+        class="admin-sidebar"
+        id="adminSidebar"
+    >
+
+        <div class="admin-sidebar-header">
+
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+                <span class="admin-logo-mark">G</span>
+
+                <span>
+                    <strong>GlowSkin</strong>
+                    <small>Admin Panel</small>
+                </span>
+            </a>
+
+            <button
+                type="button"
+                class="admin-sidebar-close"
+                id="adminSidebarClose"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="admin-nav">
+
+            <a
+                href="index.html"
+                class="admin-nav-item"
+            >
+                <span class="admin-nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="products.html"
+                class="admin-nav-item"
+            >
+                <span class="admin-nav-icon">▣</span>
+                <span>Products</span>
+            </a>
+
+
+            <a
+                href="orders.html"
+                class="admin-nav-item"
+            >
+                <span class="admin-nav-icon">▤</span>
+                <span>Orders</span>
+
+                <span
+                    class="admin-nav-badge"
+                    id="sidebarOrderCount"
+                >
+                    0
+                </span>
+            </a>
+
+
+            <a
+                href="customers.html"
+                class="admin-nav-item"
+            >
+                <span class="admin-nav-icon">♙</span>
+                <span>Customers</span>
+
+                <span
+                    class="admin-nav-badge"
+                    id="adminCustomerCount"
+                >
+                    0
+                </span>
+            </a>
+
+
+            <a
+                href="inventory.html"
+                class="admin-nav-item"
+            >
+                <span class="admin-nav-icon">▦</span>
+                <span>Inventory</span>
+            </a>
+
+
+            <a
+                href="coupons.html"
+                class="admin-nav-item"
+            >
+                <span class="admin-nav-icon">%</span>
+                <span>Coupons</span>
+            </a>
+
+
+            <a
+                href="banners.html"
+                class="admin-nav-item active"
+            >
+                <span class="admin-nav-icon">▧</span>
+                <span>Banners</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+                data-admin-demo="true"
+            >
+                <span class="admin-nav-icon">★</span>
+                <span>Reviews</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+                data-admin-demo="true"
+            >
+                <span class="admin-nav-icon">✎</span>
+                <span>Blog</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+                data-admin-demo="true"
+            >
+                <span class="admin-nav-icon">🚚</span>
+                <span>Shipping</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+                data-admin-demo="true"
+            >
+                <span class="admin-nav-icon">₹</span>
+                <span>Payments</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+                data-admin-demo="true"
+            >
+                <span class="admin-nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- VIEW STORE -->
+
+        <div class="admin-sidebar-bottom">
+
+            <a
+                href="../index.html"
+                class="admin-view-store"
+            >
+                <span>↗</span>
+                <span>View Store</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- SIDEBAR OVERLAY -->
+
+    <div
+        class="admin-sidebar-overlay"
+        id="adminSidebarOverlay"
+    ></div>
+
+
+    <!-- =========================
+         MAIN
+         ========================= -->
+
+    <main class="admin-main">
+
+        <!-- TOPBAR -->
+
+        <header class="admin-topbar">
+
+            <div class="admin-topbar-left">
+
+                <button
+                    type="button"
+                    class="admin-sidebar-open"
+                    id="adminSidebarOpen"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div class="admin-page-heading">
+
+                    <span class="admin-page-eyebrow">
+                        STORE MANAGEMENT
+                    </span>
+
+                    <h1>Banners</h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-topbar-actions">
+
+                <a
+                    href="../index.html"
+                    class="admin-topbar-store"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View Store ↗
+                </a>
+
+
+                <button
+                    type="button"
+                    class="admin-icon-button"
+                    title="Notifications"
+                    aria-label="Notifications"
+                >
+                    ♢
+                </button>
+
+
+                <div class="admin-profile">
+
+                    <div class="admin-profile-avatar">
+                        A
+                    </div>
+
+                    <div class="admin-profile-info">
+                        <strong>Admin</strong>
+                        <span>Store Manager</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <div class="admin-content">
+
+            <!-- PAGE HEADER -->
+
+            <section class="banners-page-header">
+
+                <div>
+
+                    <span class="admin-section-eyebrow">
+                        HOMEPAGE CONTENT
+                    </span>
+
+                    <h2>Store Banners</h2>
+
+                    <p>
+                        Manage homepage promotional banners,
+                        campaign images and call-to-action links.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-primary-button"
+                    id="addBannerButton"
+                >
+                    <span>＋</span>
+                    Add Banner
+                </button>
+
+            </section>
+
+
+            <!-- STATS -->
+
+            <section class="banners-stats-grid">
+
+                <div class="banners-stat-card">
+
+                    <div class="banners-stat-icon">
+                        ▧
+                    </div>
+
+                    <div class="banners-stat-content">
+
+                        <span class="banners-stat-label">
+                            Total Banners
+                        </span>
+
+                        <strong
+                            id="bannersTotalCount"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="banners-stat-card">
+
+                    <div class="banners-stat-icon active">
+                        ✓
+                    </div>
+
+                    <div class="banners-stat-content">
+
+                        <span class="banners-stat-label">
+                            Active
+                        </span>
+
+                        <strong
+                            id="bannersActiveCount"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="banners-stat-card">
+
+                    <div class="banners-stat-icon scheduled">
+                        ◷
+                    </div>
+
+                    <div class="banners-stat-content">
+
+                        <span class="banners-stat-label">
+                            Scheduled
+                        </span>
+
+                        <strong
+                            id="bannersScheduledCount"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="banners-stat-card">
+
+                    <div class="banners-stat-icon inactive">
+                        ○
+                    </div>
+
+                    <div class="banners-stat-content">
+
+                        <span class="banners-stat-label">
+                            Inactive
+                        </span>
+
+                        <strong
+                            id="bannersInactiveCount"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TOOLBAR -->
+
+            <section class="admin-banners-toolbar">
+
+                <div class="banners-search">
+
+                    <span class="banners-search-icon">
+                        ⌕
+                    </span>
+
+                    <input
+                        type="search"
+                        id="bannerSearch"
+                        placeholder="Search banners..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <select
+                    id="bannerStatusFilter"
+                    class="banners-filter"
+                >
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="active">
+                        Active
+                    </option>
+
+                    <option value="scheduled">
+                        Scheduled
+                    </option>
+
+                    <option value="inactive">
+                        Inactive
+                    </option>
+
+                    <option value="expired">
+                        Expired
+                    </option>
+                </select>
+
+
+                <select
+                    id="bannerPositionFilter"
+                    class="banners-filter"
+                >
+                    <option value="all">
+                        All Positions
+                    </option>
+
+                    <option value="hero">
+                        Hero
+                    </option>
+
+                    <option value="promo">
+                        Promo
+                    </option>
+
+                    <option value="category">
+                        Category
+                    </option>
+
+                    <option value="announcement">
+                        Announcement
+                    </option>
+                </select>
+
+
+                <button
+                    type="button"
+                    class="banners-clear-button"
+                    id="clearBannerFilters"
+                >
+                    Clear
+                </button>
+
+            </section>
+
+
+            <!-- RESULT BAR -->
+
+            <div class="banners-result-bar">
+
+                <span id="bannerResultCount">
+                    0 banners
+                </span>
+
+            </div>
+
+
+            <!-- BANNERS TABLE -->
+
+            <section class="admin-banners-card">
+
+                <div class="admin-banners-table-wrapper">
+
+                    <table class="admin-banners-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Banner</th>
+
+                                <th>Position</th>
+
+                                <th>Validity</th>
+
+                                <th>Button</th>
+
+                                <th>Status</th>
+
+                                <th>Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="bannersTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="banners-empty-state"
+                    id="bannersEmptyState"
+                >
+
+                    <div class="banners-empty-icon">
+                        ▧
+                    </div>
+
+                    <h3>No banners found</h3>
+
+                    <p>
+                        Add your first promotional banner
+                        to display it on the store.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="admin-primary-button"
+                        id="emptyAddBannerButton"
+                    >
+                        Add Banner
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- DEMO NOTICE -->
+
+            <section class="admin-banners-notice">
+
+                <div class="admin-banners-notice-icon">
+                    ℹ
+                </div>
+
+                <div class="admin-banners-notice-content">
+
+                    <strong>
+                        Frontend Demo Mode
+                    </strong>
+
+                    <p>
+                        Banner settings are currently stored
+                        in your browser using localStorage.
+                        A backend/database will be connected
+                        later for real store-wide banner management.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer class="admin-footer">
+
+            <span>
+                © 2026 GlowSkin Admin
+            </span>
+
+            <span>
+                Skincare Store Management
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================
+         ADD / EDIT BANNER MODAL
+         ========================= -->
+
+    <div
+        class="admin-modal banner-modal"
+        id="bannerModal"
+        aria-hidden="true"
+    >
+
+        <div class="admin-modal-dialog">
+
+            <div class="admin-modal-header">
+
+                <div>
+
+                    <span class="admin-modal-eyebrow">
+                        BANNER MANAGEMENT
+                    </span>
+
+                    <h2 id="bannerModalTitle">
+                        Add Banner
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-modal-close"
+                    id="bannerModalClose"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="banner-modal-body">
+
+                <input
+                    type="hidden"
+                    id="bannerId"
+                >
+
+
+                <!-- BASIC INFORMATION -->
+
+                <div class="banner-form-section">
+
+                    <div class="banner-form-section-title">
+                        Basic Information
+                    </div>
+
+
+                    <div class="banner-form-grid">
+
+                        <div class="admin-form-group">
+
+                            <label for="bannerTitle">
+                                Banner Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bannerTitle"
+                                placeholder="Summer Glow Sale"
+                            >
+
+                        </div>
+
+
+                        <div class="admin-form-group">
+
+                            <label for="bannerSubtitle">
+                                Subtitle
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bannerSubtitle"
+                                placeholder="Up to 20% off skincare"
+                            >
+
+                        </div>
+
+
+                        <div class="admin-form-group">
+
+                            <label for="bannerPosition">
+                                Position
+                            </label>
+
+                            <select id="bannerPosition">
+
+                                <option value="hero">
+                                    Hero
+                                </option>
+
+                                <option value="promo">
+                                    Promo
+                                </option>
+
+                                <option value="category">
+                                    Category
+                                </option>
+
+                                <option value="announcement">
+                                    Announcement
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="admin-form-group">
+
+                            <label for="bannerButtonText">
+                                Button Text
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bannerButtonText"
+                                placeholder="Shop Now"
+                            >
+
+                        </div>
+
+
+                        <div class="admin-form-group banner-full-width">
+
+                            <label for="bannerLink">
+                                Button / Banner Link
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bannerLink"
+                                placeholder="shop.html?category=serums"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGE -->
+
+                <div class="banner-form-section">
+
+                    <div class="banner-form-section-title">
+                        Banner Images
+                    </div>
+
+
+                    <div class="banner-form-grid">
+
+                        <div class="admin-form-group">
+
+                            <label for="bannerDesktopImage">
+                                Desktop Image Path
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bannerDesktopImage"
+                                placeholder="assets/images/banners/hero-1.jpg"
+                            >
+
+                            <small>
+                                Example:
+                                assets/images/banners/hero-1.jpg
+                            </small>
+
+                        </div>
+
+
+                        <div class="admin-form-group">
+
+                            <label for="bannerMobileImage">
+                                Mobile Image Path
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bannerMobileImage"
+                                placeholder="assets/images/banners/hero-1-mobile.jpg"
+                            >
+
+                            <small>
+                                Optional. Desktop image will be used
+                                if this is empty.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- IMAGE PREVIEW -->
+
+                    <div
+                        class="banner-image-preview"
+                        id="bannerImagePreview"
+                    >
+
+                        <div class="banner-preview-placeholder">
+                            Image preview will appear here
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SCHEDULE -->
+
+                <div class="banner-form-section">
+
+                    <div class="banner-form-section-title">
+                        Schedule
+                    </div>
+
+
+                    <div class="banner-form-grid">
+
+                        <div class="admin-form-group">
+
+                            <label for="bannerStartDate">
+                                Start Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="bannerStartDate"
+                            >
+
+                        </div>
+
+
+                        <div class="admin-form-group">
+
+                            <label for="bannerEndDate">
+                                End Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="bannerEndDate"
+                            >
+
+                        </div>
+
+
+                        <div class="admin-form-group">
+
+                            <label for="bannerStatus">
+                                Status
+                            </label>
+
+                            <select id="bannerStatus">
+
+                                <option value="active">
+                                    Active
+                                </option>
+
+                                <option value="inactive">
+                                    Inactive
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="admin-form-group">
+
+                            <label for="bannerOrder">
+                                Display Order
+                            </label>
+
+                            <input
+                                type="number"
+                                id="bannerOrder"
+                                min="1"
+                                value="1"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEATURED -->
+
+                <div class="banner-featured-row">
+
+                    <label class="admin-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="bannerFeatured"
+                        >
+
+                        <span class="admin-checkbox-box"></span>
+
+                        <span>
+                            Show this banner prominently
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-modal-footer">
+
+                <button
+                    type="button"
+                    class="admin-secondary-button"
+                    id="cancelBannerButton"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="button"
+                    class="admin-primary-button"
+                    id="saveBannerButton"
+                >
+                    Save Banner
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         DELETE MODAL
+         ========================= -->
+
+    <div
+        class="admin-modal banner-delete-modal"
+        id="deleteBannerModal"
+        aria-hidden="true"
+    >
+
+        <div class="admin-modal-dialog small">
+
+            <div class="admin-modal-header">
+
+                <div>
+
+                    <span class="admin-modal-eyebrow">
+                        DELETE BANNER
+                    </span>
+
+                    <h2>
+                        Delete Banner
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-modal-close"
+                    id="deleteBannerClose"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="banner-delete-body">
+
+                <div class="banner-delete-icon">
+                    !
+                </div>
+
+                <p>
+                    Are you sure you want to delete
+                    <strong id="deleteBannerName">
+                        this banner
+                    </strong>?
+                </p>
+
+                <small>
+                    This action cannot be undone.
+                </small>
+
+            </div>
+
+
+            <div class="admin-modal-footer">
+
+                <button
+                    type="button"
+                    class="admin-secondary-button"
+                    id="cancelDeleteBanner"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="button"
+                    class="admin-danger-button"
+                    id="confirmDeleteBanner"
+                >
+                    Delete Banner
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../assets/js/admin.js"></script>
+    <script src="../assets/js/admin-banners.js"></script>
+
+</body>
+                  </html>
