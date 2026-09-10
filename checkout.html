@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout — GlowSkin</title>
+
+    <meta
+        name="description"
+        content="Complete your GlowSkin skincare order securely."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <!-- Checkout CSS -->
+    <link rel="stylesheet" href="assets/css/checkout.css">
+
+</head>
+
+<body>
+
+
+    <!-- =====================================================
+         ANNOUNCEMENT BAR
+    ====================================================== -->
+
+    <div class="announcement-bar">
+        ✨ Free shipping on orders above ₹999
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">
+                    G
+                </span>
+
+                <span class="logo-text">
+                    GlowSkin
+                </span>
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="shop.html?category=face-wash">
+                    Face Care
+                </a>
+
+                <a href="shop.html?category=serums">
+                    Serums
+                </a>
+
+                <a href="shop.html?category=sunscreen">
+                    Sunscreen
+                </a>
+
+                <a href="offers.html">
+                    Offers
+                </a>
+
+            </nav>
+
+
+            <!-- Header Actions -->
+
+            <div class="header-actions">
+
+
+                <!-- Search -->
+
+                <button
+                    type="button"
+                    class="header-icon-btn"
+                    id="searchBtn"
+                    aria-label="Search"
+                >
+                    🔍
+                </button>
+
+
+                <!-- Account -->
+
+                <a
+                    href="login.html"
+                    class="header-icon-btn"
+                    aria-label="Account"
+                >
+                    👤
+                </a>
+
+
+                <!-- Wishlist -->
+
+                <a
+                    href="wishlist.html"
+                    class="header-icon-btn header-count-btn"
+                    aria-label="Wishlist"
+                >
+                    ♡
+
+                    <span
+                        id="wishlistCount"
+                        class="count-badge"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- Cart -->
+
+                <a
+                    href="cart.html"
+                    class="header-icon-btn header-count-btn"
+                    aria-label="Cart"
+                >
+                    🛒
+
+                    <span
+                        id="cartCount"
+                        class="count-badge"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- Mobile Menu -->
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         SEARCH OVERLAY
+    ====================================================== -->
+
+    <div
+        class="search-overlay"
+        id="searchOverlay"
+    >
+
+        <div class="search-box">
+
+            <button
+                type="button"
+                class="close-search"
+                id="closeSearch"
+                aria-label="Close search"
+            >
+                ×
+            </button>
+
+
+            <h2>
+                What are you looking for?
+            </h2>
+
+
+            <form id="searchForm">
+
+                <div class="search-input-wrapper">
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search skincare products..."
+                        autocomplete="off"
+                    >
+
+                    <button type="submit">
+                        Search
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CHECKOUT HEADER
+    ====================================================== -->
+
+    <section class="checkout-page-header">
+
+        <div class="container">
+
+            <span class="checkout-eyebrow">
+                SECURE CHECKOUT
+            </span>
+
+            <h1>
+                Complete Your Order
+            </h1>
+
+            <p>
+                Enter your delivery details and choose your payment method.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CHECKOUT MAIN
+    ====================================================== -->
+
+    <main class="checkout-page">
+
+        <div class="container">
+
+            <div class="checkout-layout">
+
+
+                <!-- =================================================
+                     LEFT SIDE — CUSTOMER DETAILS
+                ================================================== -->
+
+                <section class="checkout-form-section">
+
+
+                    <!-- Delivery Address -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-header">
+
+                            <div>
+
+                                <span class="section-number">
+                                    01
+                                </span>
+
+                                <h2>
+                                    Delivery Address
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <form id="checkoutForm" novalidate>
+
+
+                            <!-- Full Name -->
+
+                            <div class="form-group">
+
+                                <label for="customerName">
+                                    Full Name
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="customerName"
+                                    name="customerName"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                                <small
+                                    class="field-error"
+                                    id="customerNameError"
+                                ></small>
+
+                            </div>
+
+
+                            <!-- Mobile + Email -->
+
+                            <div class="form-row">
+
+
+                                <div class="form-group">
+
+                                    <label for="customerPhone">
+                                        Mobile Number
+                                        <span>*</span>
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="customerPhone"
+                                        name="customerPhone"
+                                        placeholder="10-digit mobile number"
+                                        inputmode="numeric"
+                                        maxlength="10"
+                                        autocomplete="tel"
+                                        required
+                                    >
+
+                                    <small
+                                        class="field-error"
+                                        id="customerPhoneError"
+                                    ></small>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="customerEmail">
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="customerEmail"
+                                        name="customerEmail"
+                                        placeholder="you@example.com"
+                                        autocomplete="email"
+                                    >
+
+                                    <small
+                                        class="field-error"
+                                        id="customerEmailError"
+                                    ></small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Address -->
+
+                            <div class="form-group">
+
+                                <label for="customerAddress">
+                                    Full Address
+                                    <span>*</span>
+                                </label>
+
+                                <textarea
+                                    id="customerAddress"
+                                    name="customerAddress"
+                                    rows="4"
+                                    placeholder="House / Flat No., Street, Locality"
+                                    autocomplete="street-address"
+                                    required
+                                ></textarea>
+
+                                <small
+                                    class="field-error"
+                                    id="customerAddressError"
+                                ></small>
+
+                            </div>
+
+
+                            <!-- City + State -->
+
+                            <div class="form-row">
+
+
+                                <div class="form-group">
+
+                                    <label for="customerCity">
+                                        City
+                                        <span>*</span>
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="customerCity"
+                                        name="customerCity"
+                                        placeholder="Enter city"
+                                        autocomplete="address-level2"
+                                        required
+                                    >
+
+                                    <small
+                                        class="field-error"
+                                        id="customerCityError"
+                                    ></small>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="customerState">
+                                        State
+                                        <span>*</span>
+                                    </label>
+
+                                    <select
+                                        id="customerState"
+                                        name="customerState"
+                                        autocomplete="address-level1"
+                                        required
+                                    >
+
+                                        <option value="">
+                                            Select State
+                                        </option>
+
+                                        <option value="Andhra Pradesh">
+                                            Andhra Pradesh
+                                        </option>
+
+                                        <option value="Arunachal Pradesh">
+                                            Arunachal Pradesh
+                                        </option>
+
+                                        <option value="Assam">
+                                            Assam
+                                        </option>
+
+                                        <option value="Bihar">
+                                            Bihar
+                                        </option>
+
+                                        <option value="Chhattisgarh">
+                                            Chhattisgarh
+                                        </option>
+
+                                        <option value="Delhi">
+                                            Delhi
+                                        </option>
+
+                                        <option value="Goa">
+                                            Goa
+                                        </option>
+
+                                        <option value="Gujarat">
+                                            Gujarat
+                                        </option>
+
+                                        <option value="Haryana">
+                                            Haryana
+                                        </option>
+
+                                        <option value="Himachal Pradesh">
+                                            Himachal Pradesh
+                                        </option>
+
+                                        <option value="Jharkhand">
+                                            Jharkhand
+                                        </option>
+
+                                        <option value="Karnataka">
+                                            Karnataka
+                                        </option>
+
+                                        <option value="Kerala">
+                                            Kerala
+                                        </option>
+
+                                        <option value="Madhya Pradesh">
+                                            Madhya Pradesh
+                                        </option>
+
+                                        <option value="Maharashtra">
+                                            Maharashtra
+                                        </option>
+
+                                        <option value="Manipur">
+                                            Manipur
+                                        </option>
+
+                                        <option value="Meghalaya">
+                                            Meghalaya
+                                        </option>
+
+                                        <option value="Mizoram">
+                                            Mizoram
+                                        </option>
+
+                                        <option value="Nagaland">
+                                            Nagaland
+                                        </option>
+
+                                        <option value="Odisha">
+                                            Odisha
+                                        </option>
+
+                                        <option value="Punjab">
+                                            Punjab
+                                        </option>
+
+                                        <option value="Rajasthan">
+                                            Rajasthan
+                                        </option>
+
+                                        <option value="Sikkim">
+                                            Sikkim
+                                        </option>
+
+                                        <option value="Tamil Nadu">
+                                            Tamil Nadu
+                                        </option>
+
+                                        <option value="Telangana">
+                                            Telangana
+                                        </option>
+
+                                        <option value="Tripura">
+                                            Tripura
+                                        </option>
+
+                                        <option value="Uttar Pradesh">
+                                            Uttar Pradesh
+                                        </option>
+
+                                        <option value="Uttarakhand">
+                                            Uttarakhand
+                                        </option>
+
+                                        <option value="West Bengal">
+                                            West Bengal
+                                        </option>
+
+                                    </select>
+
+                                    <small
+                                        class="field-error"
+                                        id="customerStateError"
+                                    ></small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Pincode -->
+
+                            <div class="form-group">
+
+                                <label for="customerPincode">
+                                    Pincode
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="customerPincode"
+                                    name="customerPincode"
+                                    placeholder="6-digit pincode"
+                                    inputmode="numeric"
+                                    maxlength="6"
+                                    autocomplete="postal-code"
+                                    required
+                                >
+
+                                <small
+                                    class="field-error"
+                                    id="customerPincodeError"
+                                ></small>
+
+                            </div>
+
+
+                            <!-- Payment -->
+
+                            <div class="payment-section">
+
+                                <div class="payment-header">
+
+                                    <span class="section-number">
+                                        02
+                                    </span>
+
+                                    <h2>
+                                        Payment Method
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="payment-options">
+
+
+                                    <!-- COD -->
+
+                                    <label class="payment-option">
+
+                                        <input
+                                            type="radio"
+                                            name="paymentMethod"
+                                            value="cod"
+                                            checked
+                                        >
+
+                                        <span class="payment-radio"></span>
+
+                                        <span class="payment-content">
+
+                                            <strong>
+                                                Cash on Delivery
+                                            </strong>
+
+                                            <small>
+                                                Pay when your order arrives
+                                            </small>
+
+                                        </span>
+
+                                        <span class="payment-icon">
+                                            💵
+                                        </span>
+
+                                    </label>
+
+
+                                    <!-- UPI -->
+
+                                    <label class="payment-option">
+
+                                        <input
+                                            type="radio"
+                                            name="paymentMethod"
+                                            value="upi"
+                                        >
+
+                                        <span class="payment-radio"></span>
+
+                                        <span class="payment-content">
+
+                                            <strong>
+                                                UPI
+                                            </strong>
+
+                                            <small>
+                                                Google Pay, PhonePe, Paytm & more
+                                            </small>
+
+                                        </span>
+
+                                        <span class="payment-icon">
+                                            📱
+                                        </span>
+
+                                    </label>
+
+
+                                    <!-- Card -->
+
+                                    <label class="payment-option">
+
+                                        <input
+                                            type="radio"
+                                            name="paymentMethod"
+                                            value="card"
+                                        >
+
+                                        <span class="payment-radio"></span>
+
+                                        <span class="payment-content">
+
+                                            <strong>
+                                                Credit / Debit Card
+                                            </strong>
+
+                                            <small>
+                                                Secure card payment
+                                            </small>
+
+                                        </span>
+
+                                        <span class="payment-icon">
+                                            💳
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Terms -->
+
+                            <label class="terms-checkbox">
+
+                                <input
+                                    type="checkbox"
+                                    id="agreeTerms"
+                                    required
+                                >
+
+                                <span class="custom-checkbox"></span>
+
+                                <span>
+                                    I agree to the
+                                    <a href="terms.html">
+                                        Terms & Conditions
+                                    </a>
+                                    and
+                                    <a href="privacy.html">
+                                        Privacy Policy
+                                    </a>.
+                                </span>
+
+                            </label>
+
+                            <small
+                                class="field-error"
+                                id="termsError"
+                            ></small>
+
+
+                            <!-- Place Order -->
+
+                            <button
+                                type="submit"
+                                class="place-order-btn"
+                                id="placeOrderBtn"
+                            >
+
+                                <span>
+                                    Place Order
+                                </span>
+
+                                <span>
+                                    →
+                                </span>
+
+                            </button>
+
+
+                            <div class="secure-note">
+
+                                🔒
+                                Your information is securely protected.
+
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     RIGHT SIDE — ORDER SUMMARY
+                ================================================== -->
+
+                <aside class="checkout-summary">
+
+
+                    <!-- Order Summary -->
+
+                    <div class="checkout-summary-card">
+
+                        <h2>
+                            Your Order
+                        </h2>
+
+
+                        <!-- Products -->
+
+                        <div
+                            class="checkout-items"
+                            id="checkoutItems"
+                        >
+                        </div>
+
+
+                        <!-- Summary -->
+
+                        <div class="checkout-summary-lines">
+
+
+                            <div class="checkout-summary-row">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong id="checkoutSubtotal">
+                                    ₹0
+                                </strong>
+
+                            </div>
+
+
+                            <div
+                                class="checkout-summary-row"
+                                id="checkoutDiscountRow"
+                            >
+
+                                <span>
+                                    Discount
+                                </span>
+
+                                <strong
+                                    class="discount"
+                                    id="checkoutDiscount"
+                                >
+                                    -₹0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="checkout-summary-row">
+
+                                <span>
+                                    Shipping
+                                </span>
+
+                                <strong id="checkoutShipping">
+                                    ₹0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Divider -->
+
+                        <div class="checkout-divider"></div>
+
+
+                        <!-- Total -->
+
+                        <div class="checkout-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="checkoutTotal">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <!-- Delivery -->
+
+                        <div class="estimated-delivery">
+
+                            <span class="delivery-icon">
+                                🚚
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Estimated Delivery
+                                </strong>
+
+                                <p id="deliveryDate">
+                                    3–7 business days
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Back to Cart -->
+
+                    <a
+                        href="cart.html"
+                        class="back-to-cart"
+                    >
+                        ← Edit Cart
+                    </a>
+
+
+                    <!-- Trust -->
+
+                    <div class="checkout-trust">
+
+                        <div>
+
+                            <span>
+                                🔒
+                            </span>
+
+                            <strong>
+                                Secure Checkout
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                ✓
+                            </span>
+
+                            <strong>
+                                Genuine Products
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                🚚
+                            </span>
+
+                            <strong>
+                                Reliable Delivery
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- Brand -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="logo"
+                    >
+
+                        <span class="logo-mark">
+                            G
+                        </span>
+
+                        <span class="logo-text">
+                            GlowSkin
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Simple skincare for healthy,
+                        confident and glowing skin.
+                    </p>
+
+                </div>
+
+
+                <!-- Shop -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Shop
+                    </h3>
+
+                    <a href="shop.html">
+                        All Products
+                    </a>
+
+                    <a href="shop.html?category=face-wash">
+                        Face Wash
+                    </a>
+
+                    <a href="shop.html?category=serums">
+                        Serums
+                    </a>
+
+                    <a href="shop.html?category=moisturizers">
+                        Moisturizers
+                    </a>
+
+                    <a href="shop.html?category=sunscreen">
+                        Sunscreen
+                    </a>
+
+                </div>
+
+
+                <!-- Help -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Help
+                    </h3>
+
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                    <a href="shipping-returns.html">
+                        Shipping & Returns
+                    </a>
+
+                    <a href="track-order.html">
+                        Track Order
+                    </a>
+
+                </div>
+
+
+                <!-- About -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        About
+                    </h3>
+
+                    <a href="about.html">
+                        About GlowSkin
+                    </a>
+
+                    <a href="blog.html">
+                        Blog
+                    </a>
+
+                    <a href="privacy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 GlowSkin. All rights reserved.
+                </p>
+
+
+                <div class="payment-methods">
+
+                    <span>
+                        UPI
+                    </span>
+
+                    <span>
+                        COD
+                    </span>
+
+                    <span>
+                        Cards
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="assets/js/index.js"></script>
+
+    <script src="assets/js/checkout.js"></script>
+
+</body>
+  </html>
