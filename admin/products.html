@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Products — GlowSkin Admin</title>
+
+  <meta
+    name="description"
+    content="Manage GlowSkin skincare products"
+  >
+
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <link rel="stylesheet" href="../assets/css/admin-products.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       MOBILE SIDEBAR OVERLAY
+       ===================================================== -->
+
+  <div
+    class="admin-sidebar-overlay"
+    id="adminSidebarOverlay"
+  ></div>
+
+
+  <!-- =====================================================
+       ADMIN SIDEBAR
+       ===================================================== -->
+
+  <aside
+    class="admin-sidebar"
+    id="adminSidebar"
+  >
+
+    <div class="admin-sidebar-header">
+
+      <a
+        href="index.html"
+        class="admin-logo"
+      >
+        <span class="admin-logo-mark">G</span>
+
+        <span>
+          <strong>GlowSkin</strong>
+          <small>Admin Panel</small>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        class="admin-sidebar-close"
+        id="adminSidebarClose"
+        aria-label="Close sidebar"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <nav class="admin-navigation">
+
+      <a
+        href="index.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">⌂</span>
+        <span>Dashboard</span>
+      </a>
+
+
+      <a
+        href="products.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">▦</span>
+        <span>Products</span>
+      </a>
+
+
+      <a
+        href="orders.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">▤</span>
+        <span>Orders</span>
+
+        <span
+          class="admin-nav-badge"
+          id="sidebarOrderCount"
+        >
+          0
+        </span>
+      </a>
+
+
+      <a
+        href="customers.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">♙</span>
+        <span>Customers</span>
+      </a>
+
+
+      <a
+        href="inventory.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">▥</span>
+        <span>Inventory</span>
+      </a>
+
+
+      <a
+        href="coupons.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">%</span>
+        <span>Coupons</span>
+      </a>
+
+
+      <a
+        href="banners.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">▤</span>
+        <span>Banners</span>
+      </a>
+
+
+      <a
+        href="reviews.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">★</span>
+        <span>Reviews</span>
+      </a>
+
+
+      <a
+        href="blog.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">✎</span>
+        <span>Blog</span>
+      </a>
+
+
+      <a
+        href="shipping.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">▰</span>
+        <span>Shipping</span>
+      </a>
+
+
+      <a
+        href="payments.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">₹</span>
+        <span>Payments</span>
+      </a>
+
+
+      <a
+        href="settings.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">⚙</span>
+        <span>Settings</span>
+      </a>
+
+    </nav>
+
+
+    <!-- Sidebar Bottom -->
+
+    <div class="admin-sidebar-bottom">
+
+      <a
+        href="../index.html"
+        class="admin-nav-item"
+      >
+        <span class="admin-nav-icon">↗</span>
+        <span>View Store</span>
+      </a>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main class="admin-main">
+
+
+    <!-- ===================================================
+         TOPBAR
+         =================================================== -->
+
+    <header class="admin-topbar">
+
+      <div class="admin-topbar-left">
+
+        <button
+          type="button"
+          class="admin-menu-button"
+          id="adminSidebarOpen"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+        <div>
+
+          <span class="admin-topbar-label">
+            Catalog
+          </span>
+
+          <h1 class="admin-topbar-title">
+            Products
+          </h1>
+
+        </div>
+
+      </div>
+
+
+      <div class="admin-topbar-actions">
+
+        <a
+          href="../index.html"
+          class="admin-topbar-store"
+        >
+          View Store ↗
+        </a>
+
+
+        <button
+          type="button"
+          class="admin-icon-button"
+          aria-label="Notifications"
+        >
+          ♧
+        </button>
+
+
+        <div class="admin-profile">
+
+          <div class="admin-profile-avatar">
+            A
+          </div>
+
+          <div class="admin-profile-info">
+
+            <strong>Admin</strong>
+
+            <span>Store Manager</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- ===================================================
+         PAGE CONTENT
+         =================================================== -->
+
+    <div class="admin-page-content">
+
+
+      <!-- =================================================
+           PAGE HEADER
+           ================================================= -->
+
+      <section class="products-page-header">
+
+        <div>
+
+          <span class="admin-eyebrow">
+            CATALOG MANAGEMENT
+          </span>
+
+          <h2>
+            Products
+          </h2>
+
+          <p>
+            Manage your skincare products, pricing,
+            stock and product information.
+          </p>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="admin-button admin-button-primary"
+          id="addProductButton"
+        >
+          <span>＋</span>
+          Add Product
+        </button>
+
+      </section>
+
+
+      <!-- =================================================
+           PRODUCT TOOLBAR
+           ================================================= -->
+
+      <section class="admin-products-toolbar">
+
+        <div class="products-search">
+
+          <span class="products-search-icon">
+            ⌕
+          </span>
+
+          <input
+            type="search"
+            id="productSearch"
+            placeholder="Search products..."
+            autocomplete="off"
+          >
+
+        </div>
+
+
+        <div class="products-filter">
+
+          <label for="productCategory">
+            Category
+          </label>
+
+          <select id="productCategory">
+
+            <option value="all">
+              All Categories
+            </option>
+
+            <option value="face-wash">
+              Face Wash
+            </option>
+
+            <option value="serums">
+              Serums
+            </option>
+
+            <option value="moisturizers">
+              Moisturizers
+            </option>
+
+            <option value="sunscreen">
+              Sunscreen
+            </option>
+
+            <option value="toners">
+              Toners
+            </option>
+
+            <option value="lip-care">
+              Lip Care
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="products-filter">
+
+          <label for="productStatus">
+            Status
+          </label>
+
+          <select id="productStatus">
+
+            <option value="all">
+              All Status
+            </option>
+
+            <option value="active">
+              Active
+            </option>
+
+            <option value="draft">
+              Draft
+            </option>
+
+            <option value="out-of-stock">
+              Out of Stock
+            </option>
+
+          </select>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           PRODUCT COUNT
+           ================================================= -->
+
+      <div class="products-result-bar">
+
+        <span id="productResultCount">
+          0 products
+        </span>
+
+        <button
+          type="button"
+          class="products-clear-button"
+          id="clearProductFilters"
+        >
+          Clear Filters
+        </button>
+
+      </div>
+
+
+      <!-- =================================================
+           PRODUCT TABLE
+           ================================================= -->
+
+      <section class="admin-products-card">
+
+        <div class="admin-products-table-wrapper">
+
+          <table class="admin-products-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Product
+                </th>
+
+                <th>
+                  Category
+                </th>
+
+                <th>
+                  Price
+                </th>
+
+                <th>
+                  Stock
+                </th>
+
+                <th>
+                  Status
+                </th>
+
+                <th>
+                  Actions
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody id="productsTableBody">
+              <!-- Products rendered by JS -->
+            </tbody>
+
+          </table>
+
+        </div>
+
+
+        <!-- Empty State -->
+
+        <div
+          class="products-empty-state"
+          id="productsEmptyState"
+          style="display:none;"
+        >
+
+          <div class="products-empty-icon">
+            ◫
+          </div>
+
+          <h3>
+            No products found
+          </h3>
+
+          <p>
+            Try changing your search or filters,
+            or add a new product.
+          </p>
+
+          <button
+            type="button"
+            class="admin-button admin-button-primary"
+            id="emptyAddProductButton"
+          >
+            ＋ Add Product
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           INFO NOTICE
+           ================================================= -->
+
+      <section class="admin-products-notice">
+
+        <div class="admin-products-notice-icon">
+          !
+        </div>
+
+        <div>
+
+          <strong>
+            Frontend Demo
+          </strong>
+
+          <p>
+            Products are currently stored in your browser's
+            localStorage. A real database and secure admin
+            backend can be connected later.
+          </p>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- ===================================================
+         FOOTER
+         =================================================== -->
+
+    <footer class="admin-footer">
+
+      <span>
+        © 2026 GlowSkin Admin
+      </span>
+
+      <span>
+        Skincare Store Management
+      </span>
+
+    </footer>
+
+  </main>
+
+
+  <!-- =====================================================
+       ADD / EDIT PRODUCT MODAL
+       ===================================================== -->
+
+  <div
+    class="admin-modal"
+    id="productModal"
+    aria-hidden="true"
+  >
+
+    <div class="admin-modal-backdrop"></div>
+
+
+    <div
+      class="admin-modal-content product-modal-content"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="productModalTitle"
+    >
+
+      <!-- Modal Header -->
+
+      <div class="admin-modal-header">
+
+        <div>
+
+          <span class="admin-eyebrow">
+            CATALOG
+          </span>
+
+          <h2 id="productModalTitle">
+            Add Product
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="admin-modal-close"
+          id="productModalClose"
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <!-- Product Form -->
+
+      <form
+        id="productForm"
+        class="product-form"
+        novalidate
+      >
+
+        <input
+          type="hidden"
+          id="productId"
+        >
+
+
+        <!-- Product Name -->
+
+        <div class="admin-form-group admin-form-full">
+
+          <label for="productName">
+            Product Name
+            <span>*</span>
+          </label>
+
+          <input
+            type="text"
+            id="productName"
+            placeholder="Example: Vitamin C Brightening Serum"
+            required
+          >
+
+          <small
+            class="admin-field-error"
+            id="productNameError"
+          ></small>
+
+        </div>
+
+
+        <!-- Category -->
+
+        <div class="admin-form-group">
+
+          <label for="formProductCategory">
+            Category
+            <span>*</span>
+          </label>
+
+          <select
+            id="formProductCategory"
+            required
+          >
+
+            <option value="">
+              Select Category
+            </option>
+
+            <option value="face-wash">
+              Face Wash
+            </option>
+
+            <option value="serums">
+              Serums
+            </option>
+
+            <option value="moisturizers">
+              Moisturizers
+            </option>
+
+            <option value="sunscreen">
+              Sunscreen
+            </option>
+
+            <option value="toners">
+              Toners
+            </option>
+
+            <option value="lip-care">
+              Lip Care
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- Price -->
+
+        <div class="admin-form-group">
+
+          <label for="productPrice">
+            Selling Price (₹)
+            <span>*</span>
+          </label>
+
+          <input
+            type="number"
+            id="productPrice"
+            min="0"
+            step="1"
+            placeholder="599"
+            required
+          >
+
+        </div>
+
+
+        <!-- MRP -->
+
+        <div class="admin-form-group">
+
+          <label for="productMrp">
+            MRP (₹)
+          </label>
+
+          <input
+            type="number"
+            id="productMrp"
+            min="0"
+            step="1"
+            placeholder="799"
+          >
+
+        </div>
+
+
+        <!-- Stock -->
+
+        <div class="admin-form-group">
+
+          <label for="productStock">
+            Stock Quantity
+            <span>*</span>
+          </label>
+
+          <input
+            type="number"
+            id="productStock"
+            min="0"
+            step="1"
+            placeholder="50"
+            required
+          >
+
+        </div>
+
+
+        <!-- Status -->
+
+        <div class="admin-form-group">
+
+          <label for="formProductStatus">
+            Status
+          </label>
+
+          <select id="formProductStatus">
+
+            <option value="active">
+              Active
+            </option>
+
+            <option value="draft">
+              Draft
+            </option>
+
+            <option value="out-of-stock">
+              Out of Stock
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- Image -->
+
+        <div class="admin-form-group admin-form-full">
+
+          <label for="productImage">
+            Product Image
+          </label>
+
+          <input
+            type="text"
+            id="productImage"
+            placeholder="assets/images/products/product.jpg"
+          >
+
+          <small>
+            Example:
+            assets/images/products/vitamin-c-serum-1.jpg
+          </small>
+
+        </div>
+
+
+        <!-- Description -->
+
+        <div class="admin-form-group admin-form-full">
+
+          <label for="productDescription">
+            Description
+          </label>
+
+          <textarea
+            id="productDescription"
+            rows="4"
+            placeholder="Write a short product description..."
+          ></textarea>
+
+        </div>
+
+
+        <!-- Featured -->
+
+        <div class="admin-form-checkbox">
+
+          <label>
+
+            <input
+              type="checkbox"
+              id="productFeatured"
+            >
+
+            <span>
+              Show this product as a featured product
+            </span>
+
+          </label>
+
+        </div>
+
+
+        <!-- Form Actions -->
+
+        <div class="product-form-actions">
+
+          <button
+            type="button"
+            class="admin-button admin-button-secondary"
+            id="cancelProductButton"
+          >
+            Cancel
+          </button>
+
+
+          <button
+            type="submit"
+            class="admin-button admin-button-primary"
+            id="saveProductButton"
+          >
+            Save Product
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       DELETE CONFIRM MODAL
+       ===================================================== -->
+
+  <div
+    class="admin-modal"
+    id="deleteProductModal"
+    aria-hidden="true"
+  >
+
+    <div class="admin-modal-backdrop"></div>
+
+
+    <div
+      class="admin-modal-content admin-confirm-modal"
+      role="dialog"
+      aria-modal="true"
+    >
+
+      <div class="admin-confirm-icon">
+        !
+      </div>
+
+
+      <h2>
+        Delete Product?
+      </h2>
+
+
+      <p>
+        Are you sure you want to delete
+        <strong id="deleteProductName">
+          this product
+        </strong>?
+        This action cannot be undone.
+      </p>
+
+
+      <div class="admin-confirm-actions">
+
+        <button
+          type="button"
+          class="admin-button admin-button-secondary"
+          id="cancelDeleteButton"
+        >
+          Cancel
+        </button>
+
+
+        <button
+          type="button"
+          class="admin-button admin-button-danger"
+          id="confirmDeleteButton"
+        >
+          Delete Product
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       SCRIPTS
+       ===================================================== -->
+
+  <script src="../assets/js/admin.js"></script>
+  <script src="../assets/js/admin-products.js"></script>
+
+</body>
+</html>
