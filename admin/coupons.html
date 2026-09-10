@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Coupons — GlowSkin Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/admin-coupons.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ADMIN SIDEBAR
+         ========================= -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="admin-sidebar-header">
+
+            <a href="index.html" class="admin-logo">
+                <span class="admin-logo-mark">G</span>
+
+                <span class="admin-logo-text">
+                    <strong>GlowSkin</strong>
+                    <small>Admin Panel</small>
+                </span>
+            </a>
+
+            <button
+                type="button"
+                class="admin-sidebar-close"
+                id="adminSidebarClose"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <a
+                href="index.html"
+                class="admin-nav-item"
+            >
+                <span class="admin-nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="products.html"
+                class="admin-nav-item"
+            >
+                <span class="admin-nav-icon">▣</span>
+                <span>Products</span>
+            </a>
+
+
+            <a
+                href="orders.html"
+                class="admin-nav-item"
+            >
+                <span class="admin-nav-icon">▤</span>
+                <span>Orders</span>
+
+                <span
+                    class="admin-nav-badge"
+                    id="sidebarOrderCount"
+                >
+                    0
+                </span>
+            </a>
+
+
+            <a
+                href="customers.html"
+                class="admin-nav-item"
+            >
+                <span class="admin-nav-icon">♙</span>
+                <span>Customers</span>
+
+                <span
+                    class="admin-nav-badge"
+                    id="adminCustomerCount"
+                >
+                    0
+                </span>
+            </a>
+
+
+            <a
+                href="inventory.html"
+                class="admin-nav-item"
+            >
+                <span class="admin-nav-icon">▥</span>
+                <span>Inventory</span>
+            </a>
+
+
+            <a
+                href="coupons.html"
+                class="admin-nav-item active"
+            >
+                <span class="admin-nav-icon">%</span>
+                <span>Coupons</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+                data-admin-demo="true"
+            >
+                <span class="admin-nav-icon">▧</span>
+                <span>Banners</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+                data-admin-demo="true"
+            >
+                <span class="admin-nav-icon">★</span>
+                <span>Reviews</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+                data-admin-demo="true"
+            >
+                <span class="admin-nav-icon">✎</span>
+                <span>Blog</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+                data-admin-demo="true"
+            >
+                <span class="admin-nav-icon">▱</span>
+                <span>Shipping</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+                data-admin-demo="true"
+            >
+                <span class="admin-nav-icon">₹</span>
+                <span>Payments</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="admin-nav-item"
+                data-admin-demo="true"
+            >
+                <span class="admin-nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar-bottom">
+
+            <a
+                href="../index.html"
+                class="admin-view-store"
+            >
+                <span>↗</span>
+                View Store
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="admin-sidebar-overlay"
+        id="adminSidebarOverlay"
+    ></div>
+
+
+    <!-- =========================
+         MAIN
+         ========================= -->
+
+    <main class="admin-main">
+
+        <!-- TOPBAR -->
+
+        <header class="admin-topbar">
+
+            <div class="admin-topbar-left">
+
+                <button
+                    type="button"
+                    class="admin-sidebar-open"
+                    id="adminSidebarOpen"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+                <div>
+                    <span class="admin-breadcrumb">
+                        Admin
+                    </span>
+
+                    <h1>Coupons</h1>
+                </div>
+
+            </div>
+
+
+            <div class="admin-topbar-actions">
+
+                <a
+                    href="../index.html"
+                    class="admin-topbar-store"
+                >
+                    View Store
+                </a>
+
+
+                <button
+                    type="button"
+                    class="admin-notification-button"
+                    aria-label="Notifications"
+                >
+                    ♢
+                </button>
+
+
+                <div class="admin-profile">
+
+                    <div class="admin-profile-avatar">
+                        A
+                    </div>
+
+                    <div class="admin-profile-info">
+                        <strong>Admin</strong>
+                        <span>Store Manager</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <div class="admin-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <section class="coupons-page-header">
+
+                <div>
+                    <span class="admin-eyebrow">
+                        PROMOTIONS
+                    </span>
+
+                    <h2>Coupons</h2>
+
+                    <p>
+                        Create and manage discount coupons
+                        for your GlowSkin store.
+                    </p>
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-primary"
+                    id="addCouponButton"
+                >
+                    <span>+</span>
+                    Add Coupon
+                </button>
+
+            </section>
+
+
+            <!-- STATS -->
+
+            <section class="coupons-stats-grid">
+
+                <div class="coupons-stat-card">
+
+                    <div class="coupons-stat-icon">
+                        %
+                    </div>
+
+                    <div class="coupons-stat-content">
+
+                        <span class="coupons-stat-label">
+                            Total Coupons
+                        </span>
+
+                        <strong
+                            class="coupons-stat-value"
+                            id="couponsTotalCount"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="coupons-stat-card">
+
+                    <div class="coupons-stat-icon active">
+                        ✓
+                    </div>
+
+                    <div class="coupons-stat-content">
+
+                        <span class="coupons-stat-label">
+                            Active
+                        </span>
+
+                        <strong
+                            class="coupons-stat-value"
+                            id="couponsActiveCount"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="coupons-stat-card">
+
+                    <div class="coupons-stat-icon expired">
+                        !
+                    </div>
+
+                    <div class="coupons-stat-content">
+
+                        <span class="coupons-stat-label">
+                            Expired
+                        </span>
+
+                        <strong
+                            class="coupons-stat-value"
+                            id="couponsExpiredCount"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="coupons-stat-card">
+
+                    <div class="coupons-stat-icon usage">
+                        #
+                    </div>
+
+                    <div class="coupons-stat-content">
+
+                        <span class="coupons-stat-label">
+                            Total Uses
+                        </span>
+
+                        <strong
+                            class="coupons-stat-value"
+                            id="couponsTotalUses"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TOOLBAR -->
+
+            <section class="admin-coupons-toolbar">
+
+                <div class="coupons-search">
+
+                    <input
+                        type="search"
+                        id="couponSearch"
+                        placeholder="Search by coupon code or name..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <select
+                    id="couponTypeFilter"
+                    class="coupons-filter"
+                >
+                    <option value="all">
+                        All Types
+                    </option>
+
+                    <option value="percentage">
+                        Percentage
+                    </option>
+
+                    <option value="fixed">
+                        Fixed Amount
+                    </option>
+                </select>
+
+
+                <select
+                    id="couponStatusFilter"
+                    class="coupons-filter"
+                >
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="active">
+                        Active
+                    </option>
+
+                    <option value="inactive">
+                        Inactive
+                    </option>
+
+                    <option value="expired">
+                        Expired
+                    </option>
+                </select>
+
+
+                <button
+                    type="button"
+                    class="coupons-clear-button"
+                    id="clearCouponFilters"
+                >
+                    Clear
+                </button>
+
+            </section>
+
+
+            <!-- RESULT COUNT -->
+
+            <div class="coupons-result-bar">
+
+                <span>
+                    Showing
+                    <strong id="couponResultCount">
+                        0 coupons
+                    </strong>
+                </span>
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <section class="admin-coupons-card">
+
+                <div class="admin-coupons-table-wrapper">
+
+                    <table class="admin-coupons-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Coupon</th>
+                                <th>Discount</th>
+                                <th>Min. Order</th>
+                                <th>Validity</th>
+                                <th>Usage</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="couponsTableBody">
+                            <!-- JS -->
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="coupons-empty-state"
+                    id="couponsEmptyState"
+                >
+
+                    <div class="coupons-empty-icon">
+                        %
+                    </div>
+
+                    <h3>No coupons found</h3>
+
+                    <p>
+                        Create your first coupon or
+                        change the selected filters.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- NOTICE -->
+
+            <div class="admin-coupons-notice">
+
+                <div class="admin-coupons-notice-icon">
+                    i
+                </div>
+
+                <div class="admin-coupons-notice-content">
+
+                    <strong>
+                        Frontend Demo
+                    </strong>
+
+                    <p>
+                        Coupon data is currently stored
+                        in your browser using localStorage.
+                        A secure backend and database can
+                        be connected later.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer class="admin-footer">
+
+            <span>
+                © 2026 GlowSkin Admin
+            </span>
+
+            <span>
+                Frontend Demo
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================
+         ADD / EDIT COUPON MODAL
+         ========================= -->
+
+    <div
+        class="admin-modal"
+        id="couponModal"
+        aria-hidden="true"
+    >
+
+        <div class="admin-modal-dialog coupon-modal">
+
+            <div class="admin-modal-header">
+
+                <div>
+                    <span class="admin-modal-eyebrow">
+                        PROMOTION
+                    </span>
+
+                    <h3 id="couponModalTitle">
+                        Add Coupon
+                    </h3>
+                </div>
+
+                <button
+                    type="button"
+                    class="admin-modal-close"
+                    id="couponModalClose"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="coupon-modal-body">
+
+                <input
+                    type="hidden"
+                    id="couponId"
+                >
+
+
+                <!-- Coupon Code -->
+
+                <div class="admin-form-group">
+
+                    <label for="couponCode">
+                        Coupon Code
+                    </label>
+
+                    <input
+                        type="text"
+                        id="couponCode"
+                        placeholder="Example: GLOW20"
+                        maxlength="30"
+                        autocomplete="off"
+                    >
+
+                    <small>
+                        Customers will enter this code at checkout.
+                    </small>
+
+                </div>
+
+
+                <!-- Coupon Name -->
+
+                <div class="admin-form-group">
+
+                    <label for="couponName">
+                        Coupon Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="couponName"
+                        placeholder="Example: GlowSkin Summer Offer"
+                        maxlength="80"
+                    >
+
+                </div>
+
+
+                <!-- Type + Value -->
+
+                <div class="coupon-form-grid">
+
+                    <div class="admin-form-group">
+
+                        <label for="couponType">
+                            Discount Type
+                        </label>
+
+                        <select id="couponType">
+
+                            <option value="percentage">
+                                Percentage
+                            </option>
+
+                            <option value="fixed">
+                                Fixed Amount
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="couponValue">
+                            Discount Value
+                        </label>
+
+                        <input
+                            type="number"
+                            id="couponValue"
+                            min="1"
+                            step="1"
+                            placeholder="10"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Minimum Order + Max Discount -->
+
+                <div class="coupon-form-grid">
+
+                    <div class="admin-form-group">
+
+                        <label for="couponMinOrder">
+                            Minimum Order
+                        </label>
+
+                        <input
+                            type="number"
+                            id="couponMinOrder"
+                            min="0"
+                            step="1"
+                            placeholder="499"
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="admin-form-group"
+                        id="maxDiscountGroup"
+                    >
+
+                        <label for="couponMaxDiscount">
+                            Maximum Discount
+                        </label>
+
+                        <input
+                            type="number"
+                            id="couponMaxDiscount"
+                            min="0"
+                            step="1"
+                            placeholder="200"
+                        >
+
+                        <small>
+                            Useful for percentage coupons.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Dates -->
+
+                <div class="coupon-form-grid">
+
+                    <div class="admin-form-group">
+
+                        <label for="couponStartDate">
+                            Start Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="couponStartDate"
+                        >
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="couponEndDate">
+                            End Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="couponEndDate"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Usage Limit -->
+
+                <div class="admin-form-group">
+
+                    <label for="couponUsageLimit">
+                        Usage Limit
+                    </label>
+
+                    <input
+                        type="number"
+                        id="couponUsageLimit"
+                        min="0"
+                        step="1"
+                        placeholder="0 = Unlimited"
+                    >
+
+                    <small>
+                        Set 0 for unlimited usage.
+                    </small>
+
+                </div>
+
+
+                <!-- Status -->
+
+                <div class="admin-form-group">
+
+                    <label for="couponStatus">
+                        Status
+                    </label>
+
+                    <select id="couponStatus">
+
+                        <option value="active">
+                            Active
+                        </option>
+
+                        <option value="inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="coupon-modal-footer">
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-secondary"
+                    id="cancelCouponButton"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-primary"
+                    id="saveCouponButton"
+                >
+                    Save Coupon
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         DELETE MODAL
+         ========================= -->
+
+    <div
+        class="admin-modal"
+        id="deleteCouponModal"
+        aria-hidden="true"
+    >
+
+        <div class="admin-modal-dialog coupon-delete-modal">
+
+            <div class="admin-modal-header">
+
+                <div>
+                    <span class="admin-modal-eyebrow">
+                        CONFIRMATION
+                    </span>
+
+                    <h3>
+                        Delete Coupon
+                    </h3>
+                </div>
+
+                <button
+                    type="button"
+                    class="admin-modal-close"
+                    id="deleteCouponClose"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="coupon-delete-body">
+
+                <div class="coupon-delete-icon">
+                    !
+                </div>
+
+                <h4>
+                    Delete this coupon?
+                </h4>
+
+                <p>
+                    You are about to delete
+                    <strong id="deleteCouponName">
+                        this coupon
+                    </strong>.
+                    This action cannot be undone.
+                </p>
+
+            </div>
+
+
+            <div class="coupon-modal-footer">
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-secondary"
+                    id="cancelDeleteCoupon"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="admin-button admin-button-danger"
+                    id="confirmDeleteCoupon"
+                >
+                    Delete Coupon
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../assets/js/admin.js"></script>
+    <script src="../assets/js/admin-coupons.js"></script>
+
+</body>
+  </html>
