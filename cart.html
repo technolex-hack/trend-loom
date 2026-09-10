@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Cart — GlowSkin</title>
+
+    <meta
+        name="description"
+        content="Review your skincare products and proceed to checkout at GlowSkin."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <!-- Cart CSS -->
+    <link rel="stylesheet" href="assets/css/cart.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         ANNOUNCEMENT BAR
+    ========================================== -->
+
+    <div class="announcement-bar">
+        ✨ Free shipping on orders above ₹999
+    </div>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">
+                    G
+                </span>
+
+                <span class="logo-text">
+                    GlowSkin
+                </span>
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="shop.html?category=face-wash">
+                    Face Care
+                </a>
+
+                <a href="shop.html?category=serums">
+                    Serums
+                </a>
+
+                <a href="shop.html?category=sunscreen">
+                    Sunscreen
+                </a>
+
+                <a href="offers.html">
+                    Offers
+                </a>
+
+            </nav>
+
+
+            <!-- Header Actions -->
+
+            <div class="header-actions">
+
+                <!-- Search -->
+
+                <button
+                    type="button"
+                    class="header-icon-btn"
+                    id="searchBtn"
+                    aria-label="Search"
+                >
+                    🔍
+                </button>
+
+
+                <!-- Account -->
+
+                <a
+                    href="login.html"
+                    class="header-icon-btn"
+                    aria-label="Account"
+                >
+                    👤
+                </a>
+
+
+                <!-- Wishlist -->
+
+                <a
+                    href="wishlist.html"
+                    class="header-icon-btn header-count-btn"
+                    aria-label="Wishlist"
+                >
+                    ♡
+
+                    <span
+                        id="wishlistCount"
+                        class="count-badge"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- Cart -->
+
+                <a
+                    href="cart.html"
+                    class="header-icon-btn header-count-btn active"
+                    aria-label="Cart"
+                >
+                    🛒
+
+                    <span
+                        id="cartCount"
+                        class="count-badge"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- Mobile Menu -->
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         SEARCH OVERLAY
+    ========================================== -->
+
+    <div
+        class="search-overlay"
+        id="searchOverlay"
+    >
+
+        <div class="search-box">
+
+            <button
+                type="button"
+                class="close-search"
+                id="closeSearch"
+                aria-label="Close search"
+            >
+                ×
+            </button>
+
+
+            <h2>
+                What are you looking for?
+            </h2>
+
+
+            <form id="searchForm">
+
+                <div class="search-input-wrapper">
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search skincare products..."
+                        autocomplete="off"
+                    >
+
+                    <button type="submit">
+                        Search
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         CART HERO
+    ========================================== -->
+
+    <section class="cart-page-header">
+
+        <div class="container">
+
+            <span class="cart-eyebrow">
+                YOUR SHOPPING BAG
+            </span>
+
+            <h1>
+                Your Cart
+            </h1>
+
+            <p>
+                Review your products before checkout.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CART MAIN
+    ========================================== -->
+
+    <main class="cart-page">
+
+        <div class="container">
+
+            <!-- =================================
+                 CART CONTENT
+            ================================== -->
+
+            <div
+                class="cart-layout"
+                id="cartLayout"
+            >
+
+
+                <!-- =================================
+                     CART PRODUCTS
+                ================================== -->
+
+                <section class="cart-products">
+
+                    <div class="cart-products-header">
+
+                        <h2>
+                            Shopping Cart
+                        </h2>
+
+                        <span id="cartItemLabel">
+                            0 items
+                        </span>
+
+                    </div>
+
+
+                    <!-- Products will be inserted here by cart.js -->
+
+                    <div
+                        class="cart-items"
+                        id="cartItems"
+                    >
+                    </div>
+
+
+                    <!-- Continue Shopping -->
+
+                    <a
+                        href="shop.html"
+                        class="continue-shopping"
+                    >
+                        ← Continue Shopping
+                    </a>
+
+                </section>
+
+
+                <!-- =================================
+                     ORDER SUMMARY
+                ================================== -->
+
+                <aside class="cart-summary">
+
+                    <h2>
+                        Order Summary
+                    </h2>
+
+
+                    <!-- Subtotal -->
+
+                    <div class="summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="cartSubtotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Discount -->
+
+                    <div
+                        class="summary-row discount-row"
+                        id="discountRow"
+                    >
+
+                        <span>
+                            Discount
+                        </span>
+
+                        <strong id="cartDiscount">
+                            -₹0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Shipping -->
+
+                    <div class="summary-row">
+
+                        <span>
+                            Shipping
+                        </span>
+
+                        <strong id="cartShipping">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Free Shipping Message -->
+
+                    <div
+                        class="free-shipping-message"
+                        id="freeShippingMessage"
+                    >
+                        Add products worth ₹999 to get free shipping.
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <!-- Total -->
+
+                    <div class="summary-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="cartTotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Coupon -->
+
+                    <div class="coupon-section">
+
+                        <label for="couponInput">
+                            Have a coupon?
+                        </label>
+
+                        <div class="coupon-form">
+
+                            <input
+                                type="text"
+                                id="couponInput"
+                                placeholder="Enter coupon code"
+                                autocomplete="off"
+                            >
+
+                            <button
+                                type="button"
+                                id="applyCoupon"
+                            >
+                                Apply
+                            </button>
+
+                        </div>
+
+
+                        <p
+                            class="coupon-message"
+                            id="couponMessage"
+                        ></p>
+
+                    </div>
+
+
+                    <!-- Checkout -->
+
+                    <button
+                        type="button"
+                        class="checkout-btn"
+                        id="checkoutBtn"
+                    >
+                        Proceed to Checkout
+                        <span>→</span>
+                    </button>
+
+
+                    <!-- Secure Checkout -->
+
+                    <div class="secure-checkout">
+
+                        <span>
+                            🔒
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Secure Checkout
+                            </strong>
+
+                            <p>
+                                Your payment information is protected.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+
+            <!-- =================================
+                 EMPTY CART
+            ================================== -->
+
+            <section
+                class="empty-cart"
+                id="emptyCart"
+            >
+
+                <div class="empty-cart-icon">
+                    🛒
+                </div>
+
+                <h2>
+                    Your cart is empty
+                </h2>
+
+                <p>
+                    Looks like you haven't added anything to your cart yet.
+                </p>
+
+                <a
+                    href="shop.html"
+                    class="empty-cart-btn"
+                >
+                    Start Shopping
+                </a>
+
+            </section>
+
+
+            <!-- =================================
+                 CART BENEFITS
+            ================================== -->
+
+            <section class="cart-benefits">
+
+                <div class="cart-benefit">
+
+                    <div class="cart-benefit-icon">
+                        🚚
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Fast Delivery
+                        </strong>
+
+                        <p>
+                            Quick delivery across India
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cart-benefit">
+
+                    <div class="cart-benefit-icon">
+                        🔒
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Secure Payments
+                        </strong>
+
+                        <p>
+                            Safe and secure checkout
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cart-benefit">
+
+                    <div class="cart-benefit-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Authentic Products
+                        </strong>
+
+                        <p>
+                            100% genuine skincare products
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cart-benefit">
+
+                    <div class="cart-benefit-icon">
+                        ↩
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Easy Returns
+                        </strong>
+
+                        <p>
+                            Simple return process
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- Brand -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="logo"
+                    >
+
+                        <span class="logo-mark">
+                            G
+                        </span>
+
+                        <span class="logo-text">
+                            GlowSkin
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Simple skincare for healthy,
+                        confident and glowing skin.
+                    </p>
+
+                </div>
+
+
+                <!-- Shop -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Shop
+                    </h3>
+
+                    <a href="shop.html">
+                        All Products
+                    </a>
+
+                    <a href="shop.html?category=face-wash">
+                        Face Wash
+                    </a>
+
+                    <a href="shop.html?category=serums">
+                        Serums
+                    </a>
+
+                    <a href="shop.html?category=moisturizers">
+                        Moisturizers
+                    </a>
+
+                    <a href="shop.html?category=sunscreen">
+                        Sunscreen
+                    </a>
+
+                </div>
+
+
+                <!-- Help -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Help
+                    </h3>
+
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                    <a href="shipping-returns.html">
+                        Shipping & Returns
+                    </a>
+
+                    <a href="track-order.html">
+                        Track Order
+                    </a>
+
+                </div>
+
+
+                <!-- About -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        About
+                    </h3>
+
+                    <a href="about.html">
+                        About GlowSkin
+                    </a>
+
+                    <a href="blog.html">
+                        Blog
+                    </a>
+
+                    <a href="privacy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 GlowSkin. All rights reserved.
+                </p>
+
+
+                <div class="payment-methods">
+
+                    <span>
+                        UPI
+                    </span>
+
+                    <span>
+                        COD
+                    </span>
+
+                    <span>
+                        Cards
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         CART TOAST
+    ========================================== -->
+
+    <div
+        class="cart-toast"
+        id="cartToast"
+        role="status"
+        aria-live="polite"
+    >
+
+        <div class="toast-icon">
+            ✓
+        </div>
+
+
+        <div class="toast-content">
+
+            <strong>
+                Cart Updated
+            </strong>
+
+            <span id="toastMessage">
+                Your cart has been updated.
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="assets/js/index.js"></script>
+
+    <script src="assets/js/cart.js"></script>
+
+</body>
+                          </html>
